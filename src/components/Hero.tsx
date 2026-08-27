@@ -146,7 +146,7 @@ export const Hero: React.FC<HeroProps> = ({
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-gray-700 bg-white/80 backdrop-blur-xs p-2 rounded-xl border border-gray-200/80 shadow-2xs col-span-2 sm:col-span-1">
                 <CheckCircle2 className="w-4 h-4 text-[#DD2B1C] flex-shrink-0" />
-                <span>Pan-India & Global Supply</span>
+                <span>PAN INDIA GLOBAL capital</span>
               </div>
             </motion.div>
 
@@ -295,9 +295,9 @@ export const Hero: React.FC<HeroProps> = ({
               icon={<Boxes className="w-5 h-5" />}
             />
             <Counter 
-              value={500} 
+              value={50} 
               suffix="+" 
-              label="Corporate Clients & Partners" 
+              label="Corporate Clients" 
               subtext="Pan India & Middle East direct supply"
               icon={<Users className="w-5 h-5" />}
             />

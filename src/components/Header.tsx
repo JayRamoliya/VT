@@ -273,13 +273,6 @@ export const Header: React.FC<HeaderProps> = () => {
 
                         {/* Mega Menu Footer Banner */}
                         <div className="mt-4 pt-3 border-t border-gray-100 bg-gray-50/80 -mx-6 -mb-6 p-4 flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <Sparkles className="w-4 h-4 text-[#DD2B1C]" />
-                            <span className="text-xs font-semibold text-gray-700">
-                              Custom Logo Laser Marking Sample Prepared in 2
-                              Hours
-                            </span>
-                          </div>
                           <button
                             onClick={() => {
                               setIsMegaMenuOpen(false);
