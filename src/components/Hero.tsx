@@ -108,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: corporateEase }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#151616] leading-[1.08]"
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold lg:font-bold tracking-[-0.02em] text-[#151616] leading-[1.08]"
             >
               Steel & MS Corporate Gifting Products with{' '}
               <span className="text-[#DD2B1C] inline-block relative">
