@@ -1,24 +1,27 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { motion } from 'motion/react';
-import { 
-  Check, 
-  Sparkles, 
-  Layers, 
-  MessageSquare, 
-  FileText, 
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { motion } from "motion/react";
+import {
+  Check,
+  Sparkles,
+  Layers,
+  MessageSquare,
+  FileText,
   Box,
-  ArrowRight
-} from 'lucide-react';
-import { Product } from '../types';
-import { useQuote } from '../context/QuoteContext';
+  ArrowRight,
+} from "lucide-react";
+import { Product } from "../types";
+import { useQuote } from "../context/QuoteContext";
 
 interface ProductCardProps {
   product: Product;
   onViewDetails?: (product: Product) => void;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({
+  product,
+  onViewDetails,
+}) => {
   const { openQuoteModal } = useQuote();
   const navigate = useNavigate();
 
@@ -32,9 +35,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails
 
   const handleWhatsAppEnquiry = (e: React.MouseEvent) => {
     e.stopPropagation();
-    const phone = '917567999989';
+    const phone = "917567999989";
     const msg = `Hello VARAIA TRADERS, I'm interested in bulk enquiry for *${product.name}* (Item Code: ${product.itemCode}).\nMaterial: ${product.material}\nMOQ: ${product.minOrderQty} pcs.\nPlease share best bulk quotation & delivery schedule.`;
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(
+      `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,
+      "_blank",
+    );
   };
 
   const handleQuoteClick = (e: React.MouseEvent) => {
@@ -43,12 +49,16 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails
   };
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      whileHover={{ y: -7 }}
-      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+    <motion.div
+      // initial={{ opacity: 0, y: 20 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // viewport={{ once: true, margin: '-40px' }}
+      // whileHover={{ y: -7 }}
+      // transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ x: -20 }}
+      whileInView={{ x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.3 }}
       onClick={handleCardClick}
       className="group bg-white rounded-2xl border border-gray-200/90 hover:border-gray-300 shadow-xs hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer relative"
       id={`product-card-${product.id}`}
@@ -103,7 +113,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails
           <div className="mt-3 space-y-1.5 text-xs text-gray-600">
             <p className="flex items-center gap-1.5 truncate">
               <Layers className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" />
-              <span className="font-medium text-gray-800">Material:</span> {product.material}
+              <span className="font-medium text-gray-800">Material:</span>{" "}
+              {product.material}
             </p>
             <p className="flex items-center gap-1.5 truncate text-[11px] text-gray-500">
               <Check className="w-3 h-3 text-green-600 flex-shrink-0" />

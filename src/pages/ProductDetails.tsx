@@ -160,11 +160,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                   </span>
                 )}
               </div>
-
-              {/* <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-xs text-[#151616] text-xs font-bold px-3 py-1.5 rounded-lg border border-gray-200 shadow-sm flex items-center gap-1.5">
-                <Boxes className="w-3.5 h-3.5 text-green-600" />
-                <span>{product.readyStockCount || '1000+ Cartons Ready Stock'}</span>
-              </div> */}
             </div>
 
             {/* Thumbnail Carousel Strip */}
