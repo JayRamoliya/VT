@@ -1,34 +1,38 @@
-import React from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { motion } from 'motion/react';
-import { 
-  ShieldCheck, 
-  Sparkles, 
-  Layers, 
-  Truck, 
-  Clock, 
-  DollarSign, 
-  Globe, 
-  Boxes, 
-  CheckCircle2, 
-  ArrowRight, 
-  Users, 
-  Briefcase, 
-  Award, 
-  Gift, 
-  Calendar, 
-  Check
-} from 'lucide-react';
-import { Hero } from '../components/Hero';
-import { ProductCard } from '../components/ProductCard';
-import { CategoryCard } from '../components/CategoryCard';
-import { TestimonialSlider } from '../components/TestimonialSlider';
-import { CTA } from '../components/CTA';
-import { FAQ } from '../components/FAQ';
-import { PRODUCTS } from '../data/products';
-import { Product, CategoryType } from '../types';
-import { useQuote } from '../context/QuoteContext';
-import { FadeUp, SectionDivider, corporateEase } from '../components/MotionWrappers';
+import React from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { motion } from "motion/react";
+import {
+  ShieldCheck,
+  Sparkles,
+  Layers,
+  Truck,
+  Clock,
+  DollarSign,
+  Globe,
+  Boxes,
+  CheckCircle2,
+  ArrowRight,
+  Users,
+  Briefcase,
+  Award,
+  Gift,
+  Calendar,
+  Check,
+} from "lucide-react";
+import { Hero } from "../components/Hero";
+import { ProductCard } from "../components/ProductCard";
+import { CategoryCard } from "../components/CategoryCard";
+import { TestimonialSlider } from "../components/TestimonialSlider";
+import { CTA } from "../components/CTA";
+import { FAQ } from "../components/FAQ";
+import { PRODUCTS } from "../data/products";
+import { Product, CategoryType } from "../types";
+import { useQuote } from "../context/QuoteContext";
+import {
+  FadeUp,
+  SectionDivider,
+  corporateEase,
+} from "../components/MotionWrappers";
 
 interface HomeProps {
   onNavigate?: (page: string, params?: Record<string, unknown>) => void;
@@ -39,53 +43,129 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
   const { openQuoteModal, openLaserPreviewModal } = useQuote();
   const navigate = useNavigate();
 
-  const featuredProducts = PRODUCTS.filter(p => p.featured).slice(0, 6);
+  const featuredProducts = PRODUCTS.filter((p) => p.featured).slice(0, 6);
 
   const whyChooseUsCards = [
     {
-      title: 'Premium Quality',
-      description: 'Forged from certified AISI 304 Stainless Steel & heavy gauge CRCA Mild Steel with immaculate satin and mirror finishes.',
-      icon: <ShieldCheck className="w-6 h-6 text-[#DD2B1C]" />
+      title: "Premium Quality",
+      description:
+        "Forged from certified AISI 304 Stainless Steel & heavy gauge CRCA Mild Steel with immaculate satin and mirror finishes.",
+      icon: <ShieldCheck className="w-6 h-6 text-[#DD2B1C]" />,
     },
     {
-      title: 'Bulk Order Specialists',
-      description: 'Engineered high-speed manufacturing lines optimized for corporate volumes ranging from 100 to 10,000+ pieces.',
-      icon: <Boxes className="w-6 h-6 text-[#DD2B1C]" />
+      title: "Bulk Order Specialists",
+      description:
+        "Engineered high-speed manufacturing lines optimized for corporate volumes ranging from 100 to 10,000+ pieces.",
+      icon: <Boxes className="w-6 h-6 text-[#DD2B1C]" />,
     },
     {
-      title: 'Custom Branding & Laser Marking',
-      description: 'Permanent fiber laser annealing of corporate logos, taglines, QR codes, and individual employee names with 0.01mm precision.',
-      icon: <Sparkles className="w-6 h-6 text-[#DD2B1C]" />
+      title: "Custom Branding & Laser Marking",
+      description:
+        "Permanent fiber laser annealing of corporate logos, taglines, QR codes, and individual employee names with 0.01mm precision.",
+      icon: <Sparkles className="w-6 h-6 text-[#DD2B1C]" />,
     },
     {
-      title: 'Timely Delivery',
-      description: 'Strict commitment to conference and event deadlines with guaranteed same-week dispatch from our Rajkot plant.',
-      icon: <Clock className="w-6 h-6 text-[#DD2B1C]" />
+      title: "Timely Delivery",
+      description:
+        "Strict commitment to conference and event deadlines with guaranteed same-week dispatch from our Rajkot plant.",
+      icon: <Clock className="w-6 h-6 text-[#DD2B1C]" />,
     },
     {
-      title: 'Competitive Factory Pricing',
-      description: 'Zero broker markups. Direct-from-manufacturer transparent tier pricing providing 30-40% savings on corporate budgets.',
-      icon: <DollarSign className="w-6 h-6 text-[#DD2B1C]" />
+      title: "Competitive Factory Pricing",
+      description:
+        "Zero broker markups. Direct-from-manufacturer transparent tier pricing providing 30-40% savings on corporate budgets.",
+      icon: <DollarSign className="w-6 h-6 text-[#DD2B1C]" />,
     },
     {
-      title: 'Pan India Supply',
-      description: 'Express multi-city dispatch network servicing corporate HQs, regional branches, and dealerships in all 28 states.',
-      icon: <Globe className="w-6 h-6 text-[#DD2B1C]" />
-    }
+      title: "Pan India Supply",
+      description:
+        "Express multi-city dispatch network servicing corporate HQs, regional branches, and dealerships in all 28 states.",
+      icon: <Globe className="w-6 h-6 text-[#DD2B1C]" />,
+    },
+  ];
+
+  const clients = [
+    {
+      name: "01 hdfc bank",
+      logo: "/clients/01 hdfc bank.webp",
+    },
+    {
+      name: "02",
+      logo: "/clients/02.webp",
+    },
+    {
+      name: "03 shell pump",
+      logo: "/clients/03 shell pump.webp",
+    },
+    {
+      name: "04 ucb",
+      logo: "/clients/04 ucb.webp",
+    },
+    {
+      name: "05",
+      logo: "/clients/05.webp",
+    },
+    {
+      name: "06",
+      logo: "/clients/06.webp",
+    },
+    {
+      name: "07",
+      logo: "/clients/07.webp",
+    },
+    {
+      name: "08",
+      logo: "/clients/08.webp",
+    },
+    {
+      name: "09",
+      logo: "/clients/09.webp",
+    },
+    {
+      name: "10",
+      logo: "/clients/10.webp",
+    },
+    {
+      name: "11 lioli granito",
+      logo: "/clients/11 lioli granito.webp",
+    },
+    {
+      name: "12",
+      logo: "/clients/12.webp",
+    },
+    {
+      name: "13",
+      logo: "/clients/13.webp",
+    },
+    {
+      name: "14",
+      logo: "/clients/14.webp",
+    },
+    {
+      name: "15",
+      logo: "/clients/15.webp",
+    },
+    {
+      name: "16",
+      logo: "/clients/16.webp",
+    },
+    {
+      name: "17",
+      logo: "/clients/17.webp",
+    },
   ];
 
   const categoriesToShow: CategoryType[] = [
-    'Mobile Stand',
-    'Pen Stand',
-    'Desk Organiser',
-    'Paper Weight',
-    'Metal Awards',
-    'Corporate Gifts in Metal'
+    "Mobile Stand",
+    "Pen Stand",
+    "Desk Organiser",
+    "Paper Weight",
+    "Corporate Gifts in Metal",
   ];
 
   const handleCategoryClick = (category: CategoryType) => {
     if (onNavigate) {
-      onNavigate('products', { category });
+      onNavigate("products", { category });
     } else {
       navigate(`/products?category=${encodeURIComponent(category)}`);
     }
@@ -103,13 +183,16 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
     <div className="w-full bg-white overflow-hidden">
       {/* 1. Hero Section with Interactive Carousel & Key Metrics */}
       <Hero
-        onExploreProducts={() => navigate('/products')}
-        onNavigateToAbout={() => navigate('/about')}
+        onExploreProducts={() => navigate("/products")}
+        onNavigateToAbout={() => navigate("/about")}
         onOpenLaserPreview={openLaserPreviewModal}
       />
 
       {/* 2. Top Product Categories Section */}
-      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="manufacturing-categories-section">
+      <section
+        className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        id="manufacturing-categories-section"
+      >
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <FadeUp>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-[#DD2B1C] border border-red-100 text-xs font-bold uppercase tracking-wider mb-3">
@@ -120,7 +203,9 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
               Featured Manufacturing Categories
             </h2>
             <p className="text-sm text-gray-600 mt-2.5 max-w-2xl leading-relaxed">
-              Industrial grade SS 304 and mild steel merchandise forged for high brand equity on executive desks across India and global corporate networks.
+              Industrial grade SS 304 and mild steel merchandise forged for high
+              brand equity on executive desks across India and global corporate
+              networks.
             </p>
           </FadeUp>
 
@@ -136,7 +221,10 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
         </div>
 
         {/* Quick Category Chips Strip */}
-        <FadeUp delay={0.15} className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
+        <FadeUp
+          delay={0.15}
+          className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none"
+        >
           <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400 mr-1 flex-shrink-0">
             Quick Jump:
           </span>
@@ -185,7 +273,9 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
                 High-Volume Signature Gifting Products
               </h2>
               <p className="text-sm text-gray-600 mt-3 leading-relaxed">
-                Our bestselling corporate metal utilities ready for instantaneous custom fiber laser engraving and same-week bulk dispatch.
+                Our bestselling corporate metal utilities ready for
+                instantaneous custom fiber laser engraving and same-week bulk
+                dispatch.
               </p>
             </FadeUp>
           </div>
@@ -215,20 +305,26 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
       {/* 4. Laser Marking in Metal Showcase Section */}
       <section className="py-20 bg-[#151616] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-6 space-y-6">
               <FadeUp>
                 <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950 text-red-400 border border-red-800/40 text-xs font-bold uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5" /> High Precision Fiber Laser Annealing
+                  <Sparkles className="w-3.5 h-3.5" /> High Precision Fiber
+                  Laser Annealing
                 </span>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mt-4">
-                  Permanent <span className="text-[#DD2B1C]">Laser Marking</span> in Metal
+                  Permanent{" "}
+                  <span className="text-[#DD2B1C]">Laser Marking</span> in Metal
                 </h2>
                 <p className="text-gray-300 text-sm sm:text-base leading-relaxed mt-4">
-                  Unlike traditional ink printing that wears off in weeks, our state-of-the-art fiber laser marking alters the surface metallurgy permanently. Crisp logos, individual employee names, QR codes, and commemorative dates will never fade or peel.
+                  Unlike traditional ink printing that wears off in weeks, our
+                  state-of-the-art fiber laser marking alters the surface
+                  metallurgy permanently. Crisp logos, individual employee
+                  names, QR codes, and commemorative dates will never fade or
+                  peel.
                 </p>
               </FadeUp>
 
@@ -238,8 +334,13 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
                     <Check className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-sm font-bold text-white block">Individual Recipient Personalization</span>
-                    <span className="text-xs text-gray-400">Mark distinct employee names & IDs across bulk 500+ unit orders with zero plate charges.</span>
+                    <span className="text-sm font-bold text-white block">
+                      Individual Recipient Personalization
+                    </span>
+                    <span className="text-xs text-gray-400">
+                      Mark distinct employee names & IDs across bulk 500+ unit
+                      orders with zero plate charges.
+                    </span>
                   </div>
                 </div>
 
@@ -248,8 +349,13 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
                     <Check className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-sm font-bold text-white block">High-Resolution Vector Detail (0.01mm)</span>
-                    <span className="text-xs text-gray-400">Intricate corporate emblems, fine line fonts, and dynamic QR codes rendered with optical clarity.</span>
+                    <span className="text-sm font-bold text-white block">
+                      High-Resolution Vector Detail (0.01mm)
+                    </span>
+                    <span className="text-xs text-gray-400">
+                      Intricate corporate emblems, fine line fonts, and dynamic
+                      QR codes rendered with optical clarity.
+                    </span>
                   </div>
                 </div>
 
@@ -258,8 +364,13 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
                     <Check className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-sm font-bold text-white block">2-Hour Rapid Digital Mockup</span>
-                    <span className="text-xs text-gray-400">Send your CDR / AI / PDF logo to receive an executive 3D visual preview before production.</span>
+                    <span className="text-sm font-bold text-white block">
+                      2-Hour Rapid Digital Mockup
+                    </span>
+                    <span className="text-xs text-gray-400">
+                      Send your CDR / AI / PDF logo to receive an executive 3D
+                      visual preview before production.
+                    </span>
                   </div>
                 </div>
               </FadeUp>
@@ -297,7 +408,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
                     Sub-Millimeter Fiber Laser Etching on 304 Stainless Steel
                   </h3>
                   <p className="text-xs text-gray-300 mt-1">
-                    Zero chemical etching. Environmentally conscious metallurgical annealing.
+                    Zero chemical etching. Environmentally conscious
+                    metallurgical annealing.
                   </p>
                 </div>
               </div>
@@ -317,7 +429,9 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
               Direct Factory Advantages for Corporate Buyers
             </h2>
             <p className="text-sm text-gray-500 mt-2">
-              Experience the reliability, manufacturing capacity, and engineering excellence of an established Rajkot metal manufacturer.
+              Experience the reliability, manufacturing capacity, and
+              engineering excellence of an established Rajkot metal
+              manufacturer.
             </p>
           </FadeUp>
         </div>
@@ -328,8 +442,12 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
               key={card.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.4, delay: idx * 0.08, ease: corporateEase }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{
+                duration: 0.4,
+                delay: idx * 0.08,
+                ease: corporateEase,
+              }}
               className="p-8 rounded-3xl bg-white border border-gray-200/80 hover:border-gray-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
@@ -350,6 +468,47 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
               </div>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* 6. Trusted By Clients */}
+      <section className="py-16 bg-gray-50 border-y border-gray-100 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
+            Trusted By
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-black text-[#151616]">
+            Our Corporate Clients
+          </h2>
+          <p className="text-sm text-gray-500 mt-3 max-w-2xl mx-auto">
+            Delivering premium corporate gifting solutions to leading companies,
+            institutions and organizations across India.
+          </p>
+        </div>
+
+        <div className="relative">
+          <motion.div
+            className="flex gap-12 items-center"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              repeat: Infinity,
+              duration: 25,
+              ease: "linear",
+            }}
+          >
+            {[...clients, ...clients].map((client, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 h-20 w-48 bg-white rounded-2xl border border-gray-200 flex items-center justify-center shadow-sm hover:shadow-md transition-all"
+              >
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="max-h-10 max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 

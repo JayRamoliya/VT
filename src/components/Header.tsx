@@ -20,7 +20,6 @@ import {
   Calendar, 
   Gift, 
   Award, 
-  Trophy, 
   Briefcase 
 } from 'lucide-react';
 import { useQuote } from '../context/QuoteContext';
@@ -65,8 +64,6 @@ export const Header: React.FC<HeaderProps> = () => {
       case 'Desk Organiser': return <LayoutGrid className="w-4 h-4 text-[#DD2B1C]" />;
       case 'Table Calendar': return <Calendar className="w-4 h-4 text-[#DD2B1C]" />;
       case 'Corporate Gifts in Metal': return <Gift className="w-4 h-4 text-[#DD2B1C]" />;
-      case 'Metal Awards': return <Award className="w-4 h-4 text-[#DD2B1C]" />;
-      case 'Metal Trophies': return <Trophy className="w-4 h-4 text-[#DD2B1C]" />;
       case 'Premium Office Accessories': return <Briefcase className="w-4 h-4 text-[#DD2B1C]" />;
       default: return <Gift className="w-4 h-4 text-[#DD2B1C]" />;
     }
@@ -74,11 +71,11 @@ export const Header: React.FC<HeaderProps> = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
+    // { name: 'About Us', path: '/about' },
     { name: 'Products', path: '/products', hasMegaMenu: true },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Contact', path: '/contact' },
+    // { name: 'Gallery', path: '/gallery' },
+    // { name: 'Blog', path: '/blog' },
+    // { name: 'Contact', path: '/contact' },
   ];
 
   const isLinkActive = (path: string) => {

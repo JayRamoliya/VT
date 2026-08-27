@@ -8,7 +8,6 @@ import {
   CheckCircle2, 
   Smartphone, 
   PenTool, 
-  Trophy, 
   Gift,
   Layers,
   Boxes,
@@ -32,7 +31,7 @@ export const Hero: React.FC<HeroProps> = ({
 }) => {
   const { openQuoteModal, openLaserPreviewModal } = useQuote();
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState<'mobile-stand' | 'pen-stand' | 'trophy' | 'combo'>('mobile-stand');
+  const [activeTab, setActiveTab] = useState<'mobile-stand' | 'pen-stand' | 'combo'>('mobile-stand');
 
   const handleExplore = () => {
     if (onExploreProducts) {
@@ -68,15 +67,6 @@ export const Hero: React.FC<HeroProps> = ({
       readyStock: '1200+ Cartons Ready Stock',
       image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?q=80&w=1200&auto=format&fit=crop',
       badge: 'Executive Desk Essential'
-    },
-    'trophy': {
-      title: 'Monolith Pillar of Excellence Milestone Award',
-      code: 'VT-MA-02',
-      material: 'Solid Forged Mild Steel (920g Mass)',
-      finish: 'Deep Laser Annealed Custom Names',
-      readyStock: '500+ Cartons Ready Stock',
-      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200&auto=format&fit=crop',
-      badge: 'Institutional Accolade'
     },
     'combo': {
       title: '5-in-1 Master Steel Desktop Productivity Hub',
@@ -188,16 +178,6 @@ export const Hero: React.FC<HeroProps> = ({
                 <FileText className="w-4 h-4 text-[#DD2B1C]" />
                 <span>Get Bulk Quote</span>
               </motion.button>
-
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={handleOpenLaser}
-                className="text-xs font-bold text-gray-700 hover:text-[#DD2B1C] flex items-center gap-1.5 py-2.5 px-3.5 rounded-xl hover:bg-gray-100 transition-all duration-200 cursor-pointer border border-dashed border-gray-300"
-              >
-                <Sparkles className="w-3.5 h-3.5 text-[#DD2B1C]" />
-                <span>Test Laser Marking Tool</span>
-              </motion.button>
             </motion.div>
           </div>
 
@@ -229,24 +209,6 @@ export const Hero: React.FC<HeroProps> = ({
                   <PenTool className="w-3.5 h-3.5" />
                   <span>Pen Caddy</span>
                 </button>
-                <button
-                  onClick={() => setActiveTab('trophy')}
-                  className={`flex-1 py-1.5 px-2 rounded-lg transition-all duration-200 flex items-center justify-center gap-1 cursor-pointer ${
-                    activeTab === 'trophy' ? 'bg-white text-[#DD2B1C] shadow-xs' : 'text-gray-600 hover:text-[#151616]'
-                  }`}
-                >
-                  <Trophy className="w-3.5 h-3.5" />
-                  <span>Trophy</span>
-                </button>
-                <button
-                  onClick={() => setActiveTab('combo')}
-                  className={`flex-1 py-1.5 px-2 rounded-lg transition-all duration-200 flex items-center justify-center gap-1 cursor-pointer ${
-                    activeTab === 'combo' ? 'bg-white text-[#DD2B1C] shadow-xs' : 'text-gray-600 hover:text-[#151616]'
-                  }`}
-                >
-                  <Gift className="w-3.5 h-3.5" />
-                  <span>5-in-1 Hub</span>
-                </button>
               </div>
 
               {/* Dynamic Image & Specs Preview with AnimatePresence */}
@@ -275,8 +237,7 @@ export const Hero: React.FC<HeroProps> = ({
                     </div>
                   </div>
 
-                  {/* Product Details Header */}
-                  <div>
+                  {/* <div>
                     <div className="flex items-center justify-between text-xs text-gray-500 font-medium mb-1">
                       <span className="font-mono bg-gray-100 px-2 py-0.5 rounded text-[11px] text-gray-700 font-bold">
                         {currentItem.code}
@@ -288,10 +249,9 @@ export const Hero: React.FC<HeroProps> = ({
                     <h3 className="font-bold text-base text-[#151616]">
                       {currentItem.title}
                     </h3>
-                  </div>
+                  </div> */}
 
-                  {/* Technical Specs Compact Box */}
-                  <div className="grid grid-cols-2 gap-2 text-xs bg-gray-50 p-3 rounded-xl border border-gray-100">
+                  {/* <div className="grid grid-cols-2 gap-2 text-xs bg-gray-50 p-3 rounded-xl border border-gray-100">
                     <div>
                       <span className="text-gray-400 block text-[10px] uppercase font-bold">Material</span>
                       <span className="font-semibold text-gray-800 truncate block">{currentItem.material}</span>
@@ -300,9 +260,8 @@ export const Hero: React.FC<HeroProps> = ({
                       <span className="text-gray-400 block text-[10px] uppercase font-bold">Finish</span>
                       <span className="font-semibold text-gray-800 truncate block">{currentItem.finish}</span>
                     </div>
-                  </div>
+                  </div> */}
 
-                  {/* Quick Card Action */}
                   <div className="flex items-center gap-2 pt-1">
                     <button
                       onClick={handleExplore}
@@ -310,13 +269,6 @@ export const Hero: React.FC<HeroProps> = ({
                     >
                       <span>Explore In Catalogue</span>
                       <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
-                    <button
-                      onClick={handleOpenLaser}
-                      className="bg-red-50 hover:bg-red-100 text-[#DD2B1C] p-2.5 rounded-xl transition-colors cursor-pointer border border-red-200"
-                      title="Simulate Laser Marking"
-                    >
-                      <Sparkles className="w-4 h-4" />
                     </button>
                   </div>
                 </motion.div>

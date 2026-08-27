@@ -9,7 +9,6 @@ import {
   LayoutGrid, 
   Disc, 
   Award, 
-  Trophy, 
   Gift, 
   Calendar, 
   BookOpen, 
@@ -46,10 +45,6 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category, onClick, i
         return <LayoutGrid className="w-5 h-5" />;
       case 'Paper Weight':
         return <Disc className="w-5 h-5" />;
-      case 'Metal Awards':
-        return <Award className="w-5 h-5" />;
-      case 'Metal Trophies':
-        return <Trophy className="w-5 h-5" />;
       case 'Corporate Gifts in Metal':
         return <Gift className="w-5 h-5" />;
       case 'Table Calendar':
@@ -70,11 +65,9 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category, onClick, i
       case 'Pen Stand':
         return ['360° Silent Bearing', 'Solid Barrels', 'Card Slot'];
       case 'Desk Organiser':
-        return ['5-in-1 Hubs', 'Dual-Tone Finish', 'Modular Trays'];
+        return ['Dual-Tone Finish', 'Modular Trays'];
       case 'Paper Weight':
         return ['Solid 320g Dome', 'Mirror Finish', 'Hexagonal MS'];
-      case 'Metal Awards':
-        return ['Monolith Pillars', 'Heavy Mass 920g', 'Deep Annealed'];
       case 'Corporate Gifts in Metal':
         return ['Steel Coasters', 'Card Cases', 'VIP Hampers'];
       case 'Table Calendar':

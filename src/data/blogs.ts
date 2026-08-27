@@ -151,8 +151,8 @@ export const BLOG_POSTS: BlogPost[] = [
         content: 'No two achievements are alike. We specialize in batch orders with individualized laser marking—allowing each trophy to feature the specific recipient’s full name, department, achievement year, and custom citation without slowing down delivery times.'
       }
     ],
-    tags: ['Metal Awards', 'Metal Trophies', 'Employee Recognition', 'HR Strategies', 'Leadership'],
-    relatedProductCategory: 'Metal Awards'
+    tags: ['Employee Recognition', 'HR Strategies', 'Leadership'],
+    relatedProductCategory: 'Desk Organiser'
   },
   {
     id: 'blog-04',

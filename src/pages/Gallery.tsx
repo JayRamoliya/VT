@@ -36,7 +36,7 @@ export const Gallery: React.FC<GalleryProps> = ({ onNavigateHome }) => {
             Visual Portfolio & Craftsmanship
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#151616] tracking-tight">
-            Corporate Gifting & Trophy Showcase
+            Corporate Gifting
           </h1>
           <p className="text-xs sm:text-sm text-gray-600 mt-3 leading-relaxed">
             Explore finished production samples, fiber laser engraving precision, and custom executive desktop suites created for leading corporations across India and globally.

@@ -29,15 +29,6 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     materialUsed: 'Mild Steel + Brass Mechanism'
   },
   {
-    id: 'gal-04',
-    title: 'Architectural Geometric Victory Trophy for National Summit',
-    category: 'Trophies',
-    image: 'https://images.unsplash.com/photo-1578269174936-2709b6aeb913?q=80&w=900&auto=format&fit=crop',
-    description: 'Laser-cut multi-layer stainless steel flame trophy designed for annual corporate summit in Mumbai.',
-    clientType: 'National Industry Chamber',
-    materialUsed: '3mm SS 304 + Heavy MS Base'
-  },
-  {
     id: 'gal-05',
     title: '5-in-1 Master Desk Productivity Hub for C-Suite Kits',
     category: 'Office Accessories',

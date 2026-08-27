@@ -7,8 +7,6 @@ export type CategoryType =
   | 'Desk Organiser'
   | 'Table Calendar'
   | 'Corporate Gifts in Metal'
-  | 'Metal Awards'
-  | 'Metal Trophies'
   | 'Premium Office Accessories';
 
 export interface Product {

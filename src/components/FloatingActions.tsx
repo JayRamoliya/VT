@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { MessageSquare, Phone, ArrowUp } from 'lucide-react';
-import { useQuote } from '../context/QuoteContext';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { FaWhatsapp, FaPhoneAlt, FaArrowUp } from "react-icons/fa";
+import { useQuote } from "../context/QuoteContext";
 
 export const FloatingActions: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -11,12 +11,19 @@ export const FloatingActions: React.FC = () => {
     const checkScroll = () => {
       setShowScrollTop(window.scrollY > 300);
     };
-    window.addEventListener('scroll', checkScroll, { passive: true });
-    return () => window.removeEventListener('scroll', checkScroll);
+
+    window.addEventListener("scroll", checkScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const whatsappUrl = generateWhatsAppLink(
@@ -39,7 +46,7 @@ export const FloatingActions: React.FC = () => {
             aria-label="Scroll to top"
             className="pointer-events-auto w-11 h-11 rounded-full bg-[#151616] text-white flex items-center justify-center shadow-lg hover:bg-black transition-colors duration-200 cursor-pointer border border-white/20"
           >
-            <ArrowUp className="w-5 h-5" />
+            <FaArrowUp className="text-sm" />
           </motion.button>
         )}
       </AnimatePresence>
@@ -54,8 +61,9 @@ export const FloatingActions: React.FC = () => {
         className="pointer-events-auto flex items-center gap-2 bg-[#151616] text-white pl-3.5 pr-4 py-2.5 rounded-full shadow-xl hover:bg-black transition-colors duration-200 border border-white/10 group cursor-pointer"
       >
         <div className="w-6 h-6 rounded-full bg-[#DD2B1C] flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform duration-200">
-          <Phone className="w-3.5 h-3.5 text-white" />
+          <FaPhoneAlt className="text-[12px] text-white" />
         </div>
+
         <span className="text-xs font-bold tracking-wide hidden sm:inline">
           75679 99989
         </span>
@@ -73,8 +81,9 @@ export const FloatingActions: React.FC = () => {
         className="pointer-events-auto flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white pl-3.5 pr-4 py-2.5 rounded-full shadow-xl transition-colors duration-200 cursor-pointer"
       >
         <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-          <MessageSquare className="w-3.5 h-3.5 text-white" />
+          <FaWhatsapp className="text-[14px] text-white" />
         </div>
+
         <span className="text-xs font-bold tracking-wide">
           WhatsApp RFQ
         </span>
@@ -82,3 +91,5 @@ export const FloatingActions: React.FC = () => {
     </div>
   );
 };
+
+export default FloatingActions;

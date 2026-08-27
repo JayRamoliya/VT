@@ -43,7 +43,7 @@ export const MainLayout: React.FC = () => {
       </main>
 
       {/* Persistent Global Footer */}
-      <Footer />
+      {/* <Footer /> */}
 
       {/* Persistent Global Modals & Interactive Floating Actions */}
       <BulkQuoteModal />
