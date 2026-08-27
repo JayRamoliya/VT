@@ -1,22 +1,22 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion } from 'motion/react';
-import { 
-  ArrowRight, 
-  Sparkles, 
-  Smartphone, 
-  PenTool, 
-  LayoutGrid, 
-  Disc, 
-  Award, 
-  Gift, 
-  Calendar, 
-  BookOpen, 
-  Layers, 
-  Briefcase 
-} from 'lucide-react';
-import { CategoryType } from '../types';
-import { CATEGORY_DETAILS } from '../data/products';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "motion/react";
+import {
+  ArrowRight,
+  Sparkles,
+  Smartphone,
+  PenTool,
+  LayoutGrid,
+  Disc,
+  Award,
+  Gift,
+  Calendar,
+  BookOpen,
+  Layers,
+  Briefcase,
+} from "lucide-react";
+import { CategoryType } from "../types";
+import { CATEGORY_DETAILS } from "../data/products";
 
 interface CategoryCardProps {
   category: CategoryType;
@@ -24,34 +24,40 @@ interface CategoryCardProps {
   index?: number;
 }
 
-export const CategoryCard: React.FC<CategoryCardProps> = ({ category, onClick, index = 0 }) => {
+export const CategoryCard: React.FC<CategoryCardProps> = ({
+  category,
+  onClick,
+  index = 0,
+}) => {
   const navigate = useNavigate();
 
   const details = CATEGORY_DETAILS[category] || {
     title: category,
-    subtitle: 'Steel & MS Corporate Utilities',
-    description: 'Precision manufactured corporate gifts with ready stock availability.',
+    subtitle: "Steel & MS Corporate Utilities",
+    description:
+      "Precision manufactured corporate gifts with ready stock availability.",
     count: 6,
-    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?q=80&w=900&auto=format&fit=crop'
+    image:
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?q=80&w=900&auto=format&fit=crop",
   };
 
   const getCategoryIcon = (cat: CategoryType) => {
     switch (cat) {
-      case 'Mobile Stand':
+      case "Mobile Stand":
         return <Smartphone className="w-5 h-5" />;
-      case 'Pen Stand':
+      case "Pen Stand":
         return <PenTool className="w-5 h-5" />;
-      case 'Desk Organiser':
+      case "Desk Organiser":
         return <LayoutGrid className="w-5 h-5" />;
-      case 'Paper Weight':
+      case "Paper Weight":
         return <Disc className="w-5 h-5" />;
-      case 'Corporate Gifts in Metal':
+      case "Corporate Gifts in Metal":
         return <Gift className="w-5 h-5" />;
-      case 'Table Calendar':
+      case "Table Calendar":
         return <Calendar className="w-5 h-5" />;
-      case 'Notepad':
+      case "Notepad":
         return <BookOpen className="w-5 h-5" />;
-      case 'Premium Office Accessories':
+      case "Premium Office Accessories":
         return <Briefcase className="w-5 h-5" />;
       default:
         return <Layers className="w-5 h-5" />;
@@ -60,20 +66,20 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category, onClick, i
 
   const getCategoryHighlights = (cat: CategoryType) => {
     switch (cat) {
-      case 'Mobile Stand':
-        return ['AISI 304 Steel', 'Multi-Angle MS', 'Laser Area'];
-      case 'Pen Stand':
-        return ['360° Silent Bearing', 'Solid Barrels', 'Card Slot'];
-      case 'Desk Organiser':
-        return ['Dual-Tone Finish', 'Modular Trays'];
-      case 'Paper Weight':
-        return ['Solid 320g Dome', 'Mirror Finish', 'Hexagonal MS'];
-      case 'Corporate Gifts in Metal':
-        return ['Steel Coasters', 'Card Cases', 'VIP Hampers'];
-      case 'Table Calendar':
-        return ['Perpetual Steel', '365-Day Recall', 'Standing Docks'];
+      case "Mobile Stand":
+        return ["AISI 304 Steel", "Multi-Angle MS", "Laser Area"];
+      case "Pen Stand":
+        return ["360° Silent Bearing", "Solid Barrels", "Card Slot"];
+      case "Desk Organiser":
+        return ["Dual-Tone Finish", "Modular Trays"];
+      case "Paper Weight":
+        return ["Solid 320g Dome", "Mirror Finish", "Hexagonal MS"];
+      case "Corporate Gifts in Metal":
+        return ["Steel Coasters", "Card Cases", "VIP Hampers"];
+      case "Table Calendar":
+        return ["Perpetual Steel", "365-Day Recall", "Standing Docks"];
       default:
-        return ['Precision Tooling', 'Laser Logo Ready', 'Buffer Stock'];
+        return ["Precision Tooling", "Laser Logo Ready", "Buffer Stock"];
     }
   };
 
@@ -89,13 +95,13 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category, onClick, i
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.45, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.3 }}
       onClick={handleClick}
       className="group relative h-[360px] sm:h-[380px] rounded-3xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-200/90 hover:border-[#DD2B1C]/50 flex flex-col justify-between p-6 sm:p-7"
-      id={`category-card-${category.toLowerCase().replace(/\s+/g, '-')}`}
+      id={`category-card-${category.toLowerCase().replace(/\s+/g, "-")}`}
     >
       {/* Background Image with Zoom & Dark Vignette */}
       <img
