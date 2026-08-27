@@ -80,7 +80,7 @@ export const Header: React.FC<HeaderProps> = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    // { name: 'About Us', path: '/about' },
+    { name: 'About Us', path: '/about' },
     { name: "Products", path: "/products", hasMegaMenu: true },
     // { name: 'Gallery', path: '/gallery' },
     // { name: 'Blog', path: '/blog' },
