@@ -335,41 +335,11 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
                   </div>
                   <div>
                     <span className="text-sm font-bold text-white block">
-                      Individual Recipient Personalization
-                    </span>
-                    <span className="text-xs text-gray-400">
-                      Mark distinct employee names & IDs across bulk 500+ unit
-                      orders with zero plate charges.
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-red-500/20 text-[#DD2B1C] flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-sm font-bold text-white block">
                       High-Resolution Vector Detail (0.01mm)
                     </span>
                     <span className="text-xs text-gray-400">
                       Intricate corporate emblems, fine line fonts, and dynamic
                       QR codes rendered with optical clarity.
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-red-500/20 text-[#DD2B1C] flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-sm font-bold text-white block">
-                      2-Hour Rapid Digital Mockup
-                    </span>
-                    <span className="text-xs text-gray-400">
-                      Send your CDR / AI / PDF logo to receive an executive 3D
-                      visual preview before production.
                     </span>
                   </div>
                 </div>
@@ -504,7 +474,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-h-10 max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-h-10 max-w-[140px] object-contain transition-all duration-300"
                 />
               </div>
             ))}
