@@ -84,7 +84,7 @@ export const Header: React.FC<HeaderProps> = () => {
     { name: "Products", path: "/products", hasMegaMenu: true },
     // { name: 'Gallery', path: '/gallery' },
     // { name: 'Blog', path: '/blog' },
-    // { name: 'Contact', path: '/contact' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   const isLinkActive = (path: string) => {

@@ -1,20 +1,20 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  MessageSquare, 
-  ShieldCheck, 
-  Building2, 
-  Truck, 
-  CheckCircle2, 
-  FileCheck 
-} from 'lucide-react';
-import { Breadcrumb } from '../components/Breadcrumb';
-import { ContactForm } from '../components/ContactForm';
-import { useQuote } from '../context/QuoteContext';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  MessageSquare,
+  ShieldCheck,
+  Building2,
+  Truck,
+  CheckCircle2,
+  FileCheck,
+} from "lucide-react";
+import { Breadcrumb } from "../components/Breadcrumb";
+import { ContactForm } from "../components/ContactForm";
+import { useQuote } from "../context/QuoteContext";
 
 interface ContactProps {
   onNavigateHome?: () => void;
@@ -26,11 +26,11 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
 
   const handleHomeClick = () => {
     if (onNavigateHome) onNavigateHome();
-    else navigate('/');
+    else navigate("/");
   };
 
   const whatsappUrl = generateWhatsAppLink(
-    "Hello VARAIA TRADERS, I would like to discuss a bulk corporate gift requirement for our company."
+    "Hello VARAIA TRADERS, I would like to discuss a bulk corporate gift requirement for our company.",
   );
 
   return (
@@ -38,7 +38,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
       {/* Breadcrumb Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-100">
         <Breadcrumb
-          items={[{ label: 'Contact Factory Desk', active: true }]}
+          items={[{ label: "Contact Factory Desk", active: true }]}
           onNavigateHome={handleHomeClick}
         />
       </div>
@@ -54,7 +54,9 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
               Let's Discuss Your Bulk Corporate Gift Requirements
             </h1>
             <p className="text-xs sm:text-sm text-gray-600 mt-3 leading-relaxed">
-              Connect directly with our Rajkot manufacturing team for customized sample CAD layouts, direct factory price tiering, and pan-India express logistics.
+              Connect directly with our Rajkot manufacturing team for customized
+              sample CAD layouts, direct factory price tiering, and pan-India
+              express logistics.
             </p>
           </div>
         </div>
@@ -63,10 +65,8 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
       {/* Main Contact Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
-          
           {/* Left: Contact Info Cards & Quick WhatsApp */}
           <div className="lg:col-span-5 space-y-6">
-            
             {/* Direct Contact Cards */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm space-y-6">
               <h3 className="text-xl font-bold text-[#151616]">
@@ -79,9 +79,12 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="font-bold text-gray-900 block">Plant & Sales Office:</span>
+                    <span className="font-bold text-gray-900 block">
+                      Plant & Sales Office:
+                    </span>
                     <span className="text-gray-600 leading-relaxed block mt-0.5">
-                      Plot No. 14, Aji GIDC Industrial Area, Phase-II, Rajkot - 360003, Gujarat, India.
+                      THIRD FLOOR, AAKANKSHA COMPLEX, 11, Gondal Rd, opp. BIMAL
+                      TYES, Vijay Plot, Bhakti Nagar, Rajkot, Gujarat 360002
                     </span>
                   </div>
                 </div>
@@ -91,11 +94,15 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="font-bold text-gray-900 block">Factory Direct Helpline:</span>
-                    <a href="tel:+917567999989" className="text-[#DD2B1C] font-bold block mt-0.5 hover:underline text-sm">
+                    <span className="font-bold text-gray-900 block">
+                      Factory Direct Helpline:
+                    </span>
+                    <a
+                      href="tel:+917567999989"
+                      className="text-[#DD2B1C] font-bold block mt-0.5 hover:underline text-sm"
+                    >
                       +91 75679 99989
                     </a>
-                    <span className="text-gray-400 text-[11px]">Direct Line to Jigneshbhai / Procurement Desk</span>
                   </div>
                 </div>
 
@@ -104,8 +111,13 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="font-bold text-gray-900 block">Email RFQ & Artwork:</span>
-                    <a href="mailto:jignesh@varaiatraders.com" className="text-gray-700 hover:text-[#DD2B1C] block mt-0.5 font-medium">
+                    <span className="font-bold text-gray-900 block">
+                      Email RFQ & Artwork:
+                    </span>
+                    <a
+                      href="mailto:jignesh@varaiatraders.com"
+                      className="text-gray-700 hover:text-[#DD2B1C] block mt-0.5 font-medium"
+                    >
                       jignesh@varaiatraders.com
                     </a>
                   </div>
@@ -116,7 +128,9 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="font-bold text-gray-900 block">Working Hours:</span>
+                    <span className="font-bold text-gray-900 block">
+                      Working Hours:
+                    </span>
                     <span className="text-gray-600 block mt-0.5">
                       Monday to Saturday: 9:00 AM – 8:00 PM IST
                     </span>
@@ -139,62 +153,64 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
             </div>
 
             {/* Statutory Compliance & Credentials */}
-            <div className="bg-gray-50 rounded-2xl p-5 border border-gray-200 text-xs space-y-3">
-              <span className="font-bold uppercase tracking-wider text-[#151616] block">
-                Official Business Credentials
-              </span>
-              <div className="grid grid-cols-2 gap-3 text-[11px]">
-                <div className="bg-white p-3 rounded-xl border border-gray-200">
-                  <span className="text-gray-400 block font-semibold">UDYAM Reg.</span>
-                  <span className="font-mono font-bold text-gray-800 text-xs">UDYAM-GJ-20-0089421</span>
-                </div>
-                <div className="bg-white p-3 rounded-xl border border-gray-200">
-                  <span className="text-gray-400 block font-semibold">GSTIN</span>
-                  <span className="font-mono font-bold text-gray-800 text-xs">24AABCV9821M1ZT</span>
-                </div>
+            <div className="bg-gray-50 rounded-2xl p-5 border border-gray-200">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-5 h-5 text-green-600" />
+                <span className="text-sm font-semibold text-[#151616]">
+                  UDYAM & GST Registered Unit
+                </span>
               </div>
-              <p className="text-[11px] text-gray-500 flex items-center gap-1.5 pt-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-green-600 flex-shrink-0" />
-                <span>100% compliant with standard corporate vendor onboarding protocols.</span>
-              </p>
             </div>
-
           </div>
 
           {/* Right: Contact Form */}
           <div className="lg:col-span-7">
             <ContactForm />
           </div>
-
         </div>
 
-        {/* Embedded Plant Location Map / Travel Directions */}
+        {/* Google Map Section */}
         <div className="mt-14 pt-10 border-t border-gray-200">
-          <div className="bg-gray-50 rounded-3xl p-6 sm:p-8 border border-gray-200 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-1">
-                Industrial Hub
-              </span>
-              <h4 className="text-xl font-bold text-[#151616]">
-                Visiting Our Plant in Rajkot?
-              </h4>
-              <p className="text-xs sm:text-sm text-gray-600 mt-1 max-w-xl">
-                We welcome corporate procurement managers and gifting agency partners to visit our showroom and fiber laser marking lab in Aji GIDC, Rajkot.
-              </p>
-            </div>
+          <div className="mb-6">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-1">
+              Office Location
+            </span>
+            <h4 className="text-2xl font-bold text-[#151616]">
+              Visit Varaia Traders, Rajkot
+            </h4>
+            <p className="text-sm text-gray-600 mt-2">
+              Find us easily on Google Maps. Visit our office and manufacturing
+              facility for product discussions, samples, and bulk order
+              requirements.
+            </p>
+          </div>
 
+          <div className="overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3840.783776243075!2d70.79703851092366!3d22.286809243299462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395835b6de289a75%3A0xaed77fd3a318bb99!2sVaraia%20Traders!5e1!3m2!1sen!2sin!4v1787971284161!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="Varaia Traders Location"
+              className="w-full"
+            />
+          </div>
+
+          <div className="mt-4 flex justify-end">
             <a
-              href="https://maps.google.com/?q=Aji+GIDC+Rajkot+Gujarat"
+              href="https://maps.google.com/?q=Varaia+Traders+Rajkot"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#151616] hover:bg-[#DD2B1C] text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-2 whitespace-nowrap shadow-sm"
+              className="inline-flex items-center gap-2 bg-[#151616] hover:bg-[#DD2B1C] text-white px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors"
             >
               <MapPin className="w-4 h-4" />
-              <span>Get Directions on Map</span>
+              Open in Google Maps
             </a>
           </div>
         </div>
-
       </div>
     </div>
   );
