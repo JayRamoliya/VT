@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
-import { 
-  CheckCircle2, 
-  Sparkles, 
-  MessageSquare, 
-  FileText, 
-  Layers, 
-  Boxes, 
-  Truck, 
-  ShieldCheck, 
-  Clock, 
-  Share2, 
-  ChevronRight, 
-  Star, 
-  Check, 
-  Building, 
-  Info, 
-  Sliders, 
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import {
+  CheckCircle2,
+  Sparkles,
+  MessageSquare,
+  FileText,
+  Layers,
+  Boxes,
+  Truck,
+  ShieldCheck,
+  Clock,
+  Share2,
+  ChevronRight,
+  Star,
+  Check,
+  Building,
+  Info,
+  Sliders,
   HelpCircle,
-  ArrowLeft
-} from 'lucide-react';
-import { Breadcrumb } from '../components/Breadcrumb';
-import { ProductCard } from '../components/ProductCard';
-import { Product } from '../types';
-import { PRODUCTS } from '../data/products';
-import { useQuote } from '../context/QuoteContext';
+  ArrowLeft,
+} from "lucide-react";
+import { Breadcrumb } from "../components/Breadcrumb";
+import { ProductCard } from "../components/ProductCard";
+import { Product } from "../types";
+import { PRODUCTS } from "../data/products";
+import { useQuote } from "../context/QuoteContext";
 
 interface ProductDetailsProps {
   product?: Product;
@@ -37,20 +37,32 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
   product: directProduct,
   onNavigateHome,
   onNavigateProducts,
-  onSelectProduct
+  onSelectProduct,
 }) => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const { openQuoteModal, openLaserPreviewModal, generateWhatsAppLink, addToQuote } = useQuote();
+  const {
+    openQuoteModal,
+    openLaserPreviewModal,
+    generateWhatsAppLink,
+    addToQuote,
+  } = useQuote();
 
   // Find product from route param slug/id or use directProduct
-  const product = directProduct || PRODUCTS.find(
-    p => p.slug === slug || p.id === slug || p.itemCode.toLowerCase() === slug?.toLowerCase()
-  );
+  const product =
+    directProduct ||
+    PRODUCTS.find(
+      (p) =>
+        p.slug === slug ||
+        p.id === slug ||
+        p.itemCode.toLowerCase() === slug?.toLowerCase(),
+    );
 
-  const [selectedImage, setSelectedImage] = useState(product?.images[0] || '');
-  const [activeTab, setActiveTab] = useState<'description' | 'specifications' | 'customisation' | 'faq'>('description');
-  const [orderVolume, setOrderVolume] = useState<string>('100 - 250 pcs');
+  const [selectedImage, setSelectedImage] = useState(product?.images[0] || "");
+  const [activeTab, setActiveTab] = useState<
+    "description" | "specifications" | "customisation" | "faq"
+  >("description");
+  const [orderVolume, setOrderVolume] = useState<string>("100 - 250 pcs");
 
   // Update selected image whenever product changes
   useEffect(() => {
@@ -64,9 +76,12 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
       <div className="min-h-[60vh] max-w-7xl mx-auto px-4 py-20 text-center">
         <div className="bg-gray-50 border border-dashed border-gray-300 rounded-3xl p-12 max-w-xl mx-auto">
           <Boxes className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-          <h1 className="text-2xl font-bold text-[#151616]">Product Not Found</h1>
+          <h1 className="text-2xl font-bold text-[#151616]">
+            Product Not Found
+          </h1>
           <p className="text-xs sm:text-sm text-gray-600 mt-2 mb-6">
-            The product you requested might have been moved, renamed, or is currently out of catalogue circulation.
+            The product you requested might have been moved, renamed, or is
+            currently out of catalogue circulation.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link
@@ -88,19 +103,23 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
   }
 
   const relatedProducts = PRODUCTS.filter(
-    p => p.category === product.category && p.id !== product.id
+    (p) => p.category === product.category && p.id !== product.id,
   ).slice(0, 3);
 
   const handleWhatsAppEnquiry = () => {
-    const phone = '917567999989';
-    const text = `*Bulk Corporate Enquiry - VARAIA TRADERS*\n` +
+    const phone = "917567999989";
+    const text =
+      `*Bulk Corporate Enquiry - VARAIA TRADERS*\n` +
       `• *Product:* ${product.name}\n` +
       `• *Item Code:* ${product.itemCode}\n` +
       `• *Material:* ${product.material}\n` +
       `• *Finish:* ${product.finish}\n` +
       `• *Target Quantity:* ${orderVolume}\n\n` +
       `Please share official factory rate quotation, ready stock availability, and laser logo sample process.`;
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(
+      `https://wa.me/${phone}?text=${encodeURIComponent(text)}`,
+      "_blank",
+    );
   };
 
   const handleAddAndQuote = () => {
@@ -110,14 +129,16 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
 
   const handleShare = () => {
     if (navigator.share) {
-      navigator.share({
-        title: product.name,
-        text: product.shortDescription,
-        url: window.location.href
-      }).catch(() => {});
+      navigator
+        .share({
+          title: product.name,
+          text: product.shortDescription,
+          url: window.location.href,
+        })
+        .catch(() => {});
     } else {
       navigator.clipboard.writeText(window.location.href);
-      alert('Product link copied to clipboard!');
+      alert("Product link copied to clipboard!");
     }
   };
 
@@ -127,9 +148,12 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-100">
         <Breadcrumb
           items={[
-            { label: 'Products', to: '/products' },
-            { label: product.category, to: `/products?category=${encodeURIComponent(product.category)}` },
-            { label: product.name, active: true }
+            { label: "Products", to: "/products" },
+            {
+              label: product.category,
+              to: `/products?category=${encodeURIComponent(product.category)}`,
+            },
+            { label: product.name, active: true },
           ]}
           onNavigateHome={onNavigateHome}
         />
@@ -138,7 +162,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
       {/* Main Product Showcase Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
-          
           {/* Left Column: Image Gallery Preview */}
           <div className="lg:col-span-6 space-y-4">
             {/* Big Active Image Box */}
@@ -171,8 +194,8 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                     onClick={() => setSelectedImage(img)}
                     className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all flex-shrink-0 cursor-pointer p-1 bg-gray-50 ${
                       selectedImage === img
-                        ? 'border-[#DD2B1C] shadow-md'
-                        : 'border-gray-200 hover:border-gray-300'
+                        ? "border-[#DD2B1C] shadow-md"
+                        : "border-gray-200 hover:border-gray-300"
                     }`}
                   >
                     <img
@@ -186,7 +209,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             )}
 
             {/* Laser Marking Simulator Mini Banner */}
-            <div className="bg-red-50/70 border border-red-200/80 rounded-2xl p-4 flex items-center justify-between">
+            {/* <div className="bg-red-50/70 border border-red-200/80 rounded-2xl p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-xl bg-[#DD2B1C] text-white flex items-center justify-center flex-shrink-0">
                   <Sparkles className="w-4 h-4" />
@@ -206,7 +229,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
               >
                 Test Simulator
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Column: Product Information & RFQ Actions */}
@@ -217,7 +240,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                   Item Code: {product.itemCode}
                 </span>
                 <div className="flex items-center gap-3">
-                  <button 
+                  <button
                     onClick={handleShare}
                     className="flex items-center gap-1 text-gray-500 hover:text-[#151616] text-xs font-semibold cursor-pointer"
                   >
@@ -230,50 +253,102 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                 {product.name}
               </h1>
 
-              <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+              {/* <p className="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
                 {product.shortDescription}
-              </p>
+              </p> */}
             </div>
 
-            {/* Key Value Badges Strip */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs bg-gray-50 p-4 rounded-2xl border border-gray-100">
               <div>
-                <span className="text-gray-400 block text-[10px] uppercase font-bold">MOQ</span>
-                <span className="font-bold text-[#DD2B1C] text-sm">{product.minOrderQty} Pieces</span>
+                <span className="text-gray-400 block text-[10px] uppercase font-bold">
+                  MOQ
+                </span>
+                <span className="font-bold text-[#DD2B1C] text-sm">
+                  {product.minOrderQty} Pieces
+                </span>
               </div>
               <div>
-                <span className="text-gray-400 block text-[10px] uppercase font-bold">Dispatch Timeline</span>
-                <span className="font-bold text-gray-800 text-sm">{product.estimatedLeadTime || '2-4 Days'}</span>
+                <span className="text-gray-400 block text-[10px] uppercase font-bold">
+                  Dispatch Timeline
+                </span>
+                <span className="font-bold text-gray-800 text-sm">
+                  {product.estimatedLeadTime || "2-4 Days"}
+                </span>
               </div>
               <div>
-                <span className="text-gray-400 block text-[10px] uppercase font-bold">Raw Material</span>
-                <span className="font-bold text-gray-800 text-sm truncate block">{product.material}</span>
+                <span className="text-gray-400 block text-[10px] uppercase font-bold">
+                  Raw Material
+                </span>
+                <span className="font-bold text-gray-800 text-sm truncate block">
+                  {product.material}
+                </span>
               </div>
             </div>
 
-            {/* Volume Tier Selector */}
+            <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100">
+              <h3 className="text-sm font-bold text-[#151616] mb-3 uppercase tracking-wider">
+                Product Specifications
+              </h3>
+
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div>
+                  <span className="text-gray-500 text-xs block">Height</span>
+                  <span className="font-bold text-gray-800">85 mm</span>
+                </div>
+
+                <div>
+                  <span className="text-gray-500 text-xs block">Length</span>
+                  <span className="font-bold text-gray-800">95 mm</span>
+                </div>
+
+                <div>
+                  <span className="text-gray-500 text-xs block">Width</span>
+                  <span className="font-bold text-gray-800">70 mm</span>
+                </div>
+
+                <div>
+                  <span className="text-gray-500 text-xs block">Weight</span>
+                  <span className="font-bold text-gray-800">
+                    Black - 120 gm <br />
+                    S.S. - 110 gm
+                  </span>
+                </div>
+
+                <div>
+                  <span className="text-gray-500 text-xs block">Material</span>
+                  <span className="font-bold text-gray-800">CRC & SS</span>
+                </div>
+
+                <div>
+                  <span className="text-gray-500 text-xs block">Thickness</span>
+                  <span className="font-bold text-gray-800">0.92 to 1 MM</span>
+                </div>
+              </div>
+            </div>
+
             <div className="space-y-2">
               <label className="text-xs font-bold uppercase tracking-wider text-gray-500 block">
                 Select Your Required Corporate Volume:
               </label>
               <div className="grid grid-cols-3 gap-2 text-xs">
-                {['100 - 250 pcs', '250 - 1000 pcs', '1000+ pcs'].map((tier) => (
-                  <button
-                    key={tier}
-                    onClick={() => setOrderVolume(tier)}
-                    className={`py-2 px-2.5 rounded-xl border text-center font-bold transition-all cursor-pointer ${
-                      orderVolume === tier
-                        ? 'border-[#DD2B1C] bg-red-50 text-[#DD2B1C]'
-                        : 'border-gray-200 hover:border-gray-300 text-gray-700 bg-white'
-                    }`}
-                  >
-                    {tier}
-                  </button>
-                ))}
+                {["100 - 250 pcs", "250 - 1000 pcs", "1000+ pcs"].map(
+                  (tier) => (
+                    <button
+                      key={tier}
+                      onClick={() => setOrderVolume(tier)}
+                      className={`py-2 px-2.5 rounded-xl border text-center font-bold transition-all cursor-pointer ${
+                        orderVolume === tier
+                          ? "border-[#DD2B1C] bg-red-50 text-[#DD2B1C]"
+                          : "border-gray-200 hover:border-gray-300 text-gray-700 bg-white"
+                      }`}
+                    >
+                      {tier}
+                    </button>
+                  ),
+                )}
               </div>
             </div>
 
-            {/* Core Action Buttons: Request RFQ + WhatsApp */}
             <div className="space-y-3 pt-2">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <button
@@ -297,12 +372,14 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
 
               <p className="text-[11px] text-gray-400 text-center flex items-center justify-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-green-600" />
-                <span>GST Tax Invoice Provided • Direct Wholesale Pricing • Express Freight Dispatch</span>
+                <span>
+                  GST Tax Invoice Provided • Direct Wholesale Pricing • Express
+                  Freight Dispatch
+                </span>
               </p>
             </div>
 
-            {/* Fast Highlights List */}
-            <div className="border-t border-gray-100 pt-4 space-y-2">
+            {/* <div className="border-t border-gray-100 pt-4 space-y-2">
               <span className="text-xs font-bold uppercase tracking-wider text-[#151616] block mb-2">
                 Factory Assurance & Specs
               </span>
@@ -320,14 +397,12 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                   <span><strong>Packaging:</strong> {product.packaging}</span>
                 </li>
               </ul>
-            </div>
-
+            </div> */}
           </div>
         </div>
 
         {/* Detailed Tabs Section */}
-        <div className="mt-16 border-t border-gray-200 pt-10">
-          {/* Tab Navigation */}
+        {/* <div className="mt-16 border-t border-gray-200 pt-10">
           <div className="flex items-center gap-2 border-b border-gray-200 overflow-x-auto pb-px">
             {[
               { id: 'description', label: 'Detailed Description' },
@@ -349,7 +424,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             ))}
           </div>
 
-          {/* Tab Contents */}
           <div className="py-8">
             {activeTab === 'description' && (
               <div className="max-w-4xl space-y-6 text-sm text-gray-700 leading-relaxed">
@@ -457,9 +531,8 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
               </div>
             )}
           </div>
-        </div>
+        </div> */}
 
-        {/* Related Category Products Carousel */}
         {relatedProducts.length > 0 && (
           <div className="mt-16 border-t border-gray-200 pt-12">
             <div className="flex items-center justify-between mb-8">
@@ -496,7 +569,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             </div>
           </div>
         )}
-
       </div>
     </div>
   );
