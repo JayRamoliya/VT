@@ -326,6 +326,36 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                 ))}
               </div>
             </div>
+            <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-4">
+              <h4 className="text-sm font-bold text-gray-800 mb-3">
+                Dispatch Information
+              </h4>
+
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>
+                  • <span className="font-semibold">Without Logo:</span> Orders
+                  confirmed before 11:00 AM are usually dispatched on the same
+                  day.
+                </p>
+
+                <p>
+                  •{" "}
+                  <span className="font-semibold">
+                    With Custom Logo Printing:
+                  </span>{" "}
+                  Dispatch within 2–3 working days after order confirmation.
+                </p>
+
+                <p>
+                  • Dispatch timelines may vary during festival seasons and
+                  depending on model selection.
+                </p>
+
+                <p className="text-[#DD2B1C] font-medium">
+                  For exact dispatch details, please contact us on WhatsApp.
+                </p>
+              </div>
+            </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gradient-to-br from-red-50 to-white border border-red-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all">
