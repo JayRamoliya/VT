@@ -71,6 +71,16 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
     }
   }, [product]);
 
+  const specs = [
+    { label: "Height", value: product.height },
+    { label: "Length", value: product.length },
+    { label: "Width", value: product.width },
+    { label: "Weight", value: product.weight },
+    { label: "S.S. Weight", value: product.ss },
+    { label: "Material", value: product.material },
+    { label: "Thickness", value: product.thickness },
+  ].filter((item) => item.value);
+
   if (!product) {
     return (
       <div className="min-h-[60vh] max-w-7xl mx-auto px-4 py-20 text-center">
@@ -185,7 +195,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
               </div>
             </div>
 
-            {/* Thumbnail Carousel Strip */}
             {product.images.length > 1 && (
               <div className="flex items-center gap-3 overflow-x-auto pb-2">
                 {product.images.map((img, idx) => (
@@ -275,54 +284,52 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                   {product.estimatedLeadTime || "2-4 Days"}
                 </span>
               </div>
-              <div>
-                <span className="text-gray-400 block text-[10px] uppercase font-bold">
-                  Raw Material
-                </span>
-                <span className="font-bold text-gray-800 text-sm truncate block">
-                  {product.material}
-                </span>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+              <div className="px-5 py-4 border-b border-gray-100 bg-gray-50">
+                <h3 className="text-sm font-bold text-[#151616] uppercase tracking-wider">
+                  Product Specifications
+                </h3>
+              </div>
+
+              <div className="divide-y divide-gray-100">
+                {specs.map((spec) => (
+                  <div
+                    key={spec.label}
+                    className="flex items-center justify-between px-5 py-3"
+                  >
+                    <span className="text-sm text-gray-500 font-medium">
+                      {spec.label}
+                    </span>
+
+                    <span className="text-sm font-semibold text-gray-800 text-right max-w-[60%]">
+                      {spec.value}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100">
-              <h3 className="text-sm font-bold text-[#151616] mb-3 uppercase tracking-wider">
-                Product Specifications
-              </h3>
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+              <div className="px-5 py-4 border-b border-gray-100 bg-gray-50">
+                <h3 className="text-sm font-bold text-[#151616] uppercase tracking-wider">
+                  Product Specifications
+                </h3>
+              </div>
 
-              <div className="grid grid-cols-2 gap-3 text-sm">
-                <div>
-                  <span className="text-gray-500 text-xs block">Height</span>
-                  <span className="font-bold text-gray-800">85 mm</span>
-                </div>
-
-                <div>
-                  <span className="text-gray-500 text-xs block">Length</span>
-                  <span className="font-bold text-gray-800">95 mm</span>
-                </div>
-
-                <div>
-                  <span className="text-gray-500 text-xs block">Width</span>
-                  <span className="font-bold text-gray-800">70 mm</span>
-                </div>
-
-                <div>
-                  <span className="text-gray-500 text-xs block">Weight</span>
-                  <span className="font-bold text-gray-800">
-                    Black - 120 gm <br />
-                    S.S. - 110 gm
-                  </span>
-                </div>
-
-                <div>
-                  <span className="text-gray-500 text-xs block">Material</span>
-                  <span className="font-bold text-gray-800">CRC & SS</span>
-                </div>
-
-                <div>
-                  <span className="text-gray-500 text-xs block">Thickness</span>
-                  <span className="font-bold text-gray-800">0.92 to 1 MM</span>
-                </div>
+              <div className="grid sm:grid-cols-2 gap-4 p-5">
+                {specs.map((spec) => (
+                  <div
+                    key={spec.label}
+                    className="bg-gray-50 border border-gray-100 rounded-xl p-4"
+                  >
+                    <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">
+                      {spec.label}
+                    </p>
+                    <p className="font-semibold text-gray-900">{spec.value}</p>
+                  </div>
+                ))}
               </div>
             </div>
 

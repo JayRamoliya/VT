@@ -19,7 +19,12 @@ export interface Product {
   material: string;
   finish: string;
   dimensions: string;
+  height: string;
+  length: string;
+  width: string;
   weight: string;
+  ss: string;
+  thickness: string;
   minOrderQty: number; // e.g. 100 pcs
   readyStockCount: string; // e.g. "1000+ Cartons"
   laserMarkingAvailable: boolean;
