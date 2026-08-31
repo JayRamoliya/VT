@@ -45,20 +45,12 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
     switch (cat) {
       case "Mobile Stand":
         return <Smartphone className="w-5 h-5" />;
-      case "Pen Stand":
-        return <PenTool className="w-5 h-5" />;
-      case "Desk Organiser":
-        return <LayoutGrid className="w-5 h-5" />;
       case "Paper Weight":
         return <Disc className="w-5 h-5" />;
-      case "Corporate Gifts in Metal":
-        return <Gift className="w-5 h-5" />;
-      case "Table Calendar":
+      case "Calendar":
         return <Calendar className="w-5 h-5" />;
       case "Notepad":
         return <BookOpen className="w-5 h-5" />;
-      case "Premium Office Accessories":
-        return <Briefcase className="w-5 h-5" />;
       default:
         return <Layers className="w-5 h-5" />;
     }
@@ -68,15 +60,9 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
     switch (cat) {
       case "Mobile Stand":
         return ["AISI 304 Steel", "Multi-Angle MS", "Laser Area"];
-      case "Pen Stand":
-        return ["360° Silent Bearing", "Solid Barrels", "Card Slot"];
-      case "Desk Organiser":
-        return ["Dual-Tone Finish", "Modular Trays"];
       case "Paper Weight":
         return ["Solid 320g Dome", "Mirror Finish", "Hexagonal MS"];
-      case "Corporate Gifts in Metal":
-        return ["Steel Coasters", "Card Cases", "VIP Hampers"];
-      case "Table Calendar":
+      case "Calendar":
         return ["Perpetual Steel", "365-Day Recall", "Standing Docks"];
       default:
         return ["Precision Tooling", "Laser Logo Ready", "Buffer Stock"];

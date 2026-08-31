@@ -103,7 +103,7 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     tags: ['Laser Marking', 'Custom Branding', 'Graphic Design and Printing', 'Metal Craftsmanship'],
-    relatedProductCategory: 'Corporate Gifts in Metal'
+    relatedProductCategory: ''
   },
   {
     id: 'blog-03',
@@ -152,7 +152,7 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     tags: ['Employee Recognition', 'HR Strategies', 'Leadership'],
-    relatedProductCategory: 'Desk Organiser'
+    relatedProductCategory: ''
   },
   {
     id: 'blog-04',
@@ -201,6 +201,6 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     tags: ['Bulk Corporate Gifts', 'Pan India Supply', 'Rajkot Manufacturing', 'Procurement Strategy'],
-    relatedProductCategory: 'Desk Organiser'
+    relatedProductCategory: ''
   }
 ];

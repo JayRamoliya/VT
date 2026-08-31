@@ -3,13 +3,12 @@ export type CategoryType =
   | 'Mobile Stand'
   | 'Coaster Set'
   | 'Desk Holder'
+  | 'Card Holder'
   | 'Noteped & Pen Holder'
+  | 'Noteped Holder'
   | 'Paper Weight'
   | 'Charging Stand'
-  | 'Desk Organiser'
-  | 'Calendar'
-  | 'Corporate Gifts in Metal'
-  | 'Premium Office Accessories';
+  | 'Calendar';
 
 export interface Product {
   id: string;

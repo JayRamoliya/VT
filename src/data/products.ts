@@ -5,13 +5,12 @@ export const CATEGORIES: CategoryType[] = [
   "Mobile Stand",
   "Coaster Set",
   "Desk Holder",
+  "Card Holder",
   "Noteped & Pen Holder",
+  "Noteped Holder",
   "Paper Weight",
   "Charging Stand",
-  "Desk Organiser",
   "Calendar",
-  "Corporate Gifts in Metal",
-  "Premium Office Accessories",
 ];
 
 export const PRODUCTS: Product[] = [
@@ -1226,8 +1225,7 @@ export const PRODUCTS: Product[] = [
     id: "vt-1001",
     slug: "metal-mobile-stand-1001",
     name: "Premium ATM & Visiting Card Holder",
-    category: "Mobile Stand",
-    
+    category: "Card Holder",
     itemCode: "VT-1001",
     height: "7mm",
     length: "56mm",
@@ -1295,8 +1293,7 @@ export const PRODUCTS: Product[] = [
     id: "vt-1002",
     slug: "metal-mobile-stand-1002",
     name: "Envelope Steel Table Card Holder",
-    category: "Mobile Stand",
-    
+    category: "Card Holder",
     itemCode: "VT-1002",
     height: "65mm",
     length: "16mm",
@@ -1361,8 +1358,7 @@ export const PRODUCTS: Product[] = [
     id: "vt-5101",
     slug: "metal-mobile-stand-5101",
     name: "Premium Stainless Steel Tea Coster",
-    category: "Mobile Stand",
-    
+    category: "Coaster Set",
     itemCode: "VT-5101",
     height: "-",
     length: "-",
@@ -1429,8 +1425,7 @@ export const PRODUCTS: Product[] = [
     id: "vt-5102",
     slug: "metal-mobile-stand-5102",
     name: "Stainless Steel Tea Coster",
-    category: "Mobile Stand",
-    
+    category: "Coaster Set",
     itemCode: "VT-5102",
     height: "-",
     length: "-",
@@ -1495,8 +1490,7 @@ export const PRODUCTS: Product[] = [
     id: "vt-5103",
     slug: "metal-mobile-stand-5103",
     name: "Stainless Steel Tea Coster",
-    category: "Mobile Stand",
-    
+    category: "Coaster Set",
     itemCode: "VT-5103",
     height: "-",
     length: "-",
@@ -2431,8 +2425,7 @@ export const PRODUCTS: Product[] = [
     id: "vt-7102",
     slug: "metal-mobile-stand-7102",
     name: "Metal Cover Noteped Holder",
-    category: "Mobile Stand",
-    
+    category: "Noteped Holder",
     itemCode: "VT-7102",
     height: "20mm",
     length: "150mm",
@@ -3448,16 +3441,6 @@ export const CATEGORY_DETAILS: Record<
     image:
       "https://images.unsplash.com/photo-1586953208448-b95a79798f07?q=80&w=900&auto=format&fit=crop",
   },
-  "Pen Stand": {
-    title: "Pen Stands & Holders",
-    subtitle: "Executive Revolving & Solid Steel Pen Barrels",
-    description:
-      "Heavyweight desk pen stands with 360-degree silent bearings, visiting card integration, and anti-scratch velvet lined bases.",
-    icon: "PenTool",
-    count: 7,
-    image:
-      "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?q=80&w=900&auto=format&fit=crop",
-  },
   "Paper Weight": {
     title: "Paper Weights",
     subtitle: "Solid Dome & Hexagonal Geometric Steel Weights",
@@ -3478,16 +3461,6 @@ export const CATEGORY_DETAILS: Record<
     image:
       "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?q=80&w=900&auto=format&fit=crop",
   },
-  "Desk Organiser": {
-    title: "Desk Organisers",
-    subtitle: "Multi-Compartment Steel Productivity Stations",
-    description:
-      "All-in-one corporate workstations consolidating phones, pens, cards, and paper clips into one unified metal centerpiece.",
-    icon: "LayoutGrid",
-    count: 7,
-    image:
-      "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=900&auto=format&fit=crop",
-  },
   "Table Calendar": {
     title: "Table Calendars",
     subtitle: "Perpetual Steel & Standing Metal Calendar Sets",
@@ -3497,25 +3470,5 @@ export const CATEGORY_DETAILS: Record<
     count: 5,
     image:
       "https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=900&auto=format&fit=crop",
-  },
-  "Corporate Gifts in Metal": {
-    title: "Corporate Gifts in Metal",
-    subtitle: "Card Cases, Coasters, Keychains & Executive Combos",
-    description:
-      "Curated metal gifting accessories manufactured for executive networking, exhibitions, and corporate onboarding packages.",
-    icon: "Gift",
-    count: 8,
-    image:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=900&auto=format&fit=crop",
-  },
-  "Premium Office Accessories": {
-    title: "Premium Office Accessories",
-    subtitle: "Bookends, Rulers, Card Dispensers & Desk Tools",
-    description:
-      "Precision metal office utility items built for architects, engineers, law firms, and high-functioning corporate desks.",
-    icon: "Briefcase",
-    count: 5,
-    image:
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=900&auto=format&fit=crop",
   },
 };

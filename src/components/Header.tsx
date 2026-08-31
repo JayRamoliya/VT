@@ -59,20 +59,12 @@ export const Header: React.FC<HeaderProps> = () => {
     switch (cat) {
       case "Mobile Stand":
         return <Smartphone className="w-4 h-4 text-[#DD2B1C]" />;
-      case "Pen Stand":
-        return <PenTool className="w-4 h-4 text-[#DD2B1C]" />;
       case "Paper Weight":
         return <Disc className="w-4 h-4 text-[#DD2B1C]" />;
       case "Notepad":
         return <BookOpen className="w-4 h-4 text-[#DD2B1C]" />;
-      case "Desk Organiser":
-        return <LayoutGrid className="w-4 h-4 text-[#DD2B1C]" />;
-      case "Table Calendar":
+      case "Calendar":
         return <Calendar className="w-4 h-4 text-[#DD2B1C]" />;
-      case "Corporate Gifts in Metal":
-        return <Gift className="w-4 h-4 text-[#DD2B1C]" />;
-      case "Premium Office Accessories":
-        return <Briefcase className="w-4 h-4 text-[#DD2B1C]" />;
       default:
         return <Gift className="w-4 h-4 text-[#DD2B1C]" />;
     }

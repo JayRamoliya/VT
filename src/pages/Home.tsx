@@ -157,10 +157,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
 
   const categoriesToShow: CategoryType[] = [
     "Mobile Stand",
-    "Pen Stand",
-    "Desk Organiser",
     "Paper Weight",
-    "Corporate Gifts in Metal",
   ];
 
   const handleCategoryClick = (category: CategoryType) => {
