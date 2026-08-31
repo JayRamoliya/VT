@@ -72,14 +72,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           loading="lazy"
         />
 
-        {/* Badges Over Image */}
-        <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
-          <span className="bg-[#151616]/90 backdrop-blur-xs text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider shadow-xs">
+        <div className="absolute bottom-2 right-2 flex flex-col gap-1 z-10">
+          <span className="bg-[#151616]/90 text-white text-[9px] font-semibold px-2 py-0.5 rounded uppercase tracking-wide">
             {product.category}
           </span>
+
           {product.laserMarkingAvailable && (
-            <span className="bg-[#DD2B1C] text-white text-[10px] font-bold px-2 py-0.5 rounded-md flex items-center gap-1 shadow-xs">
-              <Sparkles className="w-2.5 h-2.5" /> Laser Marking
+            <span className="bg-[#DD2B1C] text-white text-[9px] font-semibold px-2 py-0.5 rounded flex items-center gap-1">
+              <Sparkles className="w-2 h-2" />
+              Laser Marking
             </span>
           )}
         </div>
