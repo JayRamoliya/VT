@@ -287,8 +287,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
               </div>
             </div> */}
 
-            
-
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
               <div className="px-5 py-4 border-b border-gray-100 bg-gray-50">
                 <h3 className="text-sm font-bold text-[#151616] uppercase tracking-wider">
