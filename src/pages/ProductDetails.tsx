@@ -8,6 +8,7 @@ import {
   Layers,
   Boxes,
   Truck,
+  Package,
   ShieldCheck,
   Clock,
   Share2,
@@ -266,7 +267,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                 {product.shortDescription}
               </p> */}
             </div>
-
+{/* 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs bg-gray-50 p-4 rounded-2xl border border-gray-100">
               <div>
                 <span className="text-gray-400 block text-[10px] uppercase font-bold">
@@ -284,7 +285,9 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                   {product.estimatedLeadTime || "2-4 Days"}
                 </span>
               </div>
-            </div>
+            </div> */}
+
+            
 
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
               <div className="px-5 py-4 border-b border-gray-100 bg-gray-50">
@@ -311,25 +314,37 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
               </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
-              <div className="px-5 py-4 border-b border-gray-100 bg-gray-50">
-                <h3 className="text-sm font-bold text-[#151616] uppercase tracking-wider">
-                  Product Specifications
-                </h3>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-gradient-to-br from-red-50 to-white border border-red-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#DD2B1C]/10 flex items-center justify-center">
+                    <Package className="w-5 h-5 text-[#DD2B1C]" />
+                  </div>
+                  <div>
+                    <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold">
+                      MOQ
+                    </p>
+                    <p className="text-base font-bold text-[#DD2B1C]">
+                      {product.minOrderQty} Pieces
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4 p-5">
-                {specs.map((spec) => (
-                  <div
-                    key={spec.label}
-                    className="bg-gray-50 border border-gray-100 rounded-xl p-4"
-                  >
-                    <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">
-                      {spec.label}
-                    </p>
-                    <p className="font-semibold text-gray-900">{spec.value}</p>
+              <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">
+                    <Truck className="w-5 h-5 text-blue-600" />
                   </div>
-                ))}
+                  <div>
+                    <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold">
+                      Dispatch
+                    </p>
+                    <p className="text-base font-bold text-gray-800">
+                      {product.estimatedLeadTime || "2-4 Days"}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
