@@ -107,7 +107,7 @@ export const Header: React.FC<HeaderProps> = () => {
             <span className="text-gray-500">|</span>
             <span className="flex items-center gap-1 text-gray-300">
               <ShieldCheck className="w-3.5 h-3.5 text-[#DD2B1C]" />
-              UDYAM & GST Registered Manufacturer
+              UDYAM & GST Registered UNIT
             </span>
           </div>
 

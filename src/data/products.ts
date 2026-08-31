@@ -9,7 +9,7 @@ export const CATEGORIES: CategoryType[] = [
   "Paper Weight",
   "Charging Stand",
   "Desk Organiser",
-  "Table Calendar",
+  "Calendar",
   "Corporate Gifts in Metal",
   "Premium Office Accessories",
 ];
@@ -483,7 +483,6 @@ export const PRODUCTS: Product[] = [
     slug: "metal-mobile-stand-1408",
     name: "Metal Mobile Stand With Card Holder",
     category: "Mobile Stand",
-    
     itemCode: "VT-1408",
     height: "85mm",
     length: "95mm",
@@ -1562,8 +1561,7 @@ export const PRODUCTS: Product[] = [
     id: "vt-201",
     slug: "metal-mobile-stand-201",
     name: "Metal Paper Weight",
-    category: "Mobile Stand",
-    
+    category: "Paper Weight",
     itemCode: "VT-201",
     height: "-",
     length: "-",
@@ -1626,9 +1624,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "vt-124",
     slug: "metal-mobile-stand-124",
-    name: "Steel Life Time Calender With Clock And Month Plate (Small Size)",
-    category: "Mobile Stand",
-    
+    name: "Steel Life Time Calendar With Clock And Month Plate (Small Size)",
+    category: "Calendar",   
     itemCode: "VT-124",
     height: "100mm",
     length: "40mm",
@@ -1691,9 +1688,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "vt-125",
     slug: "metal-mobile-stand-125",
-    name: "Steel Life Time Calender With Month Plate (Small Size)",
-    category: "Mobile Stand",
-    
+    name: "Steel Life Time Calendar With Month Plate (Small Size)",
+    category: "Calendar",
     itemCode: "VT-125",
     height: "100mm",
     length: "40mm",
@@ -1756,9 +1752,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "vt-129",
     slug: "metal-mobile-stand-129",
-    name: "Steel Life Time Calender With Month Plate (Big Size)",
-    category: "Mobile Stand",
-    
+    name: "Steel Life Time Calendar With Month Plate (Big Size)",
+    category: "Calendar",
     itemCode: "VT-129",
     height: "140mm",
     length: "48mm",
@@ -1821,9 +1816,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "vt-130",
     slug: "metal-mobile-stand-130",
-    name: "Steel Life Time Calender With Clock & Month Plate (Big Size)",
-    category: "Mobile Stand",
-    
+    name: "Steel Life Time Calendar With Clock & Month Plate (Big Size)",
+    category: "Calendar",
     itemCode: "VT-130",
     height: "140mm",
     length: "48mm",
@@ -1886,9 +1880,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "vt-1301",
     slug: "metal-mobile-stand-1301",
-    name: "Steel Life Time Calender With Month Plate (Small Size)",
-    category: "Mobile Stand",
-    
+    name: "Steel Life Time Calendar With Month Plate (Small Size)",
+    category: "Calendar",
     itemCode: "VT-1301",
     height: "100mm",
     length: "40mm",
@@ -1952,9 +1945,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "vt-1302",
     slug: "metal-mobile-stand-1302",
-    name: "Steel Life Time Calender With Month Plate (Big Size)",
-    category: "Mobile Stand",
-    
+    name: "Steel Life Time Calendar With Month Plate (Big Size)",
+    category: "Calendar",
     itemCode: "VT-1302",
     height: "140mm",
     length: "48mm",
@@ -2019,9 +2011,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "vt-1303",
     slug: "metal-mobile-stand-1303",
-    name: "Steel Life Time Calender With Watch & Month Display (Big Size)",
-    category: "Mobile Stand",
-    
+    name: "Steel Life Time Calendar With Watch & Month Display (Big Size)",
+    category: "Calendar",
     itemCode: "VT-1303",
     height: "140mm",
     length: "48mm",
@@ -2086,9 +2077,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "vt-1304",
     slug: "metal-mobile-stand-1304",
-    name: "Steel Life Time Calender With Month Display (Big Size)",
-    category: "Mobile Stand",
-    
+    name: "Steel Life Time Calendar With Month Display (Big Size)",
+    category: "Calendar",
     itemCode: "VT-1304",
     height: "140mm",
     length: "48mm",
@@ -2151,9 +2141,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "vt-1305",
     slug: "metal-mobile-stand-1305",
-    name: "Steel Life Time Calender With Sliding Month Display (Big Size)",
-    category: "Mobile Stand",
-    
+    name: "Steel Life Time Calendar With Sliding Month Display (Big Size)",
+    category: "Calendar",
     itemCode: "VT-1305",
     height: "140mm",
     length: "48mm",
@@ -2217,16 +2206,15 @@ export const PRODUCTS: Product[] = [
   {
     id: "vt-3101",
     slug: "metal-mobile-stand-3101",
-    name: "Premium Steel Jula Calender",
-    category: "Mobile Stand",
-    
+    name: "Premium Steel Jula Calendar",
+    category: "Calendar",
     itemCode: "VT-3101",
     height: "195mm",
     length: "50mm",
     width: "200mm",
     diameter: "-",
     plate: "-",
-    weight: "330 grams With paper calender",
+    weight: "330 grams With paper calendar",
     ss: "-",
     material: "SS",
     thickness: "0.8 mm",
@@ -2281,9 +2269,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "vt-126",
     slug: "metal-mobile-stand-126",
-    name: "Steel Life Time Calender With Pen Holder",
-    category: "Mobile Stand",
-    
+    name: "Steel Life Time Calendar With Pen Holder",
+    category: "Calendar",
     itemCode: "VT-126",
     height: "100mm",
     length: "42mm",
@@ -2349,8 +2336,7 @@ export const PRODUCTS: Product[] = [
     id: "vt-202",
     slug: "metal-mobile-stand-202",
     name: "Golden Bar Paper Weight",
-    category: "Mobile Stand",
-    
+    category: "Paper Weight",
     itemCode: "VT-202",
     height: "12mm",
     length: "80mm",

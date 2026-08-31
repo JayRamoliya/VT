@@ -7,7 +7,7 @@ export type CategoryType =
   | 'Paper Weight'
   | 'Charging Stand'
   | 'Desk Organiser'
-  | 'Table Calendar'
+  | 'Calendar'
   | 'Corporate Gifts in Metal'
   | 'Premium Office Accessories';
 
