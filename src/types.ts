@@ -23,6 +23,8 @@ export interface Product {
   length: string;
   width: string;
   weight: string;
+  diameter: string;
+  plate: string;
   ss: string;
   thickness: string;
   minOrderQty: number; // e.g. 100 pcs

@@ -62,7 +62,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
   const [activeTab, setActiveTab] = useState<
     "description" | "specifications" | "customisation" | "faq"
   >("description");
-  const [orderVolume, setOrderVolume] = useState<string>("100 - 250 pcs");
+  const [orderVolume, setOrderVolume] = useState<string>("100 - 500 pcs");
 
   // Update selected image whenever product changes
   useEffect(() => {
@@ -338,7 +338,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                 Select Your Required Corporate Volume:
               </label>
               <div className="grid grid-cols-3 gap-2 text-xs">
-                {["100 - 250 pcs", "250 - 1000 pcs", "1000+ pcs"].map(
+                {["100 - 500 pcs", "500 - 1000 pcs", "1000+ pcs"].map(
                   (tier) => (
                     <button
                       key={tier}
