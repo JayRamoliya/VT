@@ -201,7 +201,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                     <img
                       src={img}
                       alt={`${product.name} angle ${idx + 1}`}
-                      className="w-full h-full object-cover rounded-lg"
+                      className="w-full h-full object-contain rounded-lg"
                     />
                   </button>
                 ))}
