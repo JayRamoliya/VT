@@ -84,11 +84,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           )}
         </div>
 
-        {/* Ready Stock Indicator */}
-        <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-xs text-[#151616] text-[10px] font-bold px-2.5 py-1 rounded-md border border-gray-200 shadow-xs flex items-center gap-1">
+        {/* <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-xs text-[#151616] text-[10px] font-bold px-2.5 py-1 rounded-md border border-gray-200 shadow-xs flex items-center gap-1">
           <Box className="w-3 h-3 text-green-600" />
           <span>Ready Stock</span>
-        </div>
+        </div> */}
       </div>
 
       {/* Product Content */}

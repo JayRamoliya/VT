@@ -72,15 +72,30 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
     }
   }, [product]);
 
+  // const specs = [
+  //   { label: "Height", value: product.height },
+  //   { label: "Length", value: product.length },
+  //   { label: "Width", value: product.width },
+  //   { label: "Weight", value: product.weight },
+  //   { label: "S.S. Weight", value: product.ss },
+  //   { label: "Material", value: product.material },
+  //   { label: "Thickness", value: product.thickness },
+  // ].filter((item) => item.value);
+
   const specs = [
     { label: "Height", value: product.height },
     { label: "Length", value: product.length },
     { label: "Width", value: product.width },
+    { label: "Diameter", value: product.diameter },
+    { label: "Plate", value: product.plate },
     { label: "Weight", value: product.weight },
     { label: "S.S. Weight", value: product.ss },
     { label: "Material", value: product.material },
     { label: "Thickness", value: product.thickness },
-  ].filter((item) => item.value);
+  ].filter(
+    (item) =>
+      item.value && item.value !== "-" && item.value.toString().trim() !== "",
+  );
 
   if (!product) {
     return (
@@ -267,7 +282,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                 {product.shortDescription}
               </p> */}
             </div>
-{/* 
+            {/* 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs bg-gray-50 p-4 rounded-2xl border border-gray-100">
               <div>
                 <span className="text-gray-400 block text-[10px] uppercase font-bold">

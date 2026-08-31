@@ -1,9 +1,11 @@
 export type CategoryType = 
   | 'All'
   | 'Mobile Stand'
-  | 'Pen Stand'
+  | 'Coaster Set'
+  | 'Desk Holder'
+  | 'Noteped & Pen Holder'
   | 'Paper Weight'
-  | 'Notepad'
+  | 'Charging Stand'
   | 'Desk Organiser'
   | 'Table Calendar'
   | 'Corporate Gifts in Metal'
@@ -14,7 +16,6 @@ export interface Product {
   slug: string;
   name: string;
   category: CategoryType;
-  subcategory?: string;
   itemCode: string;
   material: string;
   finish: string;

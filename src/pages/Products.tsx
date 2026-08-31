@@ -117,8 +117,7 @@ export const Products: React.FC<ProductsProps> = ({
         const matchCode = product.itemCode.toLowerCase().includes(query);
         const matchCat = product.category.toLowerCase().includes(query);
         const matchMat = product.material.toLowerCase().includes(query);
-        const matchSub = product.subcategory?.toLowerCase().includes(query);
-        if (!matchName && !matchCode && !matchCat && !matchMat && !matchSub) {
+        if (!matchName && !matchCode && !matchCat && !matchMat) {
           return false;
         }
       }
@@ -354,23 +353,6 @@ export const Products: React.FC<ProductsProps> = ({
                   <span>Laser Marking Ready</span>
                 </label>
               </div>
-
-              {/* Custom RFQ Prompt */}
-              <div className="bg-red-50 p-4 rounded-xl border border-red-100 text-xs">
-                <span className="font-bold text-[#DD2B1C] block mb-1">
-                  Need Custom Metal Fabrication?
-                </span>
-                <p className="text-gray-600 text-[11px] leading-relaxed">
-                  We manufacture custom metal corporate awards and bespoke thickness sheets for 500+ piece orders.
-                </p>
-                <button
-                  onClick={() => openQuoteModal()}
-                  className="mt-3 w-full bg-[#151616] hover:bg-[#DD2B1C] text-white py-1.5 rounded-lg font-bold text-[11px] transition-colors cursor-pointer"
-                >
-                  Inquire Custom Design
-                </button>
-              </div>
-
             </div>
           </aside>
 
