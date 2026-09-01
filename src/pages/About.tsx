@@ -250,7 +250,7 @@ export const About: React.FC<AboutProps> = ({
     },
     {
       name: "34",
-      logo: "/clients/05 indo brine industries`.webp",
+      logo: "/clients/05 indo brine industries.webp",
     },
     {
       name: "35",
