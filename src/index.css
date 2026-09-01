@@ -91,3 +91,39 @@ body::-webkit-scrollbar,
 *::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+
+
+
+
+
+
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slideLeft 22s linear infinite;
+}
+
+.animate-slide-right {
+  animation: slideRight 25s linear infinite;
+}
+
+.animate-slide-left-slow {
+  animation: slideLeft 28s linear infinite;
+}

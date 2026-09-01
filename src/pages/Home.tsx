@@ -153,6 +153,62 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
       name: "17",
       logo: "/clients/17.webp",
     },
+    {
+      name: "18",
+      logo: "/clients/18 creanza tiles.webp",
+    },
+    {
+      name: "19",
+      logo: "/clients/19 metro tiles.webp",
+    },
+    {
+      name: "20",
+      logo: "/clients/20 colortiles.webp",
+    },
+    {
+      name: "21",
+      logo: "/clients/21 eracon vitrified.webp",
+    },
+    {
+      name: "22",
+      logo: "/clients/22 itaca tiles.webp",
+    },
+    {
+      name: "23",
+      logo: "/clients/23 jk more.webp",
+    },
+    {
+      name: "24",
+      logo: "/clients/24 ambani vitrified.webp",
+    },
+    {
+      name: "25",
+      logo: "/clients/25 gc tiles.webp",
+    },
+    {
+      name: "26",
+      logo: "/clients/26 kabir tiles.webp",
+    },
+    {
+      name: "27",
+      logo: "/clients/27 ck tiles.webp",
+    },
+    {
+      name: "28",
+      logo: "/clients/28 ceramic junction.webp",
+    },
+    {
+      name: "29",
+      logo: "/clients/29.webp",
+    },
+    {
+      name: "30",
+      logo: "/clients/30.webp",
+    },
+    {
+      name: "31",
+      logo: "/clients/31.webp",
+    },
   ];
 
   const categoriesToShow: CategoryType[] = [

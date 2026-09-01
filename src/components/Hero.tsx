@@ -56,7 +56,7 @@ export const Hero: React.FC<HeroProps> = ({
       material: 'SS 304 Solid Stainless Steel',
       finish: 'Satin Brushed with Anti-Fingerprint Layer',
       readyStock: '1000+ Cartons Ready Stock',
-      image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?q=80&w=1200&auto=format&fit=crop',
+      image: '/image/VT-1101/vt-1101-ms.webp',
       badge: 'Bestselling Corporate Gift'
     },
     'pen-stand': {
@@ -65,18 +65,9 @@ export const Hero: React.FC<HeroProps> = ({
       material: 'Heavy Mild Steel + Brass Bearing Core',
       finish: 'Matte Anthracite Black',
       readyStock: '1200+ Cartons Ready Stock',
-      image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?q=80&w=1200&auto=format&fit=crop',
+      image: '/image/VT-207/vt-207-ms.webp',
       badge: 'Executive Desk Essential'
     },
-    'combo': {
-      title: '5-in-1 Master Steel Desktop Productivity Hub',
-      code: 'VT-DO-01',
-      material: 'AISI 304 Stainless Steel & MS Dual Core',
-      finish: 'Dual-Tone Mirror & Brushed Finish',
-      readyStock: '450+ Cartons Ready Stock',
-      image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop',
-      badge: 'VIP Welcome Kit'
-    }
   };
 
   const currentItem = heroShowcaseItems[activeTab];
@@ -89,10 +80,8 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Column: Corporate Brand Pitch - Fade Up */}
           <div className="lg:col-span-7 space-y-6">
-            
-            {/* Manufacturing Tagline Pill Badge */}
+          
             <motion.div 
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -198,7 +187,7 @@ export const Hero: React.FC<HeroProps> = ({
                   }`}
                 >
                   <Smartphone className="w-3.5 h-3.5" />
-                  <span>Stand</span>
+                  <span>Mobile Stand</span>
                 </button>
                 <button
                   onClick={() => setActiveTab('pen-stand')}
@@ -207,7 +196,7 @@ export const Hero: React.FC<HeroProps> = ({
                   }`}
                 >
                   <PenTool className="w-3.5 h-3.5" />
-                  <span>Pen Caddy</span>
+                  <span>Paper Weight</span>
                 </button>
               </div>
 
@@ -226,15 +215,15 @@ export const Hero: React.FC<HeroProps> = ({
                     <img 
                       src={currentItem.image} 
                       alt={currentItem.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                       loading="eager"
                     />
-                    <div className="absolute top-3 left-3 bg-[#151616]/90 backdrop-blur-xs text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">
+                    {/* <div className="absolute top-3 left-3 bg-[#151616]/90 backdrop-blur-xs text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">
                       {currentItem.badge}
-                    </div>
-                    <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-xs text-[#151616] text-[10px] font-bold px-2.5 py-1 rounded-md border border-gray-200 shadow-sm">
+                    </div> */}
+                    {/* <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-xs text-[#151616] text-[10px] font-bold px-2.5 py-1 rounded-md border border-gray-200 shadow-sm">
                       {currentItem.readyStock}
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* <div>
