@@ -15,7 +15,7 @@ export const MainLayout: React.FC = () => {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-white text-[#151616] flex flex-col font-sans selection:bg-[#DD2B1C] selection:text-white relative">
+    <div className="min-h-screen bg-white text-[#151616] flex flex-col font-sans selection:bg-[#007BFF] selection:text-white relative">
       {/* Scroll to Top Manager on route changes */}
       <ScrollToTop />
 

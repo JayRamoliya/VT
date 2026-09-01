@@ -97,7 +97,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <div className="mt-8 pt-6 border-t border-gray-100 flex flex-wrap items-center justify-center gap-3">
           <button
             onClick={handleWhatsAppDirect}
-            className="bg-[#DD2B1C] hover:bg-[#b82215] text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-sm"
+            className="bg-[#007BFF] hover:bg-[#b82215] text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-sm"
           >
             <MessageSquare className="w-4 h-4" />
             <span>Connect on WhatsApp for Instant Rate</span>
@@ -136,7 +136,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-bold uppercase text-gray-700 mb-1.5">
-              Your Full Name <span className="text-[#DD2B1C]">*</span>
+              Your Full Name <span className="text-[#007BFF]">*</span>
             </label>
             <input
               type="text"
@@ -144,13 +144,13 @@ export const ContactForm: React.FC<ContactFormProps> = ({
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               placeholder="e.g. Rajesh Sharma"
-              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#DD2B1C] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#007BFF] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all"
             />
           </div>
 
           <div>
             <label className="block text-xs font-bold uppercase text-gray-700 mb-1.5">
-              Company / Organisation <span className="text-[#DD2B1C]">*</span>
+              Company / Organisation <span className="text-[#007BFF]">*</span>
             </label>
             <input
               type="text"
@@ -158,7 +158,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
               value={formData.company}
               onChange={(e) => setFormData({ ...formData, company: e.target.value })}
               placeholder="e.g. Acme Technologies Pvt Ltd"
-              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#DD2B1C] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#007BFF] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all"
             />
           </div>
         </div>
@@ -167,7 +167,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-bold uppercase text-gray-700 mb-1.5">
-              Phone / WhatsApp Number <span className="text-[#DD2B1C]">*</span>
+              Phone / WhatsApp Number <span className="text-[#007BFF]">*</span>
             </label>
             <input
               type="tel"
@@ -175,13 +175,13 @@ export const ContactForm: React.FC<ContactFormProps> = ({
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               placeholder="e.g. +91 98765 43210"
-              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#DD2B1C] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#007BFF] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all"
             />
           </div>
 
           <div>
             <label className="block text-xs font-bold uppercase text-gray-700 mb-1.5">
-              Corporate Email Address <span className="text-[#DD2B1C]">*</span>
+              Corporate Email Address <span className="text-[#007BFF]">*</span>
             </label>
             <input
               type="email"
@@ -189,7 +189,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               placeholder="e.g. procurement@acme.com"
-              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#DD2B1C] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#007BFF] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all"
             />
           </div>
         </div>
@@ -198,7 +198,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-bold uppercase text-gray-700 mb-1.5">
-              Delivery City / State / Country <span className="text-[#DD2B1C]">*</span>
+              Delivery City / State / Country <span className="text-[#007BFF]">*</span>
             </label>
             <input
               type="text"
@@ -206,7 +206,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
               value={formData.city}
               onChange={(e) => setFormData({ ...formData, city: e.target.value })}
               placeholder="e.g. Mumbai, Bengaluru, Dubai, etc."
-              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#DD2B1C] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#007BFF] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all"
             />
           </div>
 
@@ -217,7 +217,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             <select
               value={formData.category}
               onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#DD2B1C] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all bg-white"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#007BFF] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all bg-white"
             >
               {CATEGORIES.filter(c => c !== 'All').map(cat => (
                 <option key={cat} value={cat}>{cat}</option>
@@ -235,7 +235,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             <select
               value={formData.quantity}
               onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#DD2B1C] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all bg-white"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#007BFF] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all bg-white"
             >
               <option value="100 - 250 pcs">100 - 250 pcs (Standard Tier)</option>
               <option value="250 - 500 pcs">250 - 500 pcs (Executive Tier)</option>
@@ -252,7 +252,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             <select
               value={formData.laserMarking}
               onChange={(e) => setFormData({ ...formData, laserMarking: e.target.value })}
-              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#DD2B1C] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all bg-white"
+              className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#007BFF] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all bg-white"
             >
               <option value="Yes, need company logo laser marked">Yes, need Company Logo Laser Marked</option>
               <option value="Yes, logo + individual recipient names">Yes, Logo + Individual Employee Names</option>
@@ -266,7 +266,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           <label className="block text-xs font-bold uppercase text-gray-700 mb-1.5">
             Upload Logo for Mockup (Optional - AI, CDR, PDF, PNG, JPG)
           </label>
-          <div className="border-2 border-dashed border-gray-300 rounded-xl p-4 text-center hover:border-[#DD2B1C] transition-colors cursor-pointer relative bg-gray-50/50">
+          <div className="border-2 border-dashed border-gray-300 rounded-xl p-4 text-center hover:border-[#007BFF] transition-colors cursor-pointer relative bg-gray-50/50">
             <input
               type="file"
               accept=".png,.jpg,.jpeg,.svg,.pdf,.ai,.cdr"
@@ -300,7 +300,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             placeholder="e.g. Required by Oct 15 for Annual Dealer Meet in Goa. Please include individual gift box packaging."
-            className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#DD2B1C] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all resize-none"
+            className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#007BFF] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all resize-none"
           />
         </div>
       </div>
@@ -311,7 +311,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           type="submit"
           disabled={isSubmitting}
           id="submit-rfq-btn"
-          className="w-full sm:w-auto bg-[#DD2B1C] hover:bg-[#b82215] text-white px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
+          className="w-full sm:w-auto bg-[#007BFF] hover:bg-[#b82215] text-white px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
         >
           {isSubmitting ? (
             <span>Processing Quotation...</span>

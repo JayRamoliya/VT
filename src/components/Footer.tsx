@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
         {/* Top Corporate Assurance Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pb-12 border-b border-neutral-800">
           <div className="flex items-start gap-3.5">
-            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[#DD2B1C]">
+            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[#007BFF]">
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-start gap-3.5">
-            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[#DD2B1C]">
+            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[#007BFF]">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-start gap-3.5">
-            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[#DD2B1C]">
+            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[#007BFF]">
               <Globe className="w-5 h-5" />
             </div>
             <div>
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-start gap-3.5">
-            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[#DD2B1C]">
+            <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[#007BFF]">
               <FileCheck className="w-5 h-5" />
             </div>
             <div>
@@ -77,12 +77,12 @@ export const Footer: React.FC = () => {
           {/* Brand Info Column */}
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-white text-[#151616] flex items-center justify-center font-black text-xl rounded-lg tracking-wider border-2 border-[#DD2B1C]">
-                <span className="text-[#DD2B1C]">V</span>T
+              <div className="w-10 h-10 bg-white text-[#151616] flex items-center justify-center font-black text-xl rounded-lg tracking-wider border-2 border-[#007BFF]">
+                <span className="text-[#007BFF]">V</span>T
               </div>
               <div>
                 <span className="block font-black text-xl tracking-tight text-white leading-none">
-                  VARAIA <span className="text-[#DD2B1C]">TRADERS</span>
+                  VARAIA <span className="text-[#007BFF]">TRADERS</span>
                 </span>
                 <span className="block text-[11px] font-semibold text-gray-400 uppercase tracking-wider mt-0.5">
                   Quality that Impresses. Speed that Delivers.
@@ -97,17 +97,17 @@ export const Footer: React.FC = () => {
             {/* Direct Contact Cards */}
             <div className="pt-2 space-y-2 text-xs text-gray-300">
               <div className="flex items-center gap-2.5">
-                <MapPin className="w-4 h-4 text-[#DD2B1C] flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-[#007BFF] flex-shrink-0" />
                 <span>Aji Industrial Area, GIDC, Rajkot - 360003, Gujarat, India</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#DD2B1C] flex-shrink-0" />
+                <Phone className="w-4 h-4 text-[#007BFF] flex-shrink-0" />
                 <a href="tel:+917567999989" className="hover:text-white font-semibold">
                   +91 75679 99989 (Direct Sales & Bulk Desk)
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#DD2B1C] flex-shrink-0" />
+                <Mail className="w-4 h-4 text-[#007BFF] flex-shrink-0" />
                 <a href="mailto:jignesh@varaiatraders.com" className="hover:text-white">
                   jignesh@varaiatraders.com
                 </a>
@@ -122,27 +122,27 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs text-gray-400">
               <li>
-                <Link to="/about" className="hover:text-[#DD2B1C] transition-colors">
+                <Link to="/about" className="hover:text-[#007BFF] transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="hover:text-[#DD2B1C] transition-colors">
+                <Link to="/gallery" className="hover:text-[#007BFF] transition-colors">
                   Client Showcase & Gallery
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="hover:text-[#DD2B1C] transition-colors">
+                <Link to="/blog" className="hover:text-[#007BFF] transition-colors">
                   Corporate Gifting Insights
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-[#DD2B1C] transition-colors">
+                <Link to="/about" className="hover:text-[#007BFF] transition-colors">
                   Manufacturing Plant Infrastructure
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-[#DD2B1C] transition-colors">
+                <Link to="/about" className="hover:text-[#007BFF] transition-colors">
                   Quality Assurance & Metallurgy
                 </Link>
               </li>
@@ -159,7 +159,7 @@ export const Footer: React.FC = () => {
                 <li key={cat}>
                   <Link 
                     to={`/products?category=${encodeURIComponent(cat)}`}
-                    className="hover:text-[#DD2B1C] transition-colors truncate max-w-full block text-left"
+                    className="hover:text-[#007BFF] transition-colors truncate max-w-full block text-left"
                   >
                     {cat}
                   </Link>
@@ -168,7 +168,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link 
                   to="/products"
-                  className="text-[#DD2B1C] font-semibold hover:underline flex items-center gap-1"
+                  className="text-[#007BFF] font-semibold hover:underline flex items-center gap-1"
                 >
                   View All 57+ Items <ArrowUpRight className="w-3 h-3" />
                 </Link>
@@ -183,18 +183,18 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs text-gray-400">
               <li>
-                <Link to="/contact" className="hover:text-[#DD2B1C] transition-colors">
+                <Link to="/contact" className="hover:text-[#007BFF] transition-colors">
                   Contact Sales Office
                 </Link>
               </li>
               <li>
-                <button onClick={() => openQuoteModal()} className="hover:text-[#DD2B1C] transition-colors cursor-pointer">
+                <button onClick={() => openQuoteModal()} className="hover:text-[#007BFF] transition-colors cursor-pointer">
                   Bulk Order RFQ (100+ pcs)
                 </button>
               </li>
               <li>
-                <button onClick={openCatalogueModal} className="hover:text-[#DD2B1C] transition-colors cursor-pointer flex items-center gap-1.5">
-                  <Download className="w-3 h-3 text-[#DD2B1C]" />
+                <button onClick={openCatalogueModal} className="hover:text-[#007BFF] transition-colors cursor-pointer flex items-center gap-1.5">
+                  <Download className="w-3 h-3 text-[#007BFF]" />
                   Download PDF Catalogue
                 </button>
               </li>

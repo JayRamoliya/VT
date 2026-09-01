@@ -127,7 +127,7 @@ export const SectionDivider: React.FC<{ className?: string }> = ({ className = '
         transition={{ duration: 0.8, ease: corporateEase }}
         className="max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent relative flex items-center justify-center"
       >
-        <span className="w-2 h-2 rounded-full bg-[#DD2B1C]/40 absolute" />
+        <span className="w-2 h-2 rounded-full bg-[#007BFF]/40 absolute" />
       </motion.div>
     </div>
   );

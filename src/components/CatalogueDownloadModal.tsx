@@ -61,7 +61,7 @@ export const CatalogueDownloadModal: React.FC = () => {
             {/* Header */}
             <div className="bg-[#151616] text-white p-6 relative">
               <div className="flex items-center justify-between">
-                <div className="inline-flex items-center gap-1.5 bg-[#DD2B1C] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">
+                <div className="inline-flex items-center gap-1.5 bg-[#007BFF] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">
                   <Sparkles className="w-3 h-3" />
                   <span>2026 Master Catalogue</span>
                 </div>
@@ -117,7 +117,7 @@ export const CatalogueDownloadModal: React.FC = () => {
                       placeholder="e.g. Vikram Mehta"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] focus:border-transparent outline-hidden"
+                      className="w-full px-3.5 py-2.5 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] focus:border-transparent outline-hidden"
                     />
                   </div>
 
@@ -133,7 +133,7 @@ export const CatalogueDownloadModal: React.FC = () => {
                         placeholder="e.g. Reliance Industries, Infosys"
                         value={company}
                         onChange={(e) => setCompany(e.target.value)}
-                        className="w-full pl-9 pr-3.5 py-2.5 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] focus:border-transparent outline-hidden"
+                        className="w-full pl-9 pr-3.5 py-2.5 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] focus:border-transparent outline-hidden"
                       />
                     </div>
                   </div>
@@ -151,7 +151,7 @@ export const CatalogueDownloadModal: React.FC = () => {
                           placeholder="+91 98765 43210"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          className="w-full pl-9 pr-3 py-2.5 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] focus:border-transparent outline-hidden"
+                          className="w-full pl-9 pr-3 py-2.5 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] focus:border-transparent outline-hidden"
                         />
                       </div>
                     </div>
@@ -167,7 +167,7 @@ export const CatalogueDownloadModal: React.FC = () => {
                           placeholder="vikram@company.com"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          className="w-full pl-9 pr-3 py-2.5 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] focus:border-transparent outline-hidden"
+                          className="w-full pl-9 pr-3 py-2.5 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] focus:border-transparent outline-hidden"
                         />
                       </div>
                     </div>
@@ -178,7 +178,7 @@ export const CatalogueDownloadModal: React.FC = () => {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       type="submit"
-                      className="w-full bg-[#DD2B1C] hover:bg-[#b82215] text-white py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-md cursor-pointer"
+                      className="w-full bg-[#007BFF] hover:bg-[#b82215] text-white py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-md cursor-pointer"
                     >
                       <Download className="w-4 h-4" />
                       <span>Download PDF Brochure (57+ Items)</span>

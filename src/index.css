@@ -4,10 +4,19 @@
 
 :root {
   --text-xs: 0.8rem;
+  --color-red-50: oklch(97.8% 0.020 250);
+  --color-red-100: oklch(95.0% 0.040 250);
+  --color-red-200: oklch(89.5% 0.075 252);
+  --color-red-400: oklch(72.0% 0.180 255);
+  --color-red-500: oklch(62.0% 0.220 258);
+  --color-red-600: oklch(54.0% 0.210 260);
+  --color-red-800: oklch(40.0% 0.160 262);
+  --color-red-950: oklch(24.0% 0.090 265);
 }
 
 
 @layer base {
+
   html,
   body {
     font-family: "Google Sans", system-ui, sans-serif !important;
@@ -36,7 +45,8 @@
     font-weight: 400;
   }
 
-  span, p {
+  span,
+  p {
     font-family: "Google Sans", system-ui, sans-serif !important;
     font-weight: 400;
   }
@@ -62,7 +72,8 @@
   }
 }
 
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -87,20 +98,26 @@ html.lenis, html.lenis body {
   width: 8px;
   height: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f8f9fa;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #d1d5db;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #DD2B1C;
+  background: #007BFF;
 }
 
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
+
+  *,
+  ::before,
+  ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -121,14 +138,17 @@ html.lenis, html.lenis body {
 /* Hide scrollbar for all browsers */
 html,
 body {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
 }
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar,
 *::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 

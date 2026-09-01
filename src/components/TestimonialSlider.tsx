@@ -28,7 +28,7 @@ export const TestimonialSlider: React.FC = () => {
           transition={{ duration: 0.55, ease: corporateEase }}
           className="text-center max-w-3xl mx-auto mb-14"
         >
-          <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
             Corporate Trust & Excellence
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#151616] tracking-tight">
@@ -89,7 +89,7 @@ export const TestimonialSlider: React.FC = () => {
                 <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 text-left sm:text-right shadow-2xs">
                   <span className="block text-[10px] font-bold text-gray-500 uppercase">Product Supplied</span>
                   <span className="block text-xs font-bold text-[#151616]">{current.productSupplied}</span>
-                  <span className="block text-[11px] font-bold text-[#DD2B1C] mt-0.5">Order Batch: {current.orderVolume}</span>
+                  <span className="block text-[11px] font-bold text-[#007BFF] mt-0.5">Order Batch: {current.orderVolume}</span>
                 </div>
               </div>
             </motion.div>
@@ -103,7 +103,7 @@ export const TestimonialSlider: React.FC = () => {
                   key={i}
                   onClick={() => setCurrentIndex(i)}
                   className={`h-2 rounded-full transition-all cursor-pointer ${
-                    currentIndex === i ? 'w-8 bg-[#DD2B1C]' : 'w-2 bg-gray-300 hover:bg-gray-400'
+                    currentIndex === i ? 'w-8 bg-[#007BFF]' : 'w-2 bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to slide ${i + 1}`}
                 />
@@ -124,7 +124,7 @@ export const TestimonialSlider: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={nextSlide}
-                className="w-10 h-10 rounded-full bg-[#151616] hover:bg-[#DD2B1C] flex items-center justify-center text-white transition-colors cursor-pointer"
+                className="w-10 h-10 rounded-full bg-[#151616] hover:bg-[#007BFF] flex items-center justify-center text-white transition-colors cursor-pointer"
                 aria-label="Next testimonial"
               >
                 <ChevronRight className="w-5 h-5" />
@@ -151,7 +151,7 @@ export const TestimonialSlider: React.FC = () => {
                 key={idx}
                 className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-gray-200 text-xs font-bold text-gray-600 shadow-2xs hover:border-gray-300 transition-colors"
               >
-                <Building className="w-3.5 h-3.5 text-[#DD2B1C]" />
+                <Building className="w-3.5 h-3.5 text-[#007BFF]" />
                 <span>{name}</span>
               </motion.div>
             ))}

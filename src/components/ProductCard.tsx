@@ -78,7 +78,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </span>
 
           {product.laserMarkingAvailable && (
-            <span className="bg-[#DD2B1C] text-white text-[9px] font-semibold px-2 py-0.5 rounded flex items-center gap-1">
+            <span className="bg-[#007BFF] text-white text-[9px] font-semibold px-2 py-0.5 rounded flex items-center gap-1">
               <Sparkles className="w-2 h-2" />
               Laser Marking
             </span>
@@ -99,13 +99,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             <span className="font-mono bg-gray-100 px-2 py-0.5 rounded text-[11px] text-gray-700 font-bold">
               {product.itemCode}
             </span>
-            <span className="text-[#DD2B1C] font-bold">
+            <span className="text-[#007BFF] font-bold">
               MOQ: {product.minOrderQty} pcs
             </span>
           </div>
 
           {/* Product Title */}
-          <h3 className="font-bold text-sm sm:text-base text-[#151616] group-hover:text-[#DD2B1C] transition-colors duration-200 line-clamp-2 leading-snug">
+          <h3 className="font-bold text-sm sm:text-base text-[#151616] group-hover:text-[#007BFF] transition-colors duration-200 line-clamp-2 leading-snug">
             {product.name}
           </h3>
 
@@ -129,7 +129,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={handleQuoteClick}
-            className="w-full bg-[#151616] hover:bg-[#DD2B1C] text-white py-2 px-2.5 rounded-xl text-xs font-bold transition-colors duration-250 flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs"
+            className="w-full bg-[#151616] hover:bg-[#007BFF] text-white py-2 px-2.5 rounded-xl text-xs font-bold transition-colors duration-250 flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs"
             title="Add to Bulk RFQ"
           >
             <FileText className="w-3.5 h-3.5" />

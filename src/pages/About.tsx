@@ -57,32 +57,32 @@ export const About: React.FC<AboutProps> = ({
   const specialisations = [
     {
       name: "Mobile Stands",
-      icon: <Smartphone className="w-5 h-5 text-[#DD2B1C]" />,
+      icon: <Smartphone className="w-5 h-5 text-[#007BFF]" />,
       desc: "Ergonomic 304 stainless steel and mild steel smartphone & tablet holders.",
     },
     {
       name: "Pen Stands",
-      icon: <PenTool className="w-5 h-5 text-[#DD2B1C]" />,
+      icon: <PenTool className="w-5 h-5 text-[#007BFF]" />,
       desc: "360° revolving executive caddies with brass bearings and felt bases.",
     },
     {
       name: "Paper Weights",
-      icon: <Disc className="w-5 h-5 text-[#DD2B1C]" />,
+      icon: <Disc className="w-5 h-5 text-[#007BFF]" />,
       desc: "Solid 320g dome & geometric steel weights with mirror and brushed finishes.",
     },
     {
       name: "Notepads & Memo Docks",
-      icon: <BookOpen className="w-5 h-5 text-[#DD2B1C]" />,
+      icon: <BookOpen className="w-5 h-5 text-[#007BFF]" />,
       desc: "Refillable steel-cased memo pads and desk sticky note dispensers.",
     },
     {
       name: "Desk Accessories",
-      icon: <LayoutGrid className="w-5 h-5 text-[#DD2B1C]" />,
+      icon: <LayoutGrid className="w-5 h-5 text-[#007BFF]" />,
       desc: "5-in-1 multi-productivity hubs, metal bookends, and perpetual calendars.",
     },
     {
       name: "Business Gifts",
-      icon: <Briefcase className="w-5 h-5 text-[#DD2B1C]" />,
+      icon: <Briefcase className="w-5 h-5 text-[#007BFF]" />,
       desc: "Visiting card cases, steel coaster sets, and metal gift combos.",
     },
   ];
@@ -432,7 +432,7 @@ export const About: React.FC<AboutProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block">
                 Manufacturing Legacy & Precision Engineering
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#151616] tracking-tight leading-tight">
@@ -457,7 +457,7 @@ export const About: React.FC<AboutProps> = ({
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <button
                   onClick={() => openQuoteModal()}
-                  className="bg-[#DD2B1C] hover:bg-[#b82215] text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
+                  className="bg-[#007BFF] hover:bg-[#b82215] text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
                 >
                   Request Bulk Quotation
                 </button>
@@ -465,7 +465,7 @@ export const About: React.FC<AboutProps> = ({
                   onClick={openCatalogueModal}
                   className="bg-[#151616] hover:bg-black text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-2 cursor-pointer"
                 >
-                  <Download className="w-4 h-4 text-[#DD2B1C]" />
+                  <Download className="w-4 h-4 text-[#007BFF]" />
                   <span>Download Master Catalogue</span>
                 </button>
               </div>
@@ -479,7 +479,7 @@ export const About: React.FC<AboutProps> = ({
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C]">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF]">
                     Rajkot Central Facility
                   </span>
                   <h3 className="text-lg font-bold">
@@ -497,10 +497,10 @@ export const About: React.FC<AboutProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Vision */}
           <div className="p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300">
-            <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DD2B1C] flex items-center justify-center mb-6">
+            <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#007BFF] flex items-center justify-center mb-6">
               <Eye className="w-6 h-6" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-1">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-1">
               Long-Term Outlook
             </span>
             <h2 className="text-2xl font-black text-[#151616] mb-4">
@@ -516,10 +516,10 @@ export const About: React.FC<AboutProps> = ({
 
           {/* Mission */}
           <div className="p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300">
-            <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#DD2B1C] flex items-center justify-center mb-6">
+            <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#007BFF] flex items-center justify-center mb-6">
               <Target className="w-6 h-6" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-1">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-1">
               Our Daily Commitment
             </span>
             <h2 className="text-2xl font-black text-[#151616] mb-4">
@@ -539,7 +539,7 @@ export const About: React.FC<AboutProps> = ({
       <section className="py-16 sm:py-20 bg-gray-50 border-t border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
               Engineering Expertise
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-[#151616] tracking-tight">
@@ -575,7 +575,7 @@ export const About: React.FC<AboutProps> = ({
       {/* Target Operations We Handle */}
       <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
             Execution Capabilities
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-[#151616] tracking-tight">
@@ -591,9 +591,9 @@ export const About: React.FC<AboutProps> = ({
           {operationsHandled.map((op) => (
             <div
               key={op.title}
-              className="p-6 rounded-2xl bg-white border border-gray-200 hover:border-[#DD2B1C] transition-colors"
+              className="p-6 rounded-2xl bg-white border border-gray-200 hover:border-[#007BFF] transition-colors"
             >
-              <span className="text-xs font-bold text-[#DD2B1C] block mb-1 uppercase tracking-wider">
+              <span className="text-xs font-bold text-[#007BFF] block mb-1 uppercase tracking-wider">
                 {op.count}
               </span>
               <h3 className="font-bold text-lg text-[#151616] mb-2">
@@ -610,7 +610,7 @@ export const About: React.FC<AboutProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block">
                 Manufacturing Backbone • Rajkot
               </span>
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight">
@@ -624,32 +624,32 @@ export const About: React.FC<AboutProps> = ({
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#DD2B1C]/50 transition-colors">
-                  <div className="text-2xl font-black text-[#DD2B1C] flex items-baseline">
+                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#007BFF]/50 transition-colors">
+                  <div className="text-2xl font-black text-[#007BFF] flex items-baseline">
                     <Counter value={57} suffix="+" />
                   </div>
                   <span className="text-xs text-gray-300 font-semibold block mt-0.5">
                     Active Metal Models
                   </span>
                 </div>
-                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#DD2B1C]/50 transition-colors">
-                  <div className="text-2xl font-black text-[#DD2B1C] flex items-baseline">
+                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#007BFF]/50 transition-colors">
+                  <div className="text-2xl font-black text-[#007BFF] flex items-baseline">
                     <Counter value={1000} suffix="+" />
                   </div>
                   <span className="text-xs text-gray-300 font-semibold block mt-0.5">
                     Cartons Ready in Stock
                   </span>
                 </div>
-                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#DD2B1C]/50 transition-colors">
-                  <div className="text-2xl font-black text-[#DD2B1C] flex items-baseline">
+                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#007BFF]/50 transition-colors">
+                  <div className="text-2xl font-black text-[#007BFF] flex items-baseline">
                     <Counter value={100} suffix="%" />
                   </div>
                   <span className="text-xs text-gray-300 font-semibold block mt-0.5">
                     In-House Laser Suite
                   </span>
                 </div>
-                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#DD2B1C]/50 transition-colors">
-                  <div className="text-2xl font-black text-[#DD2B1C] flex items-baseline">
+                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#007BFF]/50 transition-colors">
+                  <div className="text-2xl font-black text-[#007BFF] flex items-baseline">
                     <Counter value={28} />
                   </div>
                   <span className="text-xs text-gray-300 font-semibold block mt-0.5">
@@ -680,7 +680,7 @@ export const About: React.FC<AboutProps> = ({
               <div className="pt-4">
                 <Link
                   to="/contact"
-                  className="inline-block bg-[#DD2B1C] hover:bg-[#b82215] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors"
+                  className="inline-block bg-[#007BFF] hover:bg-[#b82215] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors"
                 >
                   Contact Procurement Team
                 </Link>
@@ -693,7 +693,7 @@ export const About: React.FC<AboutProps> = ({
       <section className="py-16 sm:py-20 bg-white border-t border-gray-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 sm:mb-14">
           <div className="text-center">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
               Trusted By Industry Leaders
             </span>
 

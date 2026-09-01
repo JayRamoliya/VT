@@ -112,7 +112,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
           <div className="flex items-center justify-center gap-4">
             <Link
               to="/products"
-              className="bg-[#DD2B1C] hover:bg-[#b82215] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
+              className="bg-[#007BFF] hover:bg-[#b82215] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
             >
               Browse Full Catalogue
             </Link>
@@ -204,7 +204,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                   {product.category}
                 </span>
                 {product.laserMarkingAvailable && (
-                  <span className="bg-[#DD2B1C] text-white text-[11px] font-bold px-2.5 py-1 rounded-md flex items-center gap-1 shadow-sm">
+                  <span className="bg-[#007BFF] text-white text-[11px] font-bold px-2.5 py-1 rounded-md flex items-center gap-1 shadow-sm">
                     <Sparkles className="w-3 h-3" /> Laser Marking Available
                   </span>
                 )}
@@ -219,7 +219,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                     onClick={() => setSelectedImage(img)}
                     className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all flex-shrink-0 cursor-pointer p-1 bg-gray-50 ${
                       selectedImage === img
-                        ? "border-[#DD2B1C] shadow-md"
+                        ? "border-[#007BFF] shadow-md"
                         : "border-gray-200 hover:border-gray-300"
                     }`}
                   >
@@ -236,7 +236,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             {/* Laser Marking Simulator Mini Banner */}
             {/* <div className="bg-red-50/70 border border-red-200/80 rounded-2xl p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-[#DD2B1C] text-white flex items-center justify-center flex-shrink-0">
+                <div className="w-9 h-9 rounded-xl bg-[#007BFF] text-white flex items-center justify-center flex-shrink-0">
                   <Sparkles className="w-4 h-4" />
                 </div>
                 <div>
@@ -250,7 +250,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
               </div>
               <button
                 onClick={openLaserPreviewModal}
-                className="bg-[#151616] hover:bg-[#DD2B1C] text-white text-[11px] font-bold px-3.5 py-2 rounded-xl transition-colors cursor-pointer flex-shrink-0"
+                className="bg-[#151616] hover:bg-[#007BFF] text-white text-[11px] font-bold px-3.5 py-2 rounded-xl transition-colors cursor-pointer flex-shrink-0"
               >
                 Test Simulator
               </button>
@@ -288,7 +288,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                 <span className="text-gray-400 block text-[10px] uppercase font-bold">
                   MOQ
                 </span>
-                <span className="font-bold text-[#DD2B1C] text-sm">
+                <span className="font-bold text-[#007BFF] text-sm">
                   {product.minOrderQty} Pieces
                 </span>
               </div>
@@ -351,7 +351,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                   depending on model selection.
                 </p>
 
-                <p className="text-[#DD2B1C] font-medium">
+                <p className="text-[#007BFF] font-medium">
                   For exact dispatch details, please contact us on WhatsApp.
                 </p>
               </div>
@@ -360,14 +360,14 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gradient-to-br from-red-50 to-white border border-red-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#DD2B1C]/10 flex items-center justify-center">
-                    <Package className="w-5 h-5 text-[#DD2B1C]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#007BFF]/10 flex items-center justify-center">
+                    <Package className="w-5 h-5 text-[#007BFF]" />
                   </div>
                   <div>
                     <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold">
                       MOQ
                     </p>
-                    <p className="text-base font-bold text-[#DD2B1C]">
+                    <p className="text-base font-bold text-[#007BFF]">
                       {product.minOrderQty} Pieces
                     </p>
                   </div>
@@ -403,7 +403,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                       onClick={() => setOrderVolume(tier)}
                       className={`py-2 px-2.5 rounded-xl border text-center font-bold transition-all cursor-pointer ${
                         orderVolume === tier
-                          ? "border-[#DD2B1C] bg-red-50 text-[#DD2B1C]"
+                          ? "border-[#007BFF] bg-red-50 text-[#007BFF]"
                           : "border-gray-200 hover:border-gray-300 text-gray-700 bg-white"
                       }`}
                     >
@@ -419,7 +419,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                 <button
                   onClick={handleAddAndQuote}
                   id="product-details-get-quote-btn"
-                  className="w-full bg-[#151616] hover:bg-[#DD2B1C] text-white py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-[#151616] hover:bg-[#007BFF] text-white py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <FileText className="w-4 h-4" />
                   <span>Request Factory Quote</span>
@@ -480,7 +480,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`py-3 px-5 text-xs sm:text-sm font-bold border-b-2 transition-all cursor-pointer whitespace-nowrap ${
                   activeTab === tab.id
-                    ? 'border-[#DD2B1C] text-[#DD2B1C]'
+                    ? 'border-[#007BFF] text-[#007BFF]'
                     : 'border-transparent text-gray-500 hover:text-[#151616]'
                 }`}
               >
@@ -498,7 +498,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {product.features.map((feat, idx) => (
                     <li key={idx} className="flex items-start gap-2 bg-gray-50 p-3 rounded-xl border border-gray-100">
-                      <CheckCircle2 className="w-4 h-4 text-[#DD2B1C] flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#007BFF] flex-shrink-0 mt-0.5" />
                       <span className="text-xs text-gray-800">{feat}</span>
                     </li>
                   ))}
@@ -511,7 +511,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {product.bestFor.map((item, idx) => (
-                        <span key={idx} className="bg-red-50 text-[#DD2B1C] text-xs font-semibold px-3 py-1 rounded-full border border-red-100">
+                        <span key={idx} className="bg-red-50 text-[#007BFF] text-xs font-semibold px-3 py-1 rounded-full border border-red-100">
                           {item}
                         </span>
                       ))}
@@ -545,7 +545,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             {activeTab === 'customisation' && (
               <div className="max-w-3xl space-y-4 text-xs sm:text-sm text-gray-700">
                 <div className="bg-red-50/50 p-5 rounded-2xl border border-red-100 space-y-2">
-                  <h4 className="font-bold text-[#DD2B1C] text-sm flex items-center gap-2">
+                  <h4 className="font-bold text-[#007BFF] text-sm flex items-center gap-2">
                     <Sparkles className="w-4 h-4" /> High-Resolution Fiber Laser Annealing
                   </h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
@@ -571,7 +571,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
                 <div className="pt-2">
                   <button
                     onClick={openLaserPreviewModal}
-                    className="bg-[#151616] hover:bg-[#DD2B1C] text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-colors cursor-pointer"
+                    className="bg-[#151616] hover:bg-[#007BFF] text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-colors cursor-pointer"
                   >
                     Open Live Interactive Simulator
                   </button>
@@ -602,7 +602,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
           <div className="mt-16 border-t border-gray-200 pt-12">
             <div className="flex items-center justify-between mb-8">
               <div>
-                <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block">
                   More in this Category
                 </span>
                 <h3 className="text-2xl font-black text-[#151616]">
@@ -611,7 +611,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
               </div>
               <Link
                 to={`/products?category=${encodeURIComponent(product.category)}`}
-                className="text-xs font-bold text-[#151616] hover:text-[#DD2B1C] flex items-center gap-1 transition-colors"
+                className="text-xs font-bold text-[#151616] hover:text-[#007BFF] flex items-center gap-1 transition-colors"
               >
                 View Category <ChevronRight className="w-4 h-4" />
               </Link>

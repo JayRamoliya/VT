@@ -32,7 +32,7 @@ export const Gallery: React.FC<GalleryProps> = ({ onNavigateHome }) => {
       {/* Page Header */}
       <div className="bg-gray-50 border-b border-gray-100 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
             Visual Portfolio & Craftsmanship
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#151616] tracking-tight">

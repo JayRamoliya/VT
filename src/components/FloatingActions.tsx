@@ -60,7 +60,7 @@ export const FloatingActions: React.FC = () => {
         aria-label="Call Sales Desk"
         className="pointer-events-auto flex items-center gap-2 bg-[#151616] text-white pl-3.5 pr-4 py-2.5 rounded-full shadow-xl hover:bg-black transition-colors duration-200 border border-white/10 group cursor-pointer"
       >
-        <div className="w-6 h-6 rounded-full bg-[#DD2B1C] flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform duration-200">
+        <div className="w-6 h-6 rounded-full bg-[#007BFF] flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform duration-200">
           <FaPhoneAlt className="text-[12px] text-white" />
         </div>
 

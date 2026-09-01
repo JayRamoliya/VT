@@ -58,15 +58,15 @@ export const Header: React.FC<HeaderProps> = () => {
   const getCategoryIcon = (cat: CategoryType) => {
     switch (cat) {
       case "Mobile Stand":
-        return <Smartphone className="w-4 h-4 text-[#DD2B1C]" />;
+        return <Smartphone className="w-4 h-4 text-[#007BFF]" />;
       case "Paper Weight":
-        return <Disc className="w-4 h-4 text-[#DD2B1C]" />;
+        return <Disc className="w-4 h-4 text-[#007BFF]" />;
       case "Notepad":
-        return <BookOpen className="w-4 h-4 text-[#DD2B1C]" />;
+        return <BookOpen className="w-4 h-4 text-[#007BFF]" />;
       case "Calendar":
-        return <Calendar className="w-4 h-4 text-[#DD2B1C]" />;
+        return <Calendar className="w-4 h-4 text-[#007BFF]" />;
       default:
-        return <Gift className="w-4 h-4 text-[#DD2B1C]" />;
+        return <Gift className="w-4 h-4 text-[#007BFF]" />;
     }
   };
 
@@ -93,12 +93,12 @@ export const Header: React.FC<HeaderProps> = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5 text-gray-300 font-medium">
-              <span className="w-2 h-2 rounded-full bg-[#DD2B1C] animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-[#007BFF] animate-pulse"></span>
               Rajkot Manufacturing Hub: 1000+ Cartons Ready Stock
             </span>
             <span className="text-gray-500">|</span>
             <span className="flex items-center gap-1 text-gray-300">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#DD2B1C]" />
+              <ShieldCheck className="w-3.5 h-3.5 text-[#007BFF]" />
               UDYAM & GST Registered UNIT
             </span>
           </div>
@@ -108,14 +108,14 @@ export const Header: React.FC<HeaderProps> = () => {
               href="tel:+917567999989"
               className="flex items-center gap-1.5 text-gray-300 hover:text-white transition-colors duration-200"
             >
-              <Phone className="w-3.5 h-3.5 text-[#DD2B1C]" />
+              <Phone className="w-3.5 h-3.5 text-[#007BFF]" />
               <span className="font-semibold">+91 75679 99989</span>
             </a>
             <a
               href="mailto:jignesh@varaiatraders.com"
               className="flex items-center gap-1.5 text-gray-300 hover:text-white transition-colors duration-200"
             >
-              <Mail className="w-3.5 h-3.5 text-[#DD2B1C]" />
+              <Mail className="w-3.5 h-3.5 text-[#007BFF]" />
               <span>jignesh@varaiatraders.com</span>
             </a>
           </div>
@@ -145,13 +145,13 @@ export const Header: React.FC<HeaderProps> = () => {
             id="brand-logo-link"
           >
             <img
-              src="/logo.png" // public folder ma logo mukvu
+              src="/logo2.png" // public folder ma logo mukvu
               alt="Varaia Traders"
               className="h-12 w-auto object-contain"
             />
             {/* <div>
               <span className="block font-black text-lg sm:text-xl tracking-tight text-[#151616] leading-none">
-                VARAIA <span className="text-[#DD2B1C]">TRADERS</span>
+                VARAIA <span className="text-[#007BFF]">TRADERS</span>
               </span>
               <span className="block text-[10px] sm:text-[11px] font-semibold text-gray-500 uppercase tracking-wider mt-0.5">
                 Quality that Impresses. Speed that Delivers.
@@ -179,14 +179,14 @@ export const Header: React.FC<HeaderProps> = () => {
                     id={`nav-${link.name.toLowerCase().replace(/\s+/g, "-")}`}
                     className={`relative flex items-center gap-1.5 text-sm font-semibold tracking-wide cursor-pointer transition-colors duration-200 ${
                       active
-                        ? "text-[#DD2B1C]"
-                        : "text-[#151616] hover:text-[#DD2B1C]"
+                        ? "text-[#007BFF]"
+                        : "text-[#151616] hover:text-[#007BFF]"
                     }`}
                   >
                     <span>{link.name}</span>
                     {link.hasMegaMenu && (
                       <ChevronDown
-                        className={`w-3.5 h-3.5 transition-transform duration-200 ${isMegaMenuOpen ? "rotate-180 text-[#DD2B1C]" : "text-gray-400"}`}
+                        className={`w-3.5 h-3.5 transition-transform duration-200 ${isMegaMenuOpen ? "rotate-180 text-[#007BFF]" : "text-gray-400"}`}
                       />
                     )}
 
@@ -194,7 +194,7 @@ export const Header: React.FC<HeaderProps> = () => {
                     {active && (
                       <motion.div
                         layoutId="activeNavUnderline"
-                        className="absolute -bottom-2 left-0 right-0 h-[2.5px] bg-[#DD2B1C] rounded-full"
+                        className="absolute -bottom-2 left-0 right-0 h-[2.5px] bg-[#007BFF] rounded-full"
                         transition={{
                           type: "spring",
                           stiffness: 380,
@@ -229,7 +229,7 @@ export const Header: React.FC<HeaderProps> = () => {
                           <Link
                             to="/products"
                             onClick={() => setIsMegaMenuOpen(false)}
-                            className="text-xs font-bold text-[#DD2B1C] hover:underline flex items-center gap-1 cursor-pointer transition-colors"
+                            className="text-xs font-bold text-[#007BFF] hover:underline flex items-center gap-1 cursor-pointer transition-colors"
                           >
                             View Full Catalogue{" "}
                             <ArrowRight className="w-3.5 h-3.5" />
@@ -246,11 +246,11 @@ export const Header: React.FC<HeaderProps> = () => {
                                 onClick={() => setIsMegaMenuOpen(false)}
                                 className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-gray-50 text-left transition-all group cursor-pointer border border-transparent hover:border-gray-200"
                               >
-                                <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0 group-hover:bg-[#DD2B1C] group-hover:text-white transition-colors duration-200">
+                                <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0 group-hover:bg-[#007BFF] group-hover:text-white transition-colors duration-200">
                                   {getCategoryIcon(cat)}
                                 </div>
                                 <div className="min-w-0">
-                                  <span className="block text-xs font-bold text-[#151616] group-hover:text-[#DD2B1C] truncate transition-colors">
+                                  <span className="block text-xs font-bold text-[#151616] group-hover:text-[#007BFF] truncate transition-colors">
                                     {cat}
                                   </span>
                                   <span className="block text-[11px] text-gray-500 truncate">
@@ -270,7 +270,7 @@ export const Header: React.FC<HeaderProps> = () => {
                               setIsMegaMenuOpen(false);
                               openQuoteModal();
                             }}
-                            className="text-xs font-bold bg-[#151616] hover:bg-[#DD2B1C] text-white px-3.5 py-1.5 rounded-lg transition-colors cursor-pointer"
+                            className="text-xs font-bold bg-[#151616] hover:bg-[#007BFF] text-white px-3.5 py-1.5 rounded-lg transition-colors cursor-pointer"
                           >
                             Request Fast RFQ
                           </button>
@@ -292,7 +292,7 @@ export const Header: React.FC<HeaderProps> = () => {
               id="header-download-catalogue-btn"
               className="text-xs font-bold text-gray-700 hover:text-[#151616] px-3.5 py-2 rounded-xl border border-gray-200 hover:border-gray-300 bg-gray-50/50 hover:bg-gray-50 transition-colors flex items-center gap-1.5 cursor-pointer shadow-2xs"
             >
-              <Download className="w-3.5 h-3.5 text-[#DD2B1C]" />
+              <Download className="w-3.5 h-3.5 text-[#007BFF]" />
               <span>Brochure</span>
             </motion.button>
 
@@ -301,7 +301,7 @@ export const Header: React.FC<HeaderProps> = () => {
               whileTap={{ scale: 0.97 }}
               onClick={() => openQuoteModal()}
               id="header-get-quote-btn"
-              className="relative bg-[#DD2B1C] hover:bg-[#b82215] text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all duration-200 flex items-center gap-2 shadow-md hover:shadow-lg cursor-pointer"
+              className="relative bg-[#007BFF] hover:bg-[#b82215] text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all duration-200 flex items-center gap-2 shadow-md hover:shadow-lg cursor-pointer"
             >
               <FileText className="w-3.5 h-3.5" />
               <span>Get Bulk Quote</span>
@@ -317,12 +317,12 @@ export const Header: React.FC<HeaderProps> = () => {
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={() => openQuoteModal()}
-              className="relative p-2 text-gray-700 hover:text-[#DD2B1C] transition-colors"
+              className="relative p-2 text-gray-700 hover:text-[#007BFF] transition-colors"
               aria-label="View Quote Cart"
             >
               <FileText className="w-5 h-5" />
               {quoteItems.length > 0 && (
-                <span className="absolute 0 top-0 right-0 w-4 h-4 bg-[#DD2B1C] text-white text-[9px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute 0 top-0 right-0 w-4 h-4 bg-[#007BFF] text-white text-[9px] font-bold rounded-full flex items-center justify-center">
                   {quoteItems.length}
                 </span>
               )}
@@ -366,7 +366,7 @@ export const Header: React.FC<HeaderProps> = () => {
                           to={link.path}
                           onClick={() => setIsMobileMenuOpen(false)}
                           className={`text-base font-bold transition-colors ${
-                            active ? "text-[#DD2B1C]" : "text-gray-800"
+                            active ? "text-[#007BFF]" : "text-gray-800"
                           }`}
                         >
                           {link.name}
@@ -375,7 +375,7 @@ export const Header: React.FC<HeaderProps> = () => {
                           onClick={() =>
                             setMobileCategoryOpen(!mobileCategoryOpen)
                           }
-                          className="p-2 text-gray-500 hover:text-[#DD2B1C]"
+                          className="p-2 text-gray-500 hover:text-[#007BFF]"
                         >
                           <ChevronDown
                             className={`w-4 h-4 transition-transform duration-200 ${mobileCategoryOpen ? "rotate-180" : ""}`}
@@ -392,9 +392,9 @@ export const Header: React.FC<HeaderProps> = () => {
                               onClick={() => {
                                 setIsMobileMenuOpen(false);
                               }}
-                              className="flex items-center gap-2 py-1.5 text-xs font-semibold text-gray-700 hover:text-[#DD2B1C]"
+                              className="flex items-center gap-2 py-1.5 text-xs font-semibold text-gray-700 hover:text-[#007BFF]"
                             >
-                              <span className="w-1.5 h-1.5 rounded-full bg-[#DD2B1C]" />
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#007BFF]" />
                               <span>{cat}</span>
                             </Link>
                           ))}
@@ -411,8 +411,8 @@ export const Header: React.FC<HeaderProps> = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`block py-2.5 text-base font-bold border-b border-gray-100 transition-colors ${
                       active
-                        ? "text-[#DD2B1C]"
-                        : "text-gray-800 hover:text-[#DD2B1C]"
+                        ? "text-[#007BFF]"
+                        : "text-gray-800 hover:text-[#007BFF]"
                     }`}
                   >
                     {link.name}
@@ -427,7 +427,7 @@ export const Header: React.FC<HeaderProps> = () => {
                     setIsMobileMenuOpen(false);
                     openQuoteModal();
                   }}
-                  className="w-full bg-[#DD2B1C] text-white py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer"
+                  className="w-full bg-[#007BFF] text-white py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer"
                 >
                   <FileText className="w-4 h-4" />
                   <span>Get Instant Factory Quote</span>
@@ -440,7 +440,7 @@ export const Header: React.FC<HeaderProps> = () => {
                   }}
                   className="w-full bg-gray-100 text-gray-800 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <Download className="w-4 h-4 text-[#DD2B1C]" />
+                  <Download className="w-4 h-4 text-[#007BFF]" />
                   <span>Download Master Catalogue</span>
                 </button>
               </div>
@@ -452,7 +452,7 @@ export const Header: React.FC<HeaderProps> = () => {
                 </p>
                 <a
                   href="tel:+917567999989"
-                  className="flex items-center gap-1.5 text-[#DD2B1C] font-bold"
+                  className="flex items-center gap-1.5 text-[#007BFF] font-bold"
                 >
                   <Phone className="w-3.5 h-3.5" /> +91 75679 99989
                 </a>

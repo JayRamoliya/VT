@@ -53,7 +53,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, onReadMore }) => {
           {/* Date & Read Time */}
           <div className="flex items-center gap-4 text-[11px] text-gray-500 font-medium mb-3">
             <span className="flex items-center gap-1">
-              <Calendar className="w-3.5 h-3.5 text-[#DD2B1C]" />
+              <Calendar className="w-3.5 h-3.5 text-[#007BFF]" />
               {post.publishedDate}
             </span>
             <span>•</span>
@@ -64,7 +64,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, onReadMore }) => {
           </div>
 
           {/* Title */}
-          <h3 className="font-bold text-base sm:text-lg text-[#151616] group-hover:text-[#DD2B1C] transition-colors duration-200 leading-snug line-clamp-2">
+          <h3 className="font-bold text-base sm:text-lg text-[#151616] group-hover:text-[#007BFF] transition-colors duration-200 leading-snug line-clamp-2">
             {post.title}
           </h3>
 
@@ -87,7 +87,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, onReadMore }) => {
             </span>
           </div>
 
-          <span className="text-xs font-bold text-[#DD2B1C] flex items-center gap-1 group-hover:translate-x-1.5 transition-transform duration-200">
+          <span className="text-xs font-bold text-[#007BFF] flex items-center gap-1 group-hover:translate-x-1.5 transition-transform duration-200">
             Read Article <ArrowRight className="w-3.5 h-3.5" />
           </span>
         </div>

@@ -16,7 +16,7 @@ export const CTA: React.FC<CTAProps> = ({
   const { openQuoteModal, generateWhatsAppLink } = useQuote();
 
   return (
-    <section className="bg-[#DD2B1C] text-white py-16 sm:py-20 relative overflow-hidden">
+    <section className="bg-[#007BFF] text-white py-16 sm:py-20 relative overflow-hidden">
       {/* Background Architectural Patterns */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-30" />
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
@@ -110,7 +110,7 @@ export const CTA: React.FC<CTAProps> = ({
             id="cta-quote-btn"
             className="bg-white hover:bg-gray-100 text-[#151616] px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center gap-2.5 cursor-pointer"
           >
-            <FileText className="w-4 h-4 text-[#DD2B1C]" />
+            <FileText className="w-4 h-4 text-[#007BFF]" />
             <span>Request Quote</span>
           </motion.button>
         </motion.div>

@@ -99,15 +99,15 @@ export const Counter: React.FC<CounterProps> = ({
     return (
       <div
         ref={ref}
-        className={`group p-5 sm:p-6 rounded-2xl bg-white border border-gray-200/90 hover:border-[#DD2B1C]/40 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between ${cardClassName}`}
+        className={`group p-5 sm:p-6 rounded-2xl bg-white border border-gray-200/90 hover:border-[#007BFF]/40 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between ${cardClassName}`}
       >
         <div className="flex items-center justify-between mb-4">
           {icon ? (
-            <div className="w-10 h-10 rounded-xl bg-red-50 text-[#DD2B1C] flex items-center justify-center group-hover:bg-[#DD2B1C] group-hover:text-white transition-colors duration-250">
+            <div className="w-10 h-10 rounded-xl bg-red-50 text-[#007BFF] flex items-center justify-center group-hover:bg-[#007BFF] group-hover:text-white transition-colors duration-250">
               {icon}
             </div>
           ) : (
-            <div className="w-2.5 h-2.5 rounded-full bg-[#DD2B1C]/80 group-hover:scale-125 transition-transform" />
+            <div className="w-2.5 h-2.5 rounded-full bg-[#007BFF]/80 group-hover:scale-125 transition-transform" />
           )}
           <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 font-mono bg-gray-50 px-2 py-0.5 rounded border border-gray-100">
             Direct Plant Metric
@@ -121,13 +121,13 @@ export const Counter: React.FC<CounterProps> = ({
               {formattedCount}
             </span>
             {suffix && (
-              <span className="text-xl sm:text-2xl font-black text-[#DD2B1C] tracking-tight">
+              <span className="text-xl sm:text-2xl font-black text-[#007BFF] tracking-tight">
                 {suffix}
               </span>
             )}
           </div>
 
-          <h4 className="text-sm font-bold text-gray-900 mt-2 line-clamp-1 group-hover:text-[#DD2B1C] transition-colors">
+          <h4 className="text-sm font-bold text-gray-900 mt-2 line-clamp-1 group-hover:text-[#007BFF] transition-colors">
             {label}
           </h4>
           {subtext && (

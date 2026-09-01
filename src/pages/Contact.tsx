@@ -47,7 +47,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
       <section className="py-12 sm:py-16 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
               Factory Sales & Procurement Assistance
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#151616] tracking-tight">
@@ -75,7 +75,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
 
               <div className="space-y-4 text-xs sm:text-sm">
                 <div className="flex items-start gap-3.5">
-                  <div className="w-9 h-9 rounded-xl bg-red-50 text-[#DD2B1C] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-9 h-9 rounded-xl bg-red-50 text-[#007BFF] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -89,7 +89,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-9 h-9 rounded-xl bg-red-50 text-[#DD2B1C] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-9 h-9 rounded-xl bg-red-50 text-[#007BFF] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -98,7 +98,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
                     </span>
                     <a
                       href="tel:+917567999989"
-                      className="text-[#DD2B1C] font-bold block mt-0.5 hover:underline text-sm"
+                      className="text-[#007BFF] font-bold block mt-0.5 hover:underline text-sm"
                     >
                       +91 75679 99989
                     </a>
@@ -106,7 +106,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-9 h-9 rounded-xl bg-red-50 text-[#DD2B1C] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-9 h-9 rounded-xl bg-red-50 text-[#007BFF] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
@@ -115,7 +115,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
                     </span>
                     <a
                       href="mailto:jignesh@varaiatraders.com"
-                      className="text-gray-700 hover:text-[#DD2B1C] block mt-0.5 font-medium"
+                      className="text-gray-700 hover:text-[#007BFF] block mt-0.5 font-medium"
                     >
                       jignesh@varaiatraders.com
                     </a>
@@ -123,7 +123,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
                 </div>
 
                 <div className="flex items-start gap-3.5">
-                  <div className="w-9 h-9 rounded-xl bg-red-50 text-[#DD2B1C] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-9 h-9 rounded-xl bg-red-50 text-[#007BFF] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
@@ -171,7 +171,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
         {/* Google Map Section */}
         <div className="mt-14 pt-10 border-t border-gray-200">
           <div className="mb-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-1">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-1">
               Office Location
             </span>
             <h4 className="text-2xl font-bold text-[#151616]">
@@ -203,7 +203,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
               href="https://maps.google.com/?q=Varaia+Traders+Rajkot"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#151616] hover:bg-[#DD2B1C] text-white px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 bg-[#151616] hover:bg-[#007BFF] text-white px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors"
             >
               <MapPin className="w-4 h-4" />
               Open in Google Maps

@@ -53,7 +53,7 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
           <div className="flex items-center justify-center gap-4">
             <Link
               to="/blog"
-              className="bg-[#DD2B1C] hover:bg-[#b82215] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
+              className="bg-[#007BFF] hover:bg-[#b82215] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
             >
               Browse All Articles
             </Link>
@@ -112,7 +112,7 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
         {/* Back Link */}
         <Link
           to="/blog"
-          className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-500 hover:text-[#DD2B1C] mb-6 transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-500 hover:text-[#007BFF] mb-6 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to All Insights</span>
@@ -120,12 +120,12 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
 
         {/* Category & Meta */}
         <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-4">
-          <span className="bg-red-50 text-[#DD2B1C] font-bold px-3 py-1 rounded-md uppercase tracking-wider text-[11px]">
+          <span className="bg-red-50 text-[#007BFF] font-bold px-3 py-1 rounded-md uppercase tracking-wider text-[11px]">
             {post.category}
           </span>
           <span>•</span>
           <span className="flex items-center gap-1">
-            <Calendar className="w-3.5 h-3.5 text-[#DD2B1C]" />
+            <Calendar className="w-3.5 h-3.5 text-[#007BFF]" />
             {post.publishedDate}
           </span>
           <span>•</span>
@@ -146,7 +146,7 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
             <img
               src={post.author.avatar}
               alt={post.author.name}
-              className="w-11 h-11 rounded-full object-cover border-2 border-[#DD2B1C]"
+              className="w-11 h-11 rounded-full object-cover border-2 border-[#007BFF]"
             />
             <div>
               <span className="font-bold text-sm text-[#151616] block leading-none mb-1">
@@ -160,7 +160,7 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
 
           <button
             onClick={handleShare}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 text-xs font-bold text-gray-700 hover:text-[#DD2B1C] hover:border-[#DD2B1C] transition-all cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 text-xs font-bold text-gray-700 hover:text-[#007BFF] hover:border-[#007BFF] transition-all cursor-pointer"
           >
             <Share2 className="w-3.5 h-3.5" />
             <span>Share</span>
@@ -178,7 +178,7 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
 
         {/* Key Takeaways Highlight Box */}
         <div className="bg-red-50/70 border border-red-200/80 rounded-2xl p-6 mb-10">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2 flex items-center gap-1.5">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2 flex items-center gap-1.5">
             <Sparkles className="w-4 h-4" /> Executive Summary & Key Takeaways
           </span>
           <p className="text-sm font-semibold text-gray-800 leading-relaxed">
@@ -226,7 +226,7 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
               const url = generateWhatsAppLink(`Hello VARAIA TRADERS, I read your article "${post.title}" and would like to discuss metal corporate gifts.`);
               window.open(url, '_blank');
             }}
-            className="bg-[#DD2B1C] hover:bg-[#b82215] text-white px-5 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition-colors flex items-center gap-2 cursor-pointer shadow-md"
+            className="bg-[#007BFF] hover:bg-[#b82215] text-white px-5 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition-colors flex items-center gap-2 cursor-pointer shadow-md"
           >
             <MessageSquare className="w-4 h-4" />
             <span>Chat on WhatsApp</span>
@@ -240,7 +240,7 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
         <section className="bg-gray-50 border-t border-gray-200 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-10">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-1">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-1">
                 More Reading
               </span>
               <h3 className="text-2xl sm:text-3xl font-black text-[#151616]">

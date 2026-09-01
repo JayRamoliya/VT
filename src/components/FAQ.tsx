@@ -70,7 +70,7 @@ export const FAQ: React.FC<FAQProps> = ({
           transition={{ duration: 0.55, ease: corporateEase }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-[#DD2B1C] text-xs font-bold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-[#007BFF] text-xs font-bold uppercase tracking-wider mb-2">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Corporate Buyer Guidance</span>
           </div>
@@ -95,7 +95,7 @@ export const FAQ: React.FC<FAQProps> = ({
                 key={idx}
                 className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                   isOpen 
-                    ? 'border-[#DD2B1C]/40 bg-gray-50/50 shadow-sm' 
+                    ? 'border-[#007BFF]/40 bg-gray-50/50 shadow-sm' 
                     : 'border-gray-200 bg-white hover:border-gray-300'
                 }`}
               >
@@ -111,7 +111,7 @@ export const FAQ: React.FC<FAQProps> = ({
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.25, ease: corporateEase }}
                     className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
-                      isOpen ? 'bg-[#DD2B1C] text-white' : 'bg-gray-100 text-gray-600'
+                      isOpen ? 'bg-[#007BFF] text-white' : 'bg-gray-100 text-gray-600'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />

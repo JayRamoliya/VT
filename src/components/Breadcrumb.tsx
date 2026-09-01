@@ -23,7 +23,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, onNavigateHome })
           {onNavigateHome ? (
             <button
               onClick={onNavigateHome}
-              className="flex items-center gap-1.5 hover:text-[#DD2B1C] transition-colors cursor-pointer text-gray-600"
+              className="flex items-center gap-1.5 hover:text-[#007BFF] transition-colors cursor-pointer text-gray-600"
             >
               <Home className="w-3.5 h-3.5 text-gray-400" />
               <span>Home</span>
@@ -31,7 +31,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, onNavigateHome })
           ) : (
             <Link
               to="/"
-              className="flex items-center gap-1.5 hover:text-[#DD2B1C] transition-colors cursor-pointer text-gray-600"
+              className="flex items-center gap-1.5 hover:text-[#007BFF] transition-colors cursor-pointer text-gray-600"
             >
               <Home className="w-3.5 h-3.5 text-gray-400" />
               <span>Home</span>
@@ -49,21 +49,21 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, onNavigateHome })
             ) : item.to ? (
               <Link
                 to={item.to}
-                className="hover:text-[#DD2B1C] transition-colors cursor-pointer text-gray-600 truncate max-w-[150px] sm:max-w-xs"
+                className="hover:text-[#007BFF] transition-colors cursor-pointer text-gray-600 truncate max-w-[150px] sm:max-w-xs"
               >
                 {item.label}
               </Link>
             ) : item.onClick ? (
               <button
                 onClick={item.onClick}
-                className="hover:text-[#DD2B1C] transition-colors cursor-pointer text-gray-600 truncate max-w-[150px] sm:max-w-xs"
+                className="hover:text-[#007BFF] transition-colors cursor-pointer text-gray-600 truncate max-w-[150px] sm:max-w-xs"
               >
                 {item.label}
               </button>
             ) : item.href ? (
               <Link
                 to={item.href}
-                className="hover:text-[#DD2B1C] transition-colors cursor-pointer text-gray-600 truncate max-w-[150px] sm:max-w-xs"
+                className="hover:text-[#007BFF] transition-colors cursor-pointer text-gray-600 truncate max-w-[150px] sm:max-w-xs"
               >
                 {item.label}
               </Link>

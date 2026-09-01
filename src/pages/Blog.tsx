@@ -69,7 +69,7 @@ export const Blog: React.FC<BlogProps> = ({ onNavigateHome, onSelectPost }) => {
       <section className="py-12 sm:py-16 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
               Knowledge Hub & Industry Trends
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#151616] tracking-tight">
@@ -98,7 +98,7 @@ export const Blog: React.FC<BlogProps> = ({ onNavigateHome, onSelectPost }) => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute top-4 left-4">
-                <span className="bg-[#DD2B1C] text-white text-[11px] font-bold px-3 py-1 rounded-md uppercase tracking-wider shadow-sm">
+                <span className="bg-[#007BFF] text-white text-[11px] font-bold px-3 py-1 rounded-md uppercase tracking-wider shadow-sm">
                   Featured Guide
                 </span>
               </div>
@@ -108,7 +108,7 @@ export const Blog: React.FC<BlogProps> = ({ onNavigateHome, onSelectPost }) => {
               <div>
                 <div className="flex items-center gap-4 text-xs text-gray-400 font-medium mb-3">
                   <span className="flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 text-[#DD2B1C]" />
+                    <Calendar className="w-3.5 h-3.5 text-[#007BFF]" />
                     {featuredPost.publishedDate}
                   </span>
                   <span>•</span>
@@ -118,7 +118,7 @@ export const Blog: React.FC<BlogProps> = ({ onNavigateHome, onSelectPost }) => {
                   </span>
                 </div>
 
-                <h2 className="text-xl sm:text-2xl font-bold text-white group-hover:text-[#DD2B1C] transition-colors leading-snug">
+                <h2 className="text-xl sm:text-2xl font-bold text-white group-hover:text-[#007BFF] transition-colors leading-snug">
                   {featuredPost.title}
                 </h2>
 
@@ -140,7 +140,7 @@ export const Blog: React.FC<BlogProps> = ({ onNavigateHome, onSelectPost }) => {
                   </div>
                 </div>
 
-                <span className="text-xs font-bold text-[#DD2B1C] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                <span className="text-xs font-bold text-[#007BFF] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                   Read Full Article <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
@@ -173,7 +173,7 @@ export const Blog: React.FC<BlogProps> = ({ onNavigateHome, onSelectPost }) => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search articles by topic..."
-              className="w-full pl-10 pr-4 py-2 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-[#DD2B1C]"
+              className="w-full pl-10 pr-4 py-2 rounded-xl border border-gray-200 text-xs focus:outline-none focus:border-[#007BFF]"
             />
           </div>
         </div>

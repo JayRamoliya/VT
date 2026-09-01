@@ -51,37 +51,37 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
       title: "Premium Quality",
       description:
         "Forged from certified AISI 304 Stainless Steel & heavy gauge CRCA Mild Steel with immaculate satin and mirror finishes.",
-      icon: <ShieldCheck className="w-6 h-6 text-[#DD2B1C]" />,
+      icon: <ShieldCheck className="w-6 h-6 text-[#007BFF]" />,
     },
     {
       title: "Bulk Order Specialists",
       description:
         "Engineered high-speed manufacturing lines optimized for corporate volumes ranging from 100 to 10,000+ pieces.",
-      icon: <Boxes className="w-6 h-6 text-[#DD2B1C]" />,
+      icon: <Boxes className="w-6 h-6 text-[#007BFF]" />,
     },
     {
       title: "Custom Branding & Laser Marking",
       description:
         "Permanent fiber laser annealing of corporate logos, taglines, QR codes, and individual employee names with 0.01mm precision.",
-      icon: <Sparkles className="w-6 h-6 text-[#DD2B1C]" />,
+      icon: <Sparkles className="w-6 h-6 text-[#007BFF]" />,
     },
     {
       title: "Timely Delivery",
       description:
         "Strict commitment to conference and event deadlines with guaranteed same-week dispatch from our Rajkot plant.",
-      icon: <Clock className="w-6 h-6 text-[#DD2B1C]" />,
+      icon: <Clock className="w-6 h-6 text-[#007BFF]" />,
     },
     {
       title: "Competitive Factory Pricing",
       description:
         "Zero broker markups. Direct-from-manufacturer transparent tier pricing providing 30-40% savings on corporate budgets.",
-      icon: <DollarSign className="w-6 h-6 text-[#DD2B1C]" />,
+      icon: <DollarSign className="w-6 h-6 text-[#007BFF]" />,
     },
     {
       title: "Pan India Supply",
       description:
         "Express multi-city dispatch network servicing corporate HQs, regional branches, and dealerships in all 28 states.",
-      icon: <Globe className="w-6 h-6 text-[#DD2B1C]" />,
+      icon: <Globe className="w-6 h-6 text-[#007BFF]" />,
     },
   ];
 
@@ -246,7 +246,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
       >
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <FadeUp>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-[#DD2B1C] border border-red-100 text-xs font-bold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 text-[#007BFF] border border-red-100 text-xs font-bold uppercase tracking-wider mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Core Manufacturing Divisions</span>
             </div>
@@ -263,7 +263,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
           <FadeUp delay={0.2} className="flex-shrink-0">
             <Link
               to="/products"
-              className="inline-flex items-center gap-2.5 bg-gray-100 hover:bg-[#DD2B1C] text-gray-800 hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 group shadow-2xs"
+              className="inline-flex items-center gap-2.5 bg-gray-100 hover:bg-[#007BFF] text-gray-800 hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 group shadow-2xs"
             >
               <span>View All 57+ Models</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -283,14 +283,14 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
             <button
               key={cat}
               onClick={() => handleCategoryClick(cat)}
-              className="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-50 hover:bg-red-50 hover:text-[#DD2B1C] text-gray-700 border border-gray-200/80 hover:border-red-200 transition-colors cursor-pointer"
+              className="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-50 hover:bg-red-50 hover:text-[#007BFF] text-gray-700 border border-gray-200/80 hover:border-red-200 transition-colors cursor-pointer"
             >
               {cat}
             </button>
           ))}
           <Link
             to="/products"
-            className="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-red-500/10 text-[#DD2B1C] hover:bg-[#DD2B1C] hover:text-white border border-red-200 transition-colors"
+            className="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-red-500/10 text-[#007BFF] hover:bg-[#007BFF] hover:text-white border border-red-200 transition-colors"
           >
             + View All
           </Link>
@@ -317,7 +317,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <FadeUp>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
                 Corporate Favorites & Ready Stock
               </span>
               <h2 className="text-3xl sm:text-4xl font-black text-[#151616] tracking-tight">
@@ -344,7 +344,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
           <FadeUp delay={0.3} className="text-center mt-12">
             <Link
               to="/products"
-              className="inline-flex items-center gap-2 bg-[#151616] hover:bg-[#DD2B1C] text-white px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-250 shadow-md hover:shadow-xl cursor-pointer"
+              className="inline-flex items-center gap-2 bg-[#151616] hover:bg-[#007BFF] text-white px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-250 shadow-md hover:shadow-xl cursor-pointer"
             >
               <span>Explore Complete Product Range</span>
               <ArrowRight className="w-4 h-4" />
@@ -368,7 +368,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
                 </span>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mt-4">
                   Permanent{" "}
-                  <span className="text-[#DD2B1C]">Laser Marking</span> in Metal
+                  <span className="text-[#007BFF]">Laser Marking</span> in Metal
                 </h2>
                 <p className="text-gray-300 text-sm sm:text-base leading-relaxed mt-4">
                   Unlike traditional ink printing that wears off in weeks, our
@@ -381,7 +381,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
 
               <FadeUp delay={0.2} className="space-y-3 pt-2">
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-red-500/20 text-[#DD2B1C] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-red-500/20 text-[#007BFF] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-4 h-4" />
                   </div>
                   <div>
@@ -399,7 +399,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
               <FadeUp delay={0.3} className="flex flex-wrap gap-4 pt-4">
                 <button
                   onClick={openLaserPreviewModal}
-                  className="bg-[#DD2B1C] hover:bg-[#b82215] text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md flex items-center gap-2 cursor-pointer"
+                  className="bg-[#007BFF] hover:bg-[#b82215] text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 shadow-md flex items-center gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Test Laser Marking Simulator</span>
@@ -422,7 +422,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] mb-1">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] mb-1">
                     Fiber Laser Lab • Rajkot
                   </span>
                   <h3 className="text-xl font-bold text-white">
@@ -443,7 +443,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <FadeUp>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
               Why Varaia Traders
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-[#151616] tracking-tight">
@@ -472,10 +472,10 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
               className="p-8 rounded-3xl bg-white border border-gray-200/80 hover:border-gray-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center mb-6 group-hover:bg-[#DD2B1C] group-hover:text-white transition-colors duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center mb-6 group-hover:bg-[#007BFF] group-hover:text-white transition-colors duration-300">
                   {card.icon}
                 </div>
-                <h3 className="text-lg font-bold text-[#151616] mb-2 group-hover:text-[#DD2B1C] transition-colors">
+                <h3 className="text-lg font-bold text-[#151616] mb-2 group-hover:text-[#007BFF] transition-colors">
                   {card.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
@@ -483,7 +483,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-gray-100 flex items-center text-xs font-bold text-gray-400 group-hover:text-[#DD2B1C] transition-colors">
+              <div className="mt-6 pt-4 border-t border-gray-100 flex items-center text-xs font-bold text-gray-400 group-hover:text-[#007BFF] transition-colors">
                 <span>Verified Quality Standard</span>
                 <CheckCircle2 className="w-3.5 h-3.5 ml-auto text-green-600" />
               </div>
@@ -494,7 +494,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
 
       <section className="py-16 bg-gray-50 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
             Trusted By
           </span>
 

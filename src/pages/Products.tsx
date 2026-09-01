@@ -79,7 +79,7 @@ export const Products: React.FC<ProductsProps> = ({
 
   const materials = [
     'All',
-    'Stainless Steel (AISI 304)',
+    'Stainless Steel (SS 202)',
     'Heavy Mild Steel (MS)',
     'Dual Tone (SS + MS)',
     'Brass Accents'
@@ -175,7 +175,7 @@ export const Products: React.FC<ProductsProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="max-w-2xl">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-1.5">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-1.5">
                 Rajkot Manufacturing Facility • Direct Wholesale Tiers
               </span>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#151616] tracking-tight">
@@ -191,12 +191,12 @@ export const Products: React.FC<ProductsProps> = ({
                 onClick={openLaserPreviewModal}
                 className="bg-white hover:bg-gray-100 text-gray-800 border border-gray-200 px-4 py-2.5 rounded-xl text-xs font-bold transition-all shadow-2xs flex items-center gap-2 cursor-pointer"
               >
-                <Sparkles className="w-4 h-4 text-[#DD2B1C]" />
+                <Sparkles className="w-4 h-4 text-[#007BFF]" />
                 <span>Simulate Laser Logo</span>
               </button>
               <button
                 onClick={() => openQuoteModal()}
-                className="bg-[#DD2B1C] hover:bg-[#b82215] text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
+                className="bg-[#007BFF] hover:bg-[#b82215] text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
               >
                 Request Fast RFQ
               </button>
@@ -217,7 +217,7 @@ export const Products: React.FC<ProductsProps> = ({
               value={searchQuery}
               onChange={(e) => updateSearchQuery(e.target.value)}
               placeholder="Search by name, item code (e.g. VT-MS-01)..."
-              className="w-full pl-10 pr-9 py-2.5 rounded-xl border border-gray-200 text-xs sm:text-sm focus:outline-none focus:border-[#DD2B1C] focus:ring-2 focus:ring-red-100 transition-all"
+              className="w-full pl-10 pr-9 py-2.5 rounded-xl border border-gray-200 text-xs sm:text-sm focus:outline-none focus:border-[#007BFF] focus:ring-2 focus:ring-red-100 transition-all"
             />
             {searchQuery && (
               <button
@@ -235,7 +235,7 @@ export const Products: React.FC<ProductsProps> = ({
               onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
               className="lg:hidden flex items-center gap-2 px-3.5 py-2 rounded-xl border border-gray-200 text-xs font-bold text-gray-700 bg-gray-50"
             >
-              <Filter className="w-3.5 h-3.5 text-[#DD2B1C]" />
+              <Filter className="w-3.5 h-3.5 text-[#007BFF]" />
               <span>Filters {selectedCategory !== 'All' ? '(1)' : ''}</span>
             </button>
 
@@ -245,7 +245,7 @@ export const Products: React.FC<ProductsProps> = ({
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="border border-gray-200 rounded-xl px-3 py-2 text-xs font-semibold text-[#151616] bg-white focus:outline-none focus:border-[#DD2B1C]"
+                className="border border-gray-200 rounded-xl px-3 py-2 text-xs font-semibold text-[#151616] bg-white focus:outline-none focus:border-[#007BFF]"
               >
                 <option value="featured">Sort: Featured First</option>
                 <option value="name-asc">Alphabetical: A to Z</option>
@@ -265,12 +265,12 @@ export const Products: React.FC<ProductsProps> = ({
               
               <div className="flex items-center justify-between pb-3 border-b border-gray-200">
                 <span className="text-xs font-bold uppercase tracking-wider text-[#151616] flex items-center gap-1.5">
-                  <SlidersHorizontal className="w-3.5 h-3.5 text-[#DD2B1C]" /> Filter Catalogue
+                  <SlidersHorizontal className="w-3.5 h-3.5 text-[#007BFF]" /> Filter Catalogue
                 </span>
                 {(selectedCategory !== 'All' || selectedMaterial !== 'All' || readyStockOnly || laserMarkingOnly) && (
                   <button
                     onClick={clearAllFilters}
-                    className="text-[11px] font-bold text-[#DD2B1C] hover:underline"
+                    className="text-[11px] font-bold text-[#007BFF] hover:underline"
                   >
                     Reset All
                   </button>
@@ -321,7 +321,7 @@ export const Products: React.FC<ProductsProps> = ({
                       onClick={() => setSelectedMaterial(mat)}
                       className={`w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                         selectedMaterial === mat
-                          ? 'text-[#DD2B1C] font-bold'
+                          ? 'text-[#007BFF] font-bold'
                           : 'text-gray-600 hover:text-[#151616]'
                       }`}
                     >
@@ -338,7 +338,7 @@ export const Products: React.FC<ProductsProps> = ({
                     type="checkbox"
                     checked={readyStockOnly}
                     onChange={(e) => setReadyStockOnly(e.target.checked)}
-                    className="rounded text-[#DD2B1C] focus:ring-[#DD2B1C] w-4 h-4"
+                    className="rounded text-[#007BFF] focus:ring-[#007BFF] w-4 h-4"
                   />
                   <span>Ready Stock Only (1000+ Cartons)</span>
                 </label>
@@ -348,7 +348,7 @@ export const Products: React.FC<ProductsProps> = ({
                     type="checkbox"
                     checked={laserMarkingOnly}
                     onChange={(e) => setLaserMarkingOnly(e.target.checked)}
-                    className="rounded text-[#DD2B1C] focus:ring-[#DD2B1C] w-4 h-4"
+                    className="rounded text-[#007BFF] focus:ring-[#007BFF] w-4 h-4"
                   />
                   <span>Laser Marking Ready</span>
                 </label>
@@ -364,7 +364,7 @@ export const Products: React.FC<ProductsProps> = ({
               {selectedCategory !== 'All' && (
                 <span className="bg-gray-100 text-gray-800 px-2.5 py-1 rounded-full text-[11px] font-bold flex items-center gap-1">
                   Category: {selectedCategory}
-                  <X className="w-3 h-3 cursor-pointer hover:text-[#DD2B1C]" onClick={() => updateCategoryFilter('All')} />
+                  <X className="w-3 h-3 cursor-pointer hover:text-[#007BFF]" onClick={() => updateCategoryFilter('All')} />
                 </span>
               )}
             </div>
@@ -378,7 +378,7 @@ export const Products: React.FC<ProductsProps> = ({
                 </p>
                 <button
                   onClick={clearAllFilters}
-                  className="bg-[#DD2B1C] text-white text-xs font-bold px-4 py-2 rounded-xl uppercase tracking-wider"
+                  className="bg-[#007BFF] text-white text-xs font-bold px-4 py-2 rounded-xl uppercase tracking-wider"
                 >
                   Clear All Filters
                 </button>

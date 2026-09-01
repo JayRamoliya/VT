@@ -68,7 +68,7 @@ export const LaserMarkingPreview: React.FC = () => {
             {/* Header */}
             <div className="bg-[#151616] text-white p-5 flex items-center justify-between border-b border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#DD2B1C] flex items-center justify-center text-white font-bold shadow-xs">
+                <div className="w-10 h-10 rounded-xl bg-[#007BFF] flex items-center justify-center text-white font-bold shadow-xs">
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <div>
@@ -134,7 +134,7 @@ export const LaserMarkingPreview: React.FC = () => {
                   </div>
 
                   {/* Laser Beam Indicator Effect */}
-                  <div className="absolute top-3 left-3 bg-[#DD2B1C]/90 text-white text-[9px] font-bold px-2 py-0.5 rounded flex items-center gap-1 shadow-sm">
+                  <div className="absolute top-3 left-3 bg-[#007BFF]/90 text-white text-[9px] font-bold px-2 py-0.5 rounded flex items-center gap-1 shadow-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
                     50W MOPA Laser Active
                   </div>
@@ -157,7 +157,7 @@ export const LaserMarkingPreview: React.FC = () => {
                       const found = PRODUCTS.find(p => p.id === e.target.value);
                       if (found) setPreviewProduct(found);
                     }}
-                    className="w-full text-xs font-semibold p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] outline-hidden bg-white"
+                    className="w-full text-xs font-semibold p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] outline-hidden bg-white"
                   >
                     {PRODUCTS.map(p => (
                       <option key={p.id} value={p.id}>
@@ -176,7 +176,7 @@ export const LaserMarkingPreview: React.FC = () => {
                     value={companyText}
                     onChange={(e) => setCompanyText(e.target.value)}
                     maxLength={30}
-                    className="w-full text-xs font-bold p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] outline-hidden uppercase"
+                    className="w-full text-xs font-bold p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] outline-hidden uppercase"
                     placeholder="ENTER COMPANY NAME"
                   />
                 </div>
@@ -190,7 +190,7 @@ export const LaserMarkingPreview: React.FC = () => {
                     value={taglineText}
                     onChange={(e) => setTaglineText(e.target.value)}
                     maxLength={40}
-                    className="w-full text-xs font-medium p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] outline-hidden uppercase"
+                    className="w-full text-xs font-medium p-2.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] outline-hidden uppercase"
                     placeholder="SLOGAN / INDIVIDUAL NAME"
                   />
                 </div>
@@ -203,7 +203,7 @@ export const LaserMarkingPreview: React.FC = () => {
                     <button
                       onClick={() => setSelectedFont('font-sans')}
                       className={`p-2 rounded-lg border text-center transition-colors cursor-pointer ${
-                        selectedFont === 'font-sans' ? 'border-[#DD2B1C] bg-red-50 text-[#DD2B1C]' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
+                        selectedFont === 'font-sans' ? 'border-[#007BFF] bg-red-50 text-[#007BFF]' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
                       }`}
                     >
                       Sans-Serif
@@ -211,7 +211,7 @@ export const LaserMarkingPreview: React.FC = () => {
                     <button
                       onClick={() => setSelectedFont('font-serif')}
                       className={`p-2 rounded-lg border text-center transition-colors cursor-pointer font-serif ${
-                        selectedFont === 'font-serif' ? 'border-[#DD2B1C] bg-red-50 text-[#DD2B1C]' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
+                        selectedFont === 'font-serif' ? 'border-[#007BFF] bg-red-50 text-[#007BFF]' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
                       }`}
                     >
                       Serif
@@ -219,7 +219,7 @@ export const LaserMarkingPreview: React.FC = () => {
                     <button
                       onClick={() => setSelectedFont('font-mono')}
                       className={`p-2 rounded-lg border text-center transition-colors cursor-pointer font-mono ${
-                        selectedFont === 'font-mono' ? 'border-[#DD2B1C] bg-red-50 text-[#DD2B1C]' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
+                        selectedFont === 'font-mono' ? 'border-[#007BFF] bg-red-50 text-[#007BFF]' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
                       }`}
                     >
                       Monospace
@@ -235,7 +235,7 @@ export const LaserMarkingPreview: React.FC = () => {
                     <button
                       onClick={() => setContrastStyle('black-anneal')}
                       className={`p-2 rounded-lg border text-left transition-colors cursor-pointer ${
-                        contrastStyle === 'black-anneal' ? 'border-[#DD2B1C] bg-red-50 text-[#DD2B1C]' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
+                        contrastStyle === 'black-anneal' ? 'border-[#007BFF] bg-red-50 text-[#007BFF]' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
                       }`}
                     >
                       <span className="block text-xs font-bold">Dark Anneal</span>
@@ -244,7 +244,7 @@ export const LaserMarkingPreview: React.FC = () => {
                     <button
                       onClick={() => setContrastStyle('frosty-silver')}
                       className={`p-2 rounded-lg border text-left transition-colors cursor-pointer ${
-                        contrastStyle === 'frosty-silver' ? 'border-[#DD2B1C] bg-red-50 text-[#DD2B1C]' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
+                        contrastStyle === 'frosty-silver' ? 'border-[#007BFF] bg-red-50 text-[#007BFF]' : 'border-gray-200 text-gray-700 hover:bg-gray-50'
                       }`}
                     >
                       <span className="block text-xs font-bold">Frosted Silver</span>
@@ -272,7 +272,7 @@ export const LaserMarkingPreview: React.FC = () => {
                       closeLaserPreviewModal();
                       openQuoteModal(previewProduct);
                     }}
-                    className="w-full bg-[#151616] hover:bg-[#DD2B1C] text-white py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full bg-[#151616] hover:bg-[#007BFF] text-white py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <FileText className="w-4 h-4" />
                     <span>Add to RFQ with Laser Notes</span>

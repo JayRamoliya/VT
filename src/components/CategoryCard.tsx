@@ -59,7 +59,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
   const getCategoryHighlights = (cat: CategoryType) => {
     switch (cat) {
       case "Mobile Stand":
-        return ["AISI 304 Steel", "Multi-Angle MS", "Laser Area"];
+        return ["SS 202 Steel", "Multi-Angle MS", "Laser Area"];
       case "Paper Weight":
         return ["Solid 320g Dome", "Mirror Finish", "Hexagonal MS"];
       case "Calendar":
@@ -86,7 +86,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
       viewport={{ once: true }}
       transition={{ duration: 0.3 }}
       onClick={handleClick}
-      className="group relative h-[360px] sm:h-[380px] rounded-3xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-200/90 hover:border-[#DD2B1C]/50 flex flex-col justify-between p-6 sm:p-7"
+      className="group relative h-[360px] sm:h-[380px] rounded-3xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-200/90 hover:border-[#007BFF]/50 flex flex-col justify-between p-6 sm:p-7"
       id={`category-card-${category.toLowerCase().replace(/\s+/g, "-")}`}
     >
       {/* Background Image with Zoom & Dark Vignette */}
@@ -102,12 +102,12 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
 
       {/* Top Bar: Icon Badge + Ready Stock Count Badge */}
       <div className="relative z-10 flex items-center justify-between">
-        <div className="w-11 h-11 rounded-2xl bg-white/15 backdrop-blur-md border border-white/25 text-white flex items-center justify-center group-hover:bg-[#DD2B1C] group-hover:border-[#DD2B1C] transition-all duration-300 shadow-sm">
+        <div className="w-11 h-11 rounded-2xl bg-white/15 backdrop-blur-md border border-white/25 text-white flex items-center justify-center group-hover:bg-[#007BFF] group-hover:border-[#007BFF] transition-all duration-300 shadow-sm">
           {getCategoryIcon(category)}
         </div>
 
         <span className="bg-white/95 backdrop-blur-md text-[#151616] text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm flex items-center gap-1.5">
-          <Sparkles className="w-3 h-3 text-[#DD2B1C]" />
+          <Sparkles className="w-3 h-3 text-[#007BFF]" />
           <span>{details.count}+ Models Ready</span>
         </span>
       </div>
@@ -139,9 +139,9 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
         </div>
 
         {/* Action Link Button */}
-        <div className="pt-3 border-t border-white/15 flex items-center justify-between text-xs font-bold text-white group-hover:text-[#DD2B1C] transition-colors duration-200">
+        <div className="pt-3 border-t border-white/15 flex items-center justify-between text-xs font-bold text-white group-hover:text-[#007BFF] transition-colors duration-200">
           <span>Explore Full Range</span>
-          <div className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-[#DD2B1C] group-hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm">
+          <div className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-[#007BFF] group-hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm">
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </div>
         </div>

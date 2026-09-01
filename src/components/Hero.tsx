@@ -86,7 +86,7 @@ export const Hero: React.FC<HeroProps> = ({
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: corporateEase }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-100 text-[#DD2B1C] text-xs font-bold uppercase tracking-wider shadow-2xs"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-100 text-[#007BFF] text-xs font-bold uppercase tracking-wider shadow-2xs"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>Direct Rajkot Factory Manufacturer • 57+ Product Models</span>
@@ -100,9 +100,9 @@ export const Hero: React.FC<HeroProps> = ({
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold lg:font-bold tracking-[-0.02em] text-[#151616] leading-[1.08]"
             >
               Steel & MS Corporate Gifting Products with{' '}
-              <span className="text-[#DD2B1C] inline-block relative">
+              <span className="text-[#007BFF] inline-block relative">
                 Industrial Precision
-                <svg className="absolute -bottom-1.5 left-0 w-full h-2 text-[#DD2B1C]/20" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <svg className="absolute -bottom-1.5 left-0 w-full h-2 text-[#007BFF]/20" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0,5 Q50,0 100,5" stroke="currentColor" strokeWidth="3" fill="none" />
                 </svg>
               </span>
@@ -126,15 +126,15 @@ export const Hero: React.FC<HeroProps> = ({
               className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1"
             >
               <div className="flex items-center gap-2 text-xs font-semibold text-gray-700 bg-white/80 backdrop-blur-xs p-2 rounded-xl border border-gray-200/80 shadow-2xs">
-                <CheckCircle2 className="w-4 h-4 text-[#DD2B1C] flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#007BFF] flex-shrink-0" />
                 <span>Ready Stock: 1000+ Cartons</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-gray-700 bg-white/80 backdrop-blur-xs p-2 rounded-xl border border-gray-200/80 shadow-2xs">
-                <CheckCircle2 className="w-4 h-4 text-[#DD2B1C] flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#007BFF] flex-shrink-0" />
                 <span>Laser Marking in Metal</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-gray-700 bg-white/80 backdrop-blur-xs p-2 rounded-xl border border-gray-200/80 shadow-2xs col-span-2 sm:col-span-1">
-                <CheckCircle2 className="w-4 h-4 text-[#DD2B1C] flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#007BFF] flex-shrink-0" />
                 <span>PAN INDIA GLOBAL capital</span>
               </div>
             </motion.div>
@@ -151,7 +151,7 @@ export const Hero: React.FC<HeroProps> = ({
                 whileTap={{ scale: 0.98 }}
                 onClick={handleExplore}
                 id="hero-explore-products-btn"
-                className="bg-[#DD2B1C] hover:bg-[#b82215] text-white px-7 py-3.5 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-md hover:shadow-xl flex items-center gap-2.5 cursor-pointer group"
+                className="bg-[#007BFF] hover:bg-[#b82215] text-white px-7 py-3.5 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-md hover:shadow-xl flex items-center gap-2.5 cursor-pointer group"
               >
                 <span>Explore Products</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-200" />
@@ -164,7 +164,7 @@ export const Hero: React.FC<HeroProps> = ({
                 id="hero-quote-btn"
                 className="bg-[#151616] hover:bg-black text-white px-7 py-3.5 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow-md flex items-center gap-2 cursor-pointer"
               >
-                <FileText className="w-4 h-4 text-[#DD2B1C]" />
+                <FileText className="w-4 h-4 text-[#007BFF]" />
                 <span>Get Bulk Quote</span>
               </motion.button>
             </motion.div>
@@ -183,7 +183,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <button
                   onClick={() => setActiveTab('mobile-stand')}
                   className={`flex-1 py-1.5 px-2 rounded-lg transition-all duration-200 flex items-center justify-center gap-1 cursor-pointer ${
-                    activeTab === 'mobile-stand' ? 'bg-white text-[#DD2B1C] shadow-xs' : 'text-gray-600 hover:text-[#151616]'
+                    activeTab === 'mobile-stand' ? 'bg-white text-[#007BFF] shadow-xs' : 'text-gray-600 hover:text-[#151616]'
                   }`}
                 >
                   <Smartphone className="w-3.5 h-3.5" />
@@ -192,7 +192,7 @@ export const Hero: React.FC<HeroProps> = ({
                 <button
                   onClick={() => setActiveTab('pen-stand')}
                   className={`flex-1 py-1.5 px-2 rounded-lg transition-all duration-200 flex items-center justify-center gap-1 cursor-pointer ${
-                    activeTab === 'pen-stand' ? 'bg-white text-[#DD2B1C] shadow-xs' : 'text-gray-600 hover:text-[#151616]'
+                    activeTab === 'pen-stand' ? 'bg-white text-[#007BFF] shadow-xs' : 'text-gray-600 hover:text-[#151616]'
                   }`}
                 >
                   <PenTool className="w-3.5 h-3.5" />
@@ -231,7 +231,7 @@ export const Hero: React.FC<HeroProps> = ({
                       <span className="font-mono bg-gray-100 px-2 py-0.5 rounded text-[11px] text-gray-700 font-bold">
                         {currentItem.code}
                       </span>
-                      <span className="text-[#DD2B1C] font-bold">
+                      <span className="text-[#007BFF] font-bold">
                         Fiber Laser Logo Ready
                       </span>
                     </div>
@@ -254,7 +254,7 @@ export const Hero: React.FC<HeroProps> = ({
                   <div className="flex items-center gap-2 pt-1">
                     <button
                       onClick={handleExplore}
-                      className="flex-1 bg-[#151616] hover:bg-[#DD2B1C] text-white py-2.5 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                      className="flex-1 bg-[#151616] hover:bg-[#007BFF] text-white py-2.5 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
                     >
                       <span>Explore In Catalogue</span>
                       <ArrowRight className="w-3.5 h-3.5" />

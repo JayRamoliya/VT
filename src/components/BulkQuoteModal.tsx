@@ -107,7 +107,7 @@ export const BulkQuoteModal: React.FC = () => {
             {/* Modal Header */}
             <div className="bg-[#151616] text-white p-5 sm:p-6 flex items-center justify-between border-b border-white/10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#DD2B1C] flex items-center justify-center text-white font-bold shadow-xs">
+                <div className="w-10 h-10 rounded-xl bg-[#007BFF] flex items-center justify-center text-white font-bold shadow-xs">
                   <FileText className="w-5 h-5" />
                 </div>
                 <div>
@@ -162,7 +162,7 @@ export const BulkQuoteModal: React.FC = () => {
                           whileTap={{ scale: 0.98 }}
                           key={prod.id}
                           onClick={() => handleAddPopularItem(prod.id)}
-                          className="bg-white border border-gray-200 hover:border-[#DD2B1C] px-3 py-1.5 rounded-lg text-xs font-bold text-gray-700 hover:text-[#DD2B1C] transition-colors flex items-center gap-1 cursor-pointer shadow-2xs"
+                          className="bg-white border border-gray-200 hover:border-[#007BFF] px-3 py-1.5 rounded-lg text-xs font-bold text-gray-700 hover:text-[#007BFF] transition-colors flex items-center gap-1 cursor-pointer shadow-2xs"
                         >
                           <Plus className="w-3.5 h-3.5" /> + {prod.name}
                         </motion.button>
@@ -242,7 +242,7 @@ export const BulkQuoteModal: React.FC = () => {
                         placeholder="e.g., Tata Motors, L&T, HDFC"
                         value={companyName}
                         onChange={(e) => setCompanyName(e.target.value)}
-                        className="w-full pl-9 pr-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] focus:border-transparent outline-hidden transition-all"
+                        className="w-full pl-9 pr-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] focus:border-transparent outline-hidden transition-all"
                       />
                     </div>
                   </div>
@@ -255,7 +255,7 @@ export const BulkQuoteModal: React.FC = () => {
                       placeholder="e.g., Rajesh Sharma (Procurement)"
                       value={buyerName}
                       onChange={(e) => setBuyerName(e.target.value)}
-                      className="w-full px-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] focus:border-transparent outline-hidden transition-all"
+                      className="w-full px-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] focus:border-transparent outline-hidden transition-all"
                     />
                   </div>
 
@@ -269,7 +269,7 @@ export const BulkQuoteModal: React.FC = () => {
                         placeholder="+91 98765 43210"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full pl-9 pr-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] focus:border-transparent outline-hidden transition-all"
+                        className="w-full pl-9 pr-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] focus:border-transparent outline-hidden transition-all"
                       />
                     </div>
                   </div>
@@ -283,7 +283,7 @@ export const BulkQuoteModal: React.FC = () => {
                         placeholder="rajesh@company.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full pl-9 pr-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] focus:border-transparent outline-hidden transition-all"
+                        className="w-full pl-9 pr-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] focus:border-transparent outline-hidden transition-all"
                       />
                     </div>
                   </div>
@@ -298,7 +298,7 @@ export const BulkQuoteModal: React.FC = () => {
                         placeholder="e.g., Mumbai, Delhi, Bengaluru, Dubai"
                         value={city}
                         onChange={(e) => setCity(e.target.value)}
-                        className="w-full pl-9 pr-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] focus:border-transparent outline-hidden transition-all"
+                        className="w-full pl-9 pr-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] focus:border-transparent outline-hidden transition-all"
                       />
                     </div>
                   </div>
@@ -308,7 +308,7 @@ export const BulkQuoteModal: React.FC = () => {
                     <select
                       value={laserMarking}
                       onChange={(e) => setLaserMarking(e.target.value)}
-                      className="w-full px-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] focus:border-transparent outline-hidden bg-white"
+                      className="w-full px-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] focus:border-transparent outline-hidden bg-white"
                     >
                       <option>Yes, need company logo laser marked</option>
                       <option>Yes, need logo + individual recipient names</option>
@@ -325,7 +325,7 @@ export const BulkQuoteModal: React.FC = () => {
                     placeholder="Specific packaging requirement, split shipping to multiple branches, or required dispatch deadline..."
                     value={specialNotes}
                     onChange={(e) => setSpecialNotes(e.target.value)}
-                    className="w-full px-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#DD2B1C] focus:border-transparent outline-hidden"
+                    className="w-full px-3 py-2 text-xs border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#007BFF] focus:border-transparent outline-hidden"
                   />
                 </div>
 
@@ -363,7 +363,7 @@ export const BulkQuoteModal: React.FC = () => {
                       whileTap={{ scale: 0.98 }}
                       type="button"
                       onClick={handleEmailSubmit}
-                      className="flex-1 sm:flex-initial bg-[#151616] hover:bg-[#DD2B1C] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+                      className="flex-1 sm:flex-initial bg-[#151616] hover:bg-[#007BFF] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                     >
                       <Send className="w-4 h-4" />
                       <span>Email RFP</span>
