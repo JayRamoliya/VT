@@ -79,7 +79,7 @@ export const CatalogueDownloadModal: React.FC = () => {
                 Download Complete Product PDF
               </h3>
               <p className="text-xs text-gray-300 mt-1">
-                Access technical dimensions, material grades (SS 304/MS), laser branding zones, and carton packaging standards.
+                Access technical dimensions, material grades (SS 202/MS), laser branding zones, and carton packaging standards.
               </p>
             </div>
 

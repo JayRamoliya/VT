@@ -3,7 +3,7 @@ import { GalleryItem } from '../types';
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-01',
-    title: 'High-Precision Fiber Laser Marking on SS 304 Mobile Stands',
+    title: 'High-Precision Fiber Laser Marking on SS 202 Mobile Stands',
     category: 'Laser Marking',
     image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?q=80&w=900&auto=format&fit=crop',
     description: 'Crisp fiber laser annealing on 2mm brushed stainless steel phone holder lip for a multinational IT client in Bengaluru.',
@@ -44,7 +44,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=900&auto=format&fit=crop',
     description: '320g solid steel hemispherical paper weights with velvet bases custom-branded for real estate project launch.',
     clientType: 'Luxury Real Estate Developer',
-    materialUsed: 'Solid SS 304 Ingot'
+    materialUsed: 'Solid SS 202 Ingot'
   },
   {
     id: 'gal-07',
@@ -62,7 +62,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     image: 'https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=900&auto=format&fit=crop',
     description: 'Brushed steel perpetual rolling calendar distributed for annual corporate goodwill across 2,500 dealer counters.',
     clientType: 'Paints & Building Material Manufacturer',
-    materialUsed: 'Hairline Brushed SS 304'
+    materialUsed: 'Hairline Brushed SS 202'
   },
   {
     id: 'gal-09',

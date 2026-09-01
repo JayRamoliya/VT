@@ -53,7 +53,7 @@ export const Hero: React.FC<HeroProps> = ({
     'mobile-stand': {
       title: 'Executive Stainless Steel Mobile Stand',
       code: 'VT-MS-01',
-      material: 'SS 304 Solid Stainless Steel',
+      material: 'SS 202 Solid Stainless Steel',
       finish: 'Satin Brushed with Anti-Fingerprint Layer',
       readyStock: '1000+ Cartons Ready Stock',
       image: '/image/VT-1101/vt-1101-ms.webp',

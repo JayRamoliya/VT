@@ -254,7 +254,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
               Featured Manufacturing Categories
             </h2>
             <p className="text-sm text-gray-600 mt-2.5 max-w-2xl leading-relaxed">
-              Industrial grade SS 304 and mild steel merchandise forged for high
+              Industrial grade SS 202 and mild steel merchandise forged for high
               brand equity on executive desks across India and global corporate
               networks.
             </p>
