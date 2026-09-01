@@ -22,7 +22,7 @@
   h6 {
     font-family: "Google Sans", system-ui, sans-serif !important;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 600 !important;
     font-style: normal;
     letter-spacing: -0.02em;
   }
