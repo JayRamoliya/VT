@@ -1,19 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ShieldCheck, 
-  FileCheck, 
-  CheckCircle2, 
-  ArrowUpRight, 
-  Globe, 
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  ShieldCheck,
+  FileCheck,
+  CheckCircle2,
+  ArrowUpRight,
+  Globe,
   Download,
-  Sparkles
-} from 'lucide-react';
-import { useQuote } from '../context/QuoteContext';
-import { CATEGORIES } from '../data/products';
+  Sparkles,
+} from "lucide-react";
+import { useQuote } from "../context/QuoteContext";
+import { CATEGORIES } from "../data/products";
 
 export const Footer: React.FC = () => {
   const { openCatalogueModal, openQuoteModal } = useQuote();
@@ -28,9 +28,12 @@ export const Footer: React.FC = () => {
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-white uppercase tracking-wider">57+ Product Range</h4>
+              <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+                57+ Product Range
+              </h4>
               <p className="text-xs text-gray-400 mt-1 leading-relaxed">
-                Precision-engineered Steel & MS corporate gifting utilities for all budgets.
+                Precision-engineered Steel & MS corporate gifting utilities for
+                all budgets.
               </p>
             </div>
           </div>
@@ -40,9 +43,12 @@ export const Footer: React.FC = () => {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-white uppercase tracking-wider">Ready Stock 1000+ Cartons</h4>
+              <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+                Ready Stock 1000+ Cartons
+              </h4>
               <p className="text-xs text-gray-400 mt-1 leading-relaxed">
-                Central Rajkot warehouse for immediate dispatch of urgent corporate orders.
+                Central Rajkot warehouse for immediate dispatch of urgent
+                corporate orders.
               </p>
             </div>
           </div>
@@ -52,9 +58,12 @@ export const Footer: React.FC = () => {
               <Globe className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-white uppercase tracking-wider">Pan India & Global Supply</h4>
+              <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+                Pan India & Global Supply
+              </h4>
               <p className="text-xs text-gray-400 mt-1 leading-relaxed">
-                Multi-branch corporate dispatch across India, Middle East, and overseas markets.
+                Multi-branch corporate dispatch across India, Middle East, and
+                overseas markets.
               </p>
             </div>
           </div>
@@ -64,9 +73,12 @@ export const Footer: React.FC = () => {
               <FileCheck className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-white uppercase tracking-wider">Laser Marking in Metal</h4>
+              <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+                Laser Marking in Metal
+              </h4>
               <p className="text-xs text-gray-400 mt-1 leading-relaxed">
-                Permanent high-contrast fiber laser etching for brand logos & individual recipient names.
+                Permanent high-contrast fiber laser etching for brand logos &
+                individual recipient names.
               </p>
             </div>
           </div>
@@ -76,39 +88,40 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 py-12 border-b border-neutral-800">
           {/* Brand Info Column */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-white text-[#151616] flex items-center justify-center font-black text-xl rounded-lg tracking-wider border-2 border-[#007BFF]">
-                <span className="text-[#007BFF]">V</span>T
-              </div>
-              <div>
-                <span className="block font-black text-xl tracking-tight text-white leading-none">
-                  VARAIA <span className="text-[#007BFF]">TRADERS</span>
-                </span>
-                <span className="block text-[11px] font-semibold text-gray-400 uppercase tracking-wider mt-0.5">
-                  Quality that Impresses. Speed that Delivers.
-                </span>
+            <Link to="/" className="flex items-center">
+              <div className="w-44 h-20 p-2 bg-white rounded-lg flex items-center justify-center">
+                <img
+                  src="/logo2.png"
+                  alt="Varaia Traders Logo"
+                  className="max-w-full max-h-full"
+                />
               </div>
             </Link>
 
             <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
-              Varaia Traders is a premier manufacturer and bulk supplier of high-grade Stainless Steel & Mild Steel (MS) corporate gifts, executive desk accessories, custom metal awards, and mementos based in the engineering capital of Rajkot, Gujarat.
+              Varaia Traders is a premier manufacturer and bulk supplier of
+              high-grade Stainless Steel & Mild Steel (MS) corporate gifts,
+              executive desk accessories, custom metal awards, and mementos
+              based in the engineering capital of Rajkot, Gujarat.
             </p>
 
             {/* Direct Contact Cards */}
             <div className="pt-2 space-y-2 text-xs text-gray-300">
               <div className="flex items-center gap-2.5">
-                <MapPin className="w-4 h-4 text-[#007BFF] flex-shrink-0" />
-                <span>Aji Industrial Area, GIDC, Rajkot - 360003, Gujarat, India</span>
-              </div>
-              <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#007BFF] flex-shrink-0" />
-                <a href="tel:+917567999989" className="hover:text-white font-semibold">
+                <a
+                  href="tel:+917567999989"
+                  className="hover:text-white font-semibold"
+                >
                   +91 75679 99989 (Direct Sales & Bulk Desk)
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#007BFF] flex-shrink-0" />
-                <a href="mailto:jignesh@varaiatraders.com" className="hover:text-white">
+                <a
+                  href="mailto:jignesh@varaiatraders.com"
+                  className="hover:text-white"
+                >
                   jignesh@varaiatraders.com
                 </a>
               </div>
@@ -122,27 +135,39 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs text-gray-400">
               <li>
-                <Link to="/about" className="hover:text-[#007BFF] transition-colors">
+                <Link
+                  to="/about"
+                  className="hover:text-[#007BFF] transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="hover:text-[#007BFF] transition-colors">
+                <Link
+                  to="/gallery"
+                  className="hover:text-[#007BFF] transition-colors"
+                >
                   Client Showcase & Gallery
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/blog" className="hover:text-[#007BFF] transition-colors">
                   Corporate Gifting Insights
                 </Link>
-              </li>
+              </li> */}
               <li>
-                <Link to="/about" className="hover:text-[#007BFF] transition-colors">
+                <Link
+                  to="/about"
+                  className="hover:text-[#007BFF] transition-colors"
+                >
                   Manufacturing Plant Infrastructure
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-[#007BFF] transition-colors">
+                <Link
+                  to="/about"
+                  className="hover:text-[#007BFF] transition-colors"
+                >
                   Quality Assurance & Metallurgy
                 </Link>
               </li>
@@ -155,18 +180,20 @@ export const Footer: React.FC = () => {
               Products
             </h4>
             <ul className="space-y-2.5 text-xs text-gray-400">
-              {CATEGORIES.filter(c => c !== 'All').slice(0, 6).map(cat => (
-                <li key={cat}>
-                  <Link 
-                    to={`/products?category=${encodeURIComponent(cat)}`}
-                    className="hover:text-[#007BFF] transition-colors truncate max-w-full block text-left"
-                  >
-                    {cat}
-                  </Link>
-                </li>
-              ))}
+              {CATEGORIES.filter((c) => c !== "All")
+                .slice(0, 6)
+                .map((cat) => (
+                  <li key={cat}>
+                    <Link
+                      to={`/products?category=${encodeURIComponent(cat)}`}
+                      className="hover:text-[#007BFF] transition-colors truncate max-w-full block text-left"
+                    >
+                      {cat}
+                    </Link>
+                  </li>
+                ))}
               <li>
-                <Link 
+                <Link
                   to="/products"
                   className="text-[#007BFF] font-semibold hover:underline flex items-center gap-1"
                 >
@@ -183,17 +210,26 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs text-gray-400">
               <li>
-                <Link to="/contact" className="hover:text-[#007BFF] transition-colors">
+                <Link
+                  to="/contact"
+                  className="hover:text-[#007BFF] transition-colors"
+                >
                   Contact Sales Office
                 </Link>
               </li>
               <li>
-                <button onClick={() => openQuoteModal()} className="hover:text-[#007BFF] transition-colors cursor-pointer">
+                <button
+                  onClick={() => openQuoteModal()}
+                  className="hover:text-[#007BFF] transition-colors cursor-pointer"
+                >
                   Bulk Order RFQ (100+ pcs)
                 </button>
               </li>
               <li>
-                <button onClick={openCatalogueModal} className="hover:text-[#007BFF] transition-colors cursor-pointer flex items-center gap-1.5">
+                <button
+                  onClick={openCatalogueModal}
+                  className="hover:text-[#007BFF] transition-colors cursor-pointer flex items-center gap-1.5"
+                >
                   <Download className="w-3 h-3 text-[#007BFF]" />
                   Download PDF Catalogue
                 </button>
@@ -229,9 +265,13 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="text-center md:text-right">
-            <p>© {new Date().getFullYear()} VARAIA TRADERS. All Rights Reserved. Manufactured in Rajkot, Gujarat, India.</p>
+            <p>
+              © {new Date().getFullYear()} VARAIA TRADERS. All Rights Reserved.
+              Manufactured in Rajkot, Gujarat, India.
+            </p>
             <p className="text-[11px] text-gray-400 mt-0.5">
-              Target Supply: Corporate Gifting | Graphic Design & Printing | Metal Awards & Trophies | Laser Marking in Metal
+              Target Supply: Corporate Gifting | Graphic Design & Printing |
+              Metal Awards & Trophies | Laser Marking in Metal
             </p>
           </div>
         </div>
