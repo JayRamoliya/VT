@@ -205,14 +205,14 @@ export const Footer: React.FC = () => {
                     UDYAM Certificate
                   </div>
                   <div className="text-[10px] text-gray-400 font-mono">
-                    UDYAM-GJ-20-0089421
+                    UDYAM-GJ-20-0040020
                   </div>
                   <div className="flex items-center gap-1.5 text-[11px] font-bold text-gray-200 pt-1">
                     <CheckCircle2 className="w-3.5 h-3.5 text-green-400" />
                     GST Registration
                   </div>
                   <div className="text-[10px] text-gray-400 font-mono">
-                    24AABCV9821M1ZT
+                    24DSPPS1285F1ZD
                   </div>
                 </div>
               </li>

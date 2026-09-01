@@ -8,7 +8,7 @@
 @layer base {
   html,
   body {
-    font-family: "Google Sans", system-ui, sans-serif;
+    font-family: "Google Sans", system-ui, sans-serif !important;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -20,7 +20,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Google Sans", system-ui, sans-serif;
+    font-family: "Google Sans", system-ui, sans-serif !important;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -30,19 +30,24 @@
 
 @layer base {
   body {
-    font-family: "Google Sans", system-ui, sans-serif;
+    font-family: "Google Sans", system-ui, sans-serif !important;
+    font-weight: 400;
+  }
+
+  span, p {
+    font-family: "Google Sans", system-ui, sans-serif !important;
     font-weight: 400;
   }
 
   h1 {
-    font-family: "Google Sans", system-ui, sans-serif;
+    font-family: "Google Sans", system-ui, sans-serif !important;
     font-weight: 700;
     letter-spacing: -0.04em;
   }
 
   h2,
   h3 {
-    font-family: "Google Sans", system-ui, sans-serif;
+    font-family: "Google Sans", system-ui, sans-serif !important;
     font-weight: 600;
     letter-spacing: -0.03em;
   }
@@ -50,7 +55,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Google Sans", system-ui, sans-serif;
+    font-family: "Google Sans", system-ui, sans-serif !important;
     font-weight: 500;
   }
 }

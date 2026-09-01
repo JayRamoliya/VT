@@ -37,7 +37,7 @@ const DEFAULT_FAQS: FAQItem[] = [
   },
   {
     question: 'Are GST invoices provided for corporate tax credit?',
-    answer: 'Yes, 100%. Varaia Traders is a registered manufacturer with GST (24AABCV9821M1ZT) and UDYAM certification (UDYAM-GJ-20-0089421). All corporate transactions include 100% compliant GST B2B tax invoices with appropriate HSN codes for full input tax credit.',
+    answer: 'Yes, 100%. Varaia Traders is a registered manufacturer with GST (24DSPPS1285F1ZD) and UDYAM certification (UDYAM-GJ-20-0040020). All corporate transactions include 100% compliant GST B2B tax invoices with appropriate HSN codes for full input tax credit.',
     category: 'Billing & Compliance'
   }
 ];

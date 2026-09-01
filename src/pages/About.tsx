@@ -664,14 +664,14 @@ export const About: React.FC<AboutProps> = ({
                 Office Address & Credentials
               </h3>
               <p className="text-xs text-gray-400">
-                <strong className="text-white">Facility:</strong> THIRD FLOOR, AAKANKSHA COMPLEX, 11, Gondal Rd, opp. BIMAL TYES, Vijay Plot, Bhakti Nagar, Rajkot, Gujarat 360002
+                <strong className="text-white">Facility:</strong> 303, THIRD FLOOR, "AAKANKSHA COMPLEX", 11 VIJAY PLOT, OPP BIMAL TYRES, GONDAL ROAD, RAJKOT - 360002 (GUJARAT) INDIA.
               </p>
               <p className="text-xs text-gray-400">
                 <strong className="text-white">UDYAM Certificate:</strong>{" "}
-                UDYAM-GJ-20-0089421
+                UDYAM-GJ-20-0040020
               </p>
               <p className="text-xs text-gray-400">
-                <strong className="text-white">GSTIN:</strong> 24AABCV9821M1ZT
+                <strong className="text-white">GSTIN:</strong> 24DSPPS1285F1ZD
               </p>
               <p className="text-xs text-gray-400">
                 <strong className="text-white">Direct Office Desk:</strong> +91

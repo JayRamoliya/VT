@@ -83,8 +83,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
                       Plant & Sales Office:
                     </span>
                     <span className="text-gray-600 leading-relaxed block mt-0.5">
-                      THIRD FLOOR, AAKANKSHA COMPLEX, 11, Gondal Rd, opp. BIMAL
-                      TYES, Vijay Plot, Bhakti Nagar, Rajkot, Gujarat 360002
+                      303, THIRD FLOOR, "AAKANKSHA COMPLEX", 11 VIJAY PLOT, OPP BIMAL TYRES, GONDAL ROAD, RAJKOT - 360002 (GUJARAT) INDIA.
                     </span>
                   </div>
                 </div>
