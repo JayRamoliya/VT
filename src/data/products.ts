@@ -2618,7 +2618,7 @@ export const PRODUCTS: Product[] = [
     id: "vt-1109",
     slug: "1109",
     name: "Metal Mobile Stand With Tea Coster - 4 pcs",
-    category: "Coaster Set",
+    category: "Mobile Stand",
     itemCode: "VT-1109",
     height: "85mm",
     length: "95mm",

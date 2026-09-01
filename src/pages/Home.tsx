@@ -472,7 +472,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
               className="p-8 rounded-3xl bg-white border border-gray-200/80 hover:border-gray-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center mb-6 group-hover:bg-[#007BFF] group-hover:text-white transition-colors duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center mb-6 group-hover:text-white transition-colors duration-300">
                   {card.icon}
                 </div>
                 <h3 className="text-lg font-bold text-[#151616] mb-2 group-hover:text-[#007BFF] transition-colors">

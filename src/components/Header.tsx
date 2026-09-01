@@ -246,7 +246,7 @@ export const Header: React.FC<HeaderProps> = () => {
                                 onClick={() => setIsMegaMenuOpen(false)}
                                 className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-gray-50 text-left transition-all group cursor-pointer border border-transparent hover:border-gray-200"
                               >
-                                <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0 group-hover:bg-[#007BFF] group-hover:text-white transition-colors duration-200">
+                                <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0 group-hover:text-white transition-colors duration-200">
                                   {getCategoryIcon(cat)}
                                 </div>
                                 <div className="min-w-0">
