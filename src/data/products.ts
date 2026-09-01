@@ -1731,7 +1731,6 @@ export const PRODUCTS: Product[] = [
     images: [
       "/image/VT-125/vt-125-ms.webp",
       "/image/VT-125/vt-125-ms2.webp",
-      "/image/VT-125/vt-125-ms3.webp",
     ],
     featured: true,
     inStock: true,
