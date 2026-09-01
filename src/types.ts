@@ -1,8 +1,10 @@
 export type CategoryType = 
   | 'All'
   | 'Mobile Stand'
+  | 'Pen Stand'
   | 'Coaster Set'
   | 'Desk Holder'
+  | 'Pocket Badge'
   | 'Card Holder'
   | 'Noteped & Pen Holder'
   | 'Noteped Holder'
