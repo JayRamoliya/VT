@@ -212,7 +212,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
     },
   ];
 
-  const categoriesToShow: CategoryType[] = ["Mobile Stand", "Paper Weight"];
+  const categoriesToShow: CategoryType[] = ["Mobile Stand", "Paper Weight","Calendar"];
 
   const handleCategoryClick = (category: CategoryType) => {
     if (onNavigate) {
