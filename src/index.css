@@ -98,32 +98,46 @@ body::-webkit-scrollbar,
 
 
 
-@keyframes slideLeft {
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+@keyframes marqueeLeft {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
+
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
-@keyframes slideRight {
+@keyframes marqueeRight {
   from {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
+
   to {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.animate-slide-left {
-  animation: slideLeft 22s linear infinite;
+.marquee-left {
+  animation: marqueeLeft 20s linear infinite;
 }
 
-.animate-slide-right {
-  animation: slideRight 25s linear infinite;
+.marquee-right {
+  animation: marqueeRight 22s linear infinite;
 }
 
-.animate-slide-left-slow {
-  animation: slideLeft 28s linear infinite;
+.marquee-slow {
+  animation: marqueeLeft 24s linear infinite;
 }
+
+/* .marquee-left:hover,
+.marquee-right:hover,
+.marquee-slow:hover {
+  animation-play-state: paused;
+} */

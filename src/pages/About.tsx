@@ -240,6 +240,9 @@ export const About: React.FC<AboutProps> = ({
       name: "31",
       logo: "/clients/31.webp",
     },
+  ];
+
+  const clients2 = [
     {
       name: "32",
       logo: "/clients/02 lrb tiles.webp",
@@ -402,12 +405,18 @@ export const About: React.FC<AboutProps> = ({
     },
   ];
 
-  const row1 = clients.slice(0, Math.ceil(clients.length / 3));
-  const row2 = clients.slice(
-    Math.ceil(clients.length / 3),
-    Math.ceil((clients.length * 2) / 3),
-  );
-  const row3 = clients.slice(Math.ceil((clients.length * 2) / 3));
+  // const row1 = clients.slice(0, Math.ceil(clients.length / 3));
+  // const row2 = clients.slice(
+  //   Math.ceil(clients.length / 3),
+  //   Math.ceil((clients.length * 2) / 3),
+  // );
+  // const row3 = clients.slice(Math.ceil((clients.length * 2) / 3));
+
+  const chunkSize = Math.ceil(clients.length / 3);
+
+  const row1 = clients.slice(0, chunkSize);
+  const row2 = clients.slice(chunkSize, chunkSize * 2);
+  const row3 = clients.slice(chunkSize * 2);
   return (
     <div className="w-full bg-white">
       {/* Breadcrumb Bar */}
@@ -652,11 +661,10 @@ export const About: React.FC<AboutProps> = ({
 
             <div className="bg-neutral-900 p-8 rounded-3xl border border-neutral-800 space-y-4">
               <h3 className="text-xl font-bold text-white mb-2">
-                Factory Address & Credentials
+                Office Address & Credentials
               </h3>
               <p className="text-xs text-gray-400">
-                <strong className="text-white">Facility:</strong> Aji Industrial
-                Area, GIDC Industrial Estate, Rajkot - 360003, Gujarat, India
+                <strong className="text-white">Facility:</strong> THIRD FLOOR, AAKANKSHA COMPLEX, 11, Gondal Rd, opp. BIMAL TYES, Vijay Plot, Bhakti Nagar, Rajkot, Gujarat 360002
               </p>
               <p className="text-xs text-gray-400">
                 <strong className="text-white">UDYAM Certificate:</strong>{" "}
@@ -666,7 +674,7 @@ export const About: React.FC<AboutProps> = ({
                 <strong className="text-white">GSTIN:</strong> 24AABCV9821M1ZT
               </p>
               <p className="text-xs text-gray-400">
-                <strong className="text-white">Direct Factory Desk:</strong> +91
+                <strong className="text-white">Direct Office Desk:</strong> +91
                 75679 99989 | jignesh@varaiatraders.com
               </p>
               <div className="pt-4">
@@ -682,8 +690,8 @@ export const About: React.FC<AboutProps> = ({
         </div>
       </section>
 
-      <section className="py-20 bg-white border-t border-gray-100 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <section className="py-16 sm:py-20 bg-white border-t border-gray-100 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 sm:mb-14">
           <div className="text-center">
             <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
               Trusted By Industry Leaders
@@ -693,7 +701,7 @@ export const About: React.FC<AboutProps> = ({
               Trusted By 80+ Companies Across India
             </h2>
 
-            <p className="text-gray-500 mt-3 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-500 mt-3 max-w-2xl mx-auto">
               Banks, ceramic manufacturers, exporters, distributors and leading
               brands trust Varaia Traders for premium corporate gifting
               solutions.
@@ -701,62 +709,61 @@ export const About: React.FC<AboutProps> = ({
           </div>
         </div>
 
-        {/* Row 1 */}
-        <div className="overflow-hidden mb-6">
-          <div className="flex animate-slide-left gap-6">
-            {[...row1, ...row1].map((client, index) => (
-              <LogoCard key={`r1-${index}`} client={client} />
-            ))}
-          </div>
-        </div>
+        <div className="relative">
+          {/* Left Fade */}
+          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-white to-transparent z-10" />
 
-        {/* Row 2 */}
-        <div className="overflow-hidden mb-6">
-          <div className="flex animate-slide-right gap-6">
-            {[...row2, ...row2].map((client, index) => (
-              <LogoCard key={`r2-${index}`} client={client} />
-            ))}
-          </div>
-        </div>
+          {/* Right Fade */}
+          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-white to-transparent z-10" />
 
-        {/* Row 3 */}
-        <div className="overflow-hidden">
-          <div className="flex animate-slide-left-slow gap-6">
-            {[...row3, ...row3].map((client, index) => (
-              <LogoCard key={`r3-${index}`} client={client} />
-            ))}
+          {/* Row 1 */}
+          <div className="overflow-hidden mb-4 sm:mb-6">
+            <div className="marquee-track marquee-left">
+              {[...row1, ...row1].map((client, index) => (
+                <div key={`r1-${index}`} className="mr-4 sm:mr-6">
+                  <LogoCard client={client} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 2 */}
+          <div className="overflow-hidden mb-4 sm:mb-6">
+            <div className="marquee-track marquee-right">
+              {[...row2, ...row2].map((client, index) => (
+                <div key={`r2-${index}`} className="mr-4 sm:mr-6">
+                  <LogoCard client={client} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 3 */}
+          <div className="overflow-hidden">
+            <div className="marquee-track marquee-slow">
+              {[...row3, ...row3].map((client, index) => (
+                <div key={`r3-${index}`} className="mr-4 sm:mr-6">
+                  <LogoCard client={client} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       <section className="py-20 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
-              Trusted By Industry Leaders
-            </span>
-
-            <h2 className="text-3xl sm:text-4xl font-black text-[#151616]">
-              Trusted By 80+ Companies Across India
-            </h2>
-
-            <p className="text-gray-500 mt-3">
-              From banks and ceramic brands to manufacturers and exporters,
-              Varaia Traders proudly serves businesses nationwide.
-            </p>
-          </div>
-
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
-            {clients.slice(0, visibleClients).map((client, index) => (
+            {clients2.slice(0, visibleClients).map((client, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl border border-gray-200 h-28 flex items-center justify-center p-5 hover:border-[#DD2B1C] hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                className="w-28 sm:w-36 md:w-44 h-16 sm:h-20 md:h-24 bg-white border border-gray-200 rounded-xl sm:rounded-2xl flex items-center justify-center p-3 sm:p-4 shrink-0 hover:shadow-lg transition-all duration-300"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
                   loading="lazy"
-                  className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
             ))}
@@ -772,28 +779,6 @@ export const About: React.FC<AboutProps> = ({
               </button>
             </div>
           )}
-
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="bg-white rounded-2xl p-6 text-center border border-gray-200">
-              <h3 className="text-4xl font-black text-[#DD2B1C]">80+</h3>
-              <p className="text-sm text-gray-500 mt-1">Corporate Clients</p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 text-center border border-gray-200">
-              <h3 className="text-4xl font-black text-[#DD2B1C]">28</h3>
-              <p className="text-sm text-gray-500 mt-1">States Served</p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 text-center border border-gray-200">
-              <h3 className="text-4xl font-black text-[#DD2B1C]">1L+</h3>
-              <p className="text-sm text-gray-500 mt-1">Products Delivered</p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 text-center border border-gray-200">
-              <h3 className="text-4xl font-black text-[#DD2B1C]">10+</h3>
-              <p className="text-sm text-gray-500 mt-1">Years of Excellence</p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -804,13 +789,15 @@ export const About: React.FC<AboutProps> = ({
 };
 export default About;
 
-const LogoCard = ({ client }) => (
-  <div className="w-52 h-28 bg-white border border-gray-200 rounded-2xl flex items-center justify-center p-5 shadow-sm hover:shadow-lg transition-all shrink-0">
-    <img
-      src={client.logo}
-      alt={client.name}
-      loading="lazy"
-      className="max-w-full max-h-full object-contain"
-    />
-  </div>
-);
+const LogoCard = ({ client }) => {
+  return (
+    <div className="w-28 sm:w-36 md:w-44 h-16 sm:h-20 md:h-24 bg-white border border-gray-200 rounded-xl sm:rounded-2xl flex items-center justify-center p-3 sm:p-4 shrink-0 hover:shadow-lg transition-all duration-300">
+      <img
+        src={client.logo}
+        alt={client.name}
+        loading="lazy"
+        className="max-w-full max-h-full object-contain"
+      />
+    </div>
+  );
+};

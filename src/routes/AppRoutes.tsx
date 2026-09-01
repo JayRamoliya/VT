@@ -34,7 +34,6 @@ export const AppRoutes: React.FC = () => {
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:slug" element={<BlogDetails />} />
 
-        {/* Factory Contact & Sales Desk */}
         <Route path="contact" element={<Contact />} />
 
         {/* 404 Catch All Route */}

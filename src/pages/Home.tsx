@@ -20,6 +20,7 @@ import {
   Check,
 } from "lucide-react";
 import { Hero } from "../components/Hero";
+import InfiniteClients from "../components/InfiniteClients";
 import { ProductCard } from "../components/ProductCard";
 import { CategoryCard } from "../components/CategoryCard";
 import { TestimonialSlider } from "../components/TestimonialSlider";
@@ -211,10 +212,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
     },
   ];
 
-  const categoriesToShow: CategoryType[] = [
-    "Mobile Stand",
-    "Paper Weight",
-  ];
+  const categoriesToShow: CategoryType[] = ["Mobile Stand", "Paper Weight"];
 
   const handleCategoryClick = (category: CategoryType) => {
     if (onNavigate) {
@@ -494,45 +492,23 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
         </div>
       </section>
 
-      {/* 6. Trusted By Clients */}
-      <section className="py-16 bg-gray-50 border-y border-gray-100 overflow-hidden">
+      <section className="py-16 bg-gray-50 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
           <span className="text-xs font-bold uppercase tracking-widest text-[#DD2B1C] block mb-2">
             Trusted By
           </span>
+
           <h2 className="text-3xl sm:text-4xl font-black text-[#151616]">
             Our Corporate Clients
           </h2>
+
           <p className="text-sm text-gray-500 mt-3 max-w-2xl mx-auto">
             Delivering premium corporate gifting solutions to leading companies,
             institutions and organizations across India.
           </p>
         </div>
 
-        <div className="relative">
-          <motion.div
-            className="flex gap-12 items-center"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{
-              repeat: Infinity,
-              duration: 25,
-              ease: "linear",
-            }}
-          >
-            {[...clients, ...clients].map((client, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 h-20 w-48 bg-white rounded-2xl border border-gray-200 flex items-center justify-center shadow-sm hover:shadow-md transition-all"
-              >
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="max-h-10 max-w-[140px] object-contain transition-all duration-300"
-                />
-              </div>
-            ))}
-          </motion.div>
-        </div>
+        <InfiniteClients clients={clients} />
       </section>
 
       {/* Subtle Horizontal Divider */}

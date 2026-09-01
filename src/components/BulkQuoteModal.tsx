@@ -66,7 +66,7 @@ export const BulkQuoteModal: React.FC = () => {
       msg += `\n\n*Special Instructions:* ${specialNotes}`;
     }
 
-    msg += `\n\n_Generated via Varaia Traders Portal (Factory Rajkot)_`;
+    msg += `\n\n_Generated via Varaia Traders Portal (Office Rajkot)_`;
 
     window.open(`https://wa.me/${basePhone}?text=${encodeURIComponent(msg)}`, '_blank');
     setIsSubmitted(true);
