@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
           {/* Brand Info Column */}
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="flex items-center">
-              <div className="w-44 h-20 p-2 rounded-lg flex items-center justify-center">
+              <div className="w-44 h-20 rounded-lg flex items-center justify-center">
                 <img
                   src="/varaia traders logo.png"
                   alt="Varaia Traders Logo"
