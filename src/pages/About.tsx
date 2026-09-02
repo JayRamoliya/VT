@@ -27,6 +27,7 @@ import { Breadcrumb } from "../components/Breadcrumb";
 import { CTA } from "../components/CTA";
 import { Counter } from "../components/Counter";
 import { useQuote } from "../context/QuoteContext";
+import { motion } from "framer-motion";
 
 interface AboutProps {
   onNavigateHome?: () => void;
@@ -405,13 +406,6 @@ export const About: React.FC<AboutProps> = ({
     },
   ];
 
-  // const row1 = clients.slice(0, Math.ceil(clients.length / 3));
-  // const row2 = clients.slice(
-  //   Math.ceil(clients.length / 3),
-  //   Math.ceil((clients.length * 2) / 3),
-  // );
-  // const row3 = clients.slice(Math.ceil((clients.length * 2) / 3));
-
   const chunkSize = Math.ceil(clients.length / 3);
 
   const row1 = clients.slice(0, chunkSize);
@@ -419,7 +413,6 @@ export const About: React.FC<AboutProps> = ({
   const row3 = clients.slice(chunkSize * 2);
   return (
     <div className="w-full bg-white">
-      {/* Breadcrumb Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-100">
         <Breadcrumb
           items={[{ label: "About Us", active: true }]}
@@ -427,279 +420,561 @@ export const About: React.FC<AboutProps> = ({
         />
       </div>
 
-      {/* Hero Brand Section */}
       <section className="py-16 sm:py-20 bg-gray-50/70 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+          >
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="lg:col-span-7 space-y-6"
+            >
+              <motion.span
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block"
+              >
                 Manufacturing Legacy & Precision Engineering
-              </span>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#151616] tracking-tight leading-tight">
+              </motion.span>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#151616] tracking-tight leading-tight"
+              >
                 About VARAIA TRADERS
-              </h1>
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-medium">
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="text-base sm:text-lg text-gray-700 leading-relaxed font-medium"
+              >
                 Varaia Traders is a leading Indian manufacturing firm based in
                 the engineering hub of Rajkot, Gujarat. We specialize in
                 precision-crafted Stainless Steel & Mild Steel (MS) corporate
                 gifting utilities, desk accessories, and milestone trophies
                 designed for long-lasting brand visibility.
-              </p>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.25 }}
+                className="text-sm text-gray-600 leading-relaxed"
+              >
                 Founded on the pillars of uncompromising metallurgical quality
                 and high-speed execution, we bridge the gap between heavy
                 industrial engineering and refined corporate aesthetics. From
                 Fortune 500 corporate welcome kits to festive gifting for
                 nationwide dealer networks, our products represent reliability
                 and executive elegance.
-              </p>
+              </motion.p>
 
-              <div className="flex flex-wrap items-center gap-4 pt-2">
-                <button
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.35 }}
+                className="flex flex-wrap items-center gap-4 pt-2"
+              >
+                <motion.button
+                  whileHover={{
+                    scale: 1.03,
+                    y: -2,
+                  }}
+                  whileTap={{ scale: 0.98 }}
                   onClick={() => openQuoteModal()}
-                  className="bg-[#007BFF] hover:bg-[#b82215] text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
+                  className="bg-[#007BFF] hover:bg-[#005fcc] text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
                 >
                   Request Bulk Quotation
-                </button>
-                <button
+                </motion.button>
+
+                <motion.button
+                  whileHover={{
+                    scale: 1.03,
+                    y: -2,
+                  }}
+                  whileTap={{ scale: 0.98 }}
                   onClick={() =>
                     window.open(
                       "https://drive.google.com/file/d/1OPPbAgEGQ8J5Kv5l9jjwdPeoPc3S4cUc/view?usp=sharing",
                       "_blank",
                     )
                   }
-                  className="bg-[#151616] hover:bg-black text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-2 cursor-pointer"
+                  className="bg-[#151616] hover:bg-black text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer"
                 >
                   <Download className="w-4 h-4 text-[#007BFF]" />
                   <span>Download Master Catalogue</span>
-                </button>
-              </div>
-            </div>
+                </motion.button>
+              </motion.div>
+            </motion.div>
 
-            <div className="lg:col-span-5">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200 aspect-4/3 group">
-                <img
+            {/* Right Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+              }}
+              className="lg:col-span-5"
+            >
+              <motion.div
+                whileHover={{
+                  y: -6,
+                }}
+                transition={{ duration: 0.3 }}
+                className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200 aspect-[4/3] group"
+              >
+                <motion.img
                   src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=900&auto=format&fit=crop"
                   alt="Varaia Traders Manufacturing Facility"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.08 }}
+                  transition={{ duration: 0.8 }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF]">
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+                  <motion.span
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="text-xs font-bold uppercase tracking-widest text-[#007BFF]"
+                  >
                     Rajkot Central Facility
-                  </span>
-                  <h3 className="text-lg font-bold">
+                  </motion.span>
+
+                  <motion.h3
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className="text-lg font-bold"
+                  >
                     CNC Laser Cutting, Metal Bending & Fiber Laser Marking
-                  </h3>
+                  </motion.h3>
                 </div>
-              </div>
-            </div>
-          </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Vision & Mission Cards */}
       <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Vision */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300">
-            <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#007BFF] flex items-center justify-center mb-6">
-              <Eye className="w-6 h-6" />
-            </div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-1">
+          {/* Vision Card */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+            whileHover={{
+              y: -8,
+              transition: { duration: 0.2 },
+            }}
+            className="group p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-2xl hover:border-[#007BFF]/20 transition-all duration-300"
+          >
+            <motion.div
+              whileHover={{ rotate: 5, scale: 1.08 }}
+              className="w-14 h-14 rounded-2xl bg-blue-50 text-[#007BFF] flex items-center justify-center mb-6"
+            >
+              <Eye className="w-7 h-7" />
+            </motion.div>
+
+            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
               Long-Term Outlook
             </span>
+
             <h2 className="text-2xl font-black text-[#151616] mb-4">
               Our Vision
             </h2>
+
             <p className="text-sm text-gray-600 leading-relaxed">
               To be the most trusted global manufacturer for metal corporate
               gifting and executive desktop utilities—setting the global
               benchmark for metallurgical durability, sub-millimeter branding
               precision, and ethical volume supply chains.
             </p>
-          </div>
+          </motion.div>
 
-          {/* Mission */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300">
-            <div className="w-12 h-12 rounded-2xl bg-red-50 text-[#007BFF] flex items-center justify-center mb-6">
-              <Target className="w-6 h-6" />
-            </div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-1">
+          {/* Mission Card */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            whileHover={{
+              y: -8,
+              transition: { duration: 0.2 },
+            }}
+            className="group p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-2xl hover:border-[#007BFF]/20 transition-all duration-300"
+          >
+            <motion.div
+              whileHover={{ rotate: -5, scale: 1.08 }}
+              className="w-14 h-14 rounded-2xl bg-blue-50 text-[#007BFF] flex items-center justify-center mb-6"
+            >
+              <Target className="w-7 h-7" />
+            </motion.div>
+
+            <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
               Our Daily Commitment
             </span>
+
             <h2 className="text-2xl font-black text-[#151616] mb-4">
               Our Mission
             </h2>
+
             <p className="text-sm text-gray-600 leading-relaxed">
               To engineer functional, beautiful metal products that solve
               everyday executive desk organization while delivering permanent,
               unyielding brand recall through high-speed in-house laser
               technology and direct factory economics.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Product Specialisations Grid */}
       <section className="py-16 sm:py-20 bg-gray-50 border-t border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+            className="text-center max-w-3xl mx-auto mb-14"
+          >
             <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
               Engineering Expertise
             </span>
+
             <h2 className="text-3xl sm:text-4xl font-black text-[#151616] tracking-tight">
               Our Product Specialisations
             </h2>
+
             <p className="text-sm text-gray-500 mt-2">
               Each product line is manufactured to exact dimensional tolerances
               using prime grade metals.
             </p>
-          </div>
+          </motion.div>
 
+          {/* Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {specialisations.map((spec) => (
-              <div
+            {specialisations.map((spec, index) => (
+              <motion.div
                 key={spec.name}
-                className="bg-white p-6 rounded-2xl border border-gray-200 shadow-2xs hover:shadow-lg transition-all"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                }}
+                whileHover={{
+                  y: -8,
+                  transition: { duration: 0.2 },
+                }}
+                className="group bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-2xl hover:border-[#007BFF]/20 transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center mb-4">
+                {/* Icon */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.08,
+                    rotate: 5,
+                  }}
+                  transition={{ duration: 0.2 }}
+                  className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4 text-[#007BFF]"
+                >
                   {spec.icon}
-                </div>
-                <h3 className="font-bold text-base text-[#151616] mb-1.5">
+                </motion.div>
+
+                {/* Title */}
+                <h3 className="font-bold text-lg text-[#151616] mb-2 group-hover:text-[#007BFF] transition-colors">
                   {spec.name}
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
+
+                {/* Description */}
+                <p className="text-sm text-gray-500 leading-relaxed">
                   {spec.desc}
                 </p>
-              </div>
+
+                {/* Bottom Accent Line */}
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "60px" }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.1 + 0.3,
+                  }}
+                  className="h-1 bg-[#007BFF] rounded-full mt-5"
+                />
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Target Operations We Handle */}
       <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7 }}
+          className="text-center max-w-3xl mx-auto mb-14"
+        >
           <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
             Execution Capabilities
           </span>
+
           <h2 className="text-3xl sm:text-4xl font-black text-[#151616] tracking-tight">
             Corporate Operations & Campaigns We Power
           </h2>
+
           <p className="text-sm text-gray-500 mt-2">
             Equipped with high-capacity production lines to meet demanding
             corporate timelines.
           </p>
-        </div>
+        </motion.div>
 
+        {/* Operations Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {operationsHandled.map((op) => (
-            <div
+          {operationsHandled.map((op, index) => (
+            <motion.div
               key={op.title}
-              className="p-6 rounded-2xl bg-white border border-gray-200 hover:border-[#007BFF] transition-colors"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.12,
+              }}
+              whileHover={{
+                y: -8,
+                transition: { duration: 0.2 },
+              }}
+              className="group relative overflow-hidden p-7 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-2xl hover:border-[#007BFF]/30 transition-all duration-300"
             >
-              <span className="text-xs font-bold text-[#007BFF] block mb-1 uppercase tracking-wider">
+              {/* Top Accent Bar */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#007BFF] to-[#4DA3FF] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
+
+              {/* Count */}
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-[#007BFF] text-xs font-bold uppercase tracking-wider mb-4">
                 {op.count}
               </span>
-              <h3 className="font-bold text-lg text-[#151616] mb-2">
+
+              {/* Title */}
+              <h3 className="font-black text-xl text-[#151616] mb-3 group-hover:text-[#007BFF] transition-colors">
                 {op.title}
               </h3>
-              <p className="text-xs text-gray-600 leading-relaxed">{op.desc}</p>
-            </div>
+
+              {/* Description */}
+              <p className="text-sm text-gray-600 leading-relaxed">{op.desc}</p>
+
+              {/* Bottom Animated Line */}
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "70px" }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.15 + 0.3,
+                }}
+                className="h-1 bg-[#007BFF] rounded-full mt-6"
+              />
+            </motion.div>
           ))}
         </div>
       </section>
 
-      {/* Plant Infrastructure & Ready Stock Assurance */}
-      <section className="py-16 bg-[#151616] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 sm:py-20 bg-[#151616] text-white overflow-hidden">
+        {/* Background Glow */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#007BFF]/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#007BFF]/10 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
               <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block">
                 Manufacturing Backbone • Rajkot
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black tracking-tight">
+
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
                 1000+ Cartons Ready Stock & Multi-Point Express Dispatch
               </h2>
-              <p className="text-sm text-gray-300 leading-relaxed">
+
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed max-w-2xl">
                 Our plant maintains continuous buffer stocks of all 57+
                 catalogued items. When last-minute corporate conferences, AGMs,
                 or executive onboarding needs arise, we can laser-mark and
                 dispatch bulk orders within 24 to 48 hours.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#007BFF]/50 transition-colors">
-                  <div className="text-2xl font-black text-[#007BFF] flex items-baseline">
-                    <Counter value={57} suffix="+" />
-                  </div>
-                  <span className="text-xs text-gray-300 font-semibold block mt-0.5">
-                    Active Metal Models
-                  </span>
-                </div>
-                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#007BFF]/50 transition-colors">
-                  <div className="text-2xl font-black text-[#007BFF] flex items-baseline">
-                    <Counter value={1000} suffix="+" />
-                  </div>
-                  <span className="text-xs text-gray-300 font-semibold block mt-0.5">
-                    Cartons Ready in Stock
-                  </span>
-                </div>
-                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#007BFF]/50 transition-colors">
-                  <div className="text-2xl font-black text-[#007BFF] flex items-baseline">
-                    <Counter value={100} suffix="%" />
-                  </div>
-                  <span className="text-xs text-gray-300 font-semibold block mt-0.5">
-                    In-House Laser Suite
-                  </span>
-                </div>
-                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#007BFF]/50 transition-colors">
-                  <div className="text-2xl font-black text-[#007BFF] flex items-baseline">
-                    <Counter value={28} />
-                  </div>
-                  <span className="text-xs text-gray-300 font-semibold block mt-0.5">
-                    States Pan-India Delivery
-                  </span>
-                </div>
-              </div>
-            </div>
+              {/* Stats */}
+              <div className="grid grid-cols-2 gap-4 pt-4">
+                {[
+                  {
+                    value: 57,
+                    suffix: "+",
+                    label: "Active Metal Models",
+                  },
+                  {
+                    value: 1000,
+                    suffix: "+",
+                    label: "Cartons Ready in Stock",
+                  },
+                  {
+                    value: 100,
+                    suffix: "%",
+                    label: "In-House Laser Suite",
+                  },
+                  {
+                    value: 28,
+                    suffix: "",
+                    label: "States Pan-India Delivery",
+                  },
+                ].map((item, index) => (
+                  <motion.div
+                    key={item.label}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.1,
+                    }}
+                    whileHover={{
+                      y: -6,
+                      borderColor: "rgba(0,123,255,0.5)",
+                    }}
+                    className="group bg-white/5 backdrop-blur-sm p-5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  >
+                    <div className="text-3xl font-black text-[#007BFF] flex items-baseline">
+                      <Counter value={item.value} suffix={item.suffix} />
+                    </div>
 
-            <div className="bg-neutral-900 p-8 rounded-3xl border border-neutral-800 space-y-4">
-              <h3 className="text-xl font-bold text-white mb-2">
-                Office Address & Credentials
-              </h3>
-              <p className="text-xs text-gray-400">
-                <strong className="text-white">Facility:</strong> 303, THIRD
-                FLOOR, "AAKANKSHA COMPLEX", 11 VIJAY PLOT, OPP BIMAL TYRES,
-                GONDAL ROAD, RAJKOT - 360002 (GUJARAT) INDIA.
-              </p>
-              <p className="text-xs text-gray-400">
-                <strong className="text-white">UDYAM Certificate:</strong>{" "}
-                UDYAM-GJ-20-0040020
-              </p>
-              <p className="text-xs text-gray-400">
-                <strong className="text-white">GSTIN:</strong> 24DSPPS1285F1ZD
-              </p>
-              <p className="text-xs text-gray-400">
-                <strong className="text-white">Direct Office Desk:</strong> +91
-                75679 99989 | jignesh@varaiatraders.com
-              </p>
-              <div className="pt-4">
-                <Link
-                  to="/contact"
-                  className="inline-block bg-[#007BFF] hover:bg-[#b82215] text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors"
-                >
-                  Contact Procurement Team
-                </Link>
+                    <span className="text-xs text-gray-300 font-semibold block mt-1">
+                      {item.label}
+                    </span>
+                  </motion.div>
+                ))}
               </div>
-            </div>
+            </motion.div>
+
+            {/* Right Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="absolute inset-0 bg-[#007BFF]/10 blur-2xl rounded-3xl" />
+
+              <div className="relative bg-neutral-900/90 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-neutral-800 shadow-2xl">
+                <span className="inline-flex px-3 py-1 rounded-full bg-[#007BFF]/15 text-[#007BFF] text-xs font-bold uppercase tracking-wider mb-4">
+                  Verified Business Credentials
+                </span>
+
+                <h3 className="text-2xl font-black text-white mb-6">
+                  Office Address & Credentials
+                </h3>
+
+                <div className="space-y-5">
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-[#007BFF] font-bold mb-1">
+                      Facility
+                    </p>
+                    <p className="text-sm text-gray-300 leading-relaxed">
+                      303, THIRD FLOOR, AAKANKSHA COMPLEX, 11 VIJAY PLOT, OPP.
+                      BIMAL TYRES, GONDAL ROAD, RAJKOT - 360002, GUJARAT, INDIA.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-[#007BFF] font-bold mb-1">
+                      UDYAM Certificate
+                    </p>
+                    <p className="text-sm text-gray-300">UDYAM-GJ-20-0040020</p>
+                  </div>
+
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-[#007BFF] font-bold mb-1">
+                      GSTIN
+                    </p>
+                    <p className="text-sm text-gray-300">24DSPPS1285F1ZD</p>
+                  </div>
+
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-[#007BFF] font-bold mb-1">
+                      Contact
+                    </p>
+                    <p className="text-sm text-gray-300">+91 75679 99989</p>
+                    <p className="text-sm text-gray-300">
+                      jignesh@varaiatraders.com
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-8">
+                  <motion.div
+                    whileHover={{
+                      scale: 1.03,
+                      y: -2,
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center justify-center bg-[#007BFF] hover:bg-[#0066d6] text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-lg shadow-[#007BFF]/20"
+                    >
+                      Contact Procurement Team
+                    </Link>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       <section className="py-16 sm:py-20 bg-white border-t border-gray-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 sm:mb-14">
-          <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-center"
+          >
             <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
               Trusted By Industry Leaders
             </span>
@@ -713,10 +988,16 @@ export const About: React.FC<AboutProps> = ({
               brands trust Varaia Traders for premium corporate gifting
               solutions.
             </p>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="relative">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="relative"
+        >
           {/* Left Fade */}
           <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-white to-transparent z-10" />
 
@@ -755,41 +1036,62 @@ export const About: React.FC<AboutProps> = ({
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <section className="py-20 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
             {clients2.slice(0, visibleClients).map((client, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="w-28 sm:w-36 md:w-44 h-16 sm:h-20 md:h-24 bg-white border border-gray-200 rounded-xl sm:rounded-2xl flex items-center justify-center p-3 sm:p-4 shrink-0 hover:shadow-lg transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: (index % 12) * 0.05,
+                }}
+                whileHover={{
+                  y: -6,
+                  scale: 1.03,
+                }}
+                className="group w-full h-20 sm:h-24 md:h-28 bg-white border border-gray-200 rounded-2xl flex items-center justify-center p-4 hover:border-[#007BFF]/30 hover:shadow-xl transition-all duration-300"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
                   loading="lazy"
-                  className="max-w-full max-h-full object-contain"
+                  className="max-w-full max-h-full object-contain transition-all duration-300"
                 />
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {visibleClients < clients.length && (
-            <div className="flex justify-center mt-12">
-              <button
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="flex justify-center mt-12"
+            >
+              <motion.button
+                whileHover={{
+                  scale: 1.04,
+                  y: -2,
+                }}
+                whileTap={{ scale: 0.97 }}
                 onClick={loadMoreClients}
-                className="px-8 py-3 bg-[#151616] hover:bg-black text-white rounded-xl font-semibold transition-all duration-300 cursor-pointer"
+                className="px-8 py-3 bg-[#151616] hover:bg-[#007BFF] text-white rounded-xl font-semibold transition-all duration-300 cursor-pointer shadow-lg"
               >
                 Load More Clients ({clients.length - visibleClients} Remaining)
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           )}
         </div>
       </section>
 
-      {/* Global CTA */}
       <CTA />
     </div>
   );
