@@ -186,15 +186,15 @@ body::-webkit-scrollbar,
 }
 
 .marquee-left {
-  animation: marqueeLeft 20s linear infinite;
+  animation: marqueeLeft 26s linear infinite;
 }
 
 .marquee-right {
-  animation: marqueeRight 20s linear infinite;
+  animation: marqueeRight 26s linear infinite;
 }
 
 .marquee-slow {
-  animation: marqueeLeft 20s linear infinite;
+  animation: marqueeLeft 26s linear infinite;
 }
 
 /* .marquee-left:hover,
