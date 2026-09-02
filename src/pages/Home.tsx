@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import {
   ShieldCheck,
   Sparkles,
@@ -212,7 +213,11 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
     },
   ];
 
-  const categoriesToShow: CategoryType[] = ["Mobile Stand", "Paper Weight","Calendar"];
+  const categoriesToShow: CategoryType[] = [
+    "Mobile Stand",
+    "Paper Weight",
+    "Calendar",
+  ];
 
   const handleCategoryClick = (category: CategoryType) => {
     if (onNavigate) {
@@ -232,6 +237,42 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
 
   return (
     <div className="w-full bg-white overflow-hidden">
+      <Helmet>
+        <title>Varaia Traders | Corporate Gifts Manufacturer in Rajkot</title>
+
+        <meta
+          name="description"
+          content="Varaia Traders is a leading manufacturer of corporate gifting products, mobile stands, paper weights, calendars, and custom laser-marked promotional products in Rajkot, India."
+        />
+
+        <meta
+          name="keywords"
+          content="corporate gifts, promotional products, mobile stand manufacturer, paper weight manufacturer, custom laser marking, corporate gifting India, Varaia Traders Rajkot"
+        />
+
+        <link rel="canonical" href="https://varaiatraders.com/" />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Varaia Traders | Corporate Gifts Manufacturer"
+        />
+        <meta
+          property="og:description"
+          content="Premium corporate gifting products with custom laser branding and bulk manufacturing solutions."
+        />
+        <meta property="og:url" content="https://varaiatraders.com/" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Varaia Traders | Corporate Gifts Manufacturer"
+        />
+        <meta
+          name="twitter:description"
+          content="Premium corporate gifting products with custom laser branding and bulk manufacturing solutions."
+        />
+      </Helmet>
       {/* 1. Hero Section with Interactive Carousel & Key Metrics */}
       <Hero
         onExploreProducts={() => navigate("/products")}

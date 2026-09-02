@@ -79,6 +79,12 @@ html.lenis body {
   height: auto;
 }
 
+html,
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #007BFF #f1f5f9;
+}
+
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
@@ -137,21 +143,6 @@ html.lenis body {
 
 
 
-/* Hide scrollbar for all browsers */
-html,
-body {
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE and Edge */
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar,
-*::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari, Opera */
-}
 
 
 
@@ -202,3 +193,26 @@ body::-webkit-scrollbar,
 .marquee-slow:hover {
   animation-play-state: paused;
 } */
+
+
+
+.floating-glow {
+  box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  animation: pulseBlue 2s infinite;
+}
+
+@keyframes pulseBlue {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 18px rgba(0, 123, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+

@@ -28,6 +28,7 @@ import { CTA } from "../components/CTA";
 import { Counter } from "../components/Counter";
 import { useQuote } from "../context/QuoteContext";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 interface AboutProps {
   onNavigateHome?: () => void;
@@ -413,6 +414,44 @@ export const About: React.FC<AboutProps> = ({
   const row3 = clients.slice(chunkSize * 2);
   return (
     <div className="w-full bg-white">
+      <Helmet>
+        <title>
+          About Varaia Traders | Corporate Gift Manufacturer in Rajkot
+        </title>
+
+        <meta
+          name="description"
+          content="Learn about Varaia Traders, a Rajkot-based manufacturer of premium corporate gifts, mobile stands, paper weights, desk accessories, laser-marked promotional products, and bulk corporate gifting solutions across India."
+        />
+
+        <meta
+          name="keywords"
+          content="About Varaia Traders, corporate gift manufacturer Rajkot, stainless steel gifts, promotional products manufacturer India, laser marking company Rajkot, corporate gifting supplier Gujarat, desk accessories manufacturer"
+        />
+
+        <link rel="canonical" href="https://varaiatraders.com/about" />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="About Varaia Traders | Leading Corporate Gift Manufacturer"
+        />
+        <meta
+          property="og:description"
+          content="Discover Varaia Traders' manufacturing expertise, corporate gifting solutions, laser marking technology, and trusted partnerships with leading brands across India."
+        />
+        <meta property="og:url" content="https://varaiatraders.com/about" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About Varaia Traders | Corporate Gift Manufacturer"
+        />
+        <meta
+          name="twitter:description"
+          content="Rajkot-based manufacturer of premium corporate gifting products, laser-marked branding solutions, and executive desk accessories."
+        />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-100">
         <Breadcrumb
           items={[{ label: "About Us", active: true }]}
@@ -513,7 +552,7 @@ export const About: React.FC<AboutProps> = ({
                   whileTap={{ scale: 0.98 }}
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/file/d/1OPPbAgEGQ8J5Kv5l9jjwdPeoPc3S4cUc/view?usp=sharing",
+                      "https://wa.me/917567999989?text=Hello,%20I%20am%20interested%20in%20your%20products.%20Please%20share%20more%20details.",
                       "_blank",
                     )
                   }

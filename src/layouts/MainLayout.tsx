@@ -7,7 +7,7 @@ import { ScrollProgressBar } from '../components/ScrollProgressBar';
 import { BulkQuoteModal } from '../components/BulkQuoteModal';
 import { LaserMarkingPreview } from '../components/LaserMarkingPreview';
 import { CatalogueDownloadModal } from '../components/CatalogueDownloadModal';
-import { FloatingActions } from '../components/FloatingActions';
+import FloatingActions from '../components/FloatingActions';
 import { ScrollToTop } from '../components/ScrollToTop';
 import { PageLoader } from '../components/PageLoader';
 

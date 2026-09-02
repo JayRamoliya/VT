@@ -89,15 +89,15 @@ export const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="w-full z-40 sticky top-0">
       {/* Top Corporate Strip */}
-      <div className="bg-[#151616] text-white text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10 hidden md:block transition-all duration-300">
+      <div className="bg-[#151616] text-white font-bold text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10 hidden md:block transition-all duration-300">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1.5 text-gray-300 font-medium">
+            <span className="flex items-center gap-1.5 font-semibold text-gray-300">
               <span className="w-2 h-2 rounded-full bg-[#007BFF] animate-pulse"></span>
               Rajkot Manufacturing Hub: 1000+ Cartons Ready Stock
             </span>
             <span className="text-gray-500">|</span>
-            <span className="flex items-center gap-1 text-gray-300">
+            <span className="flex items-center gap-1 font-semibold text-gray-300">
               <ShieldCheck className="w-3.5 h-3.5 text-[#007BFF]" />
               UDYAM & GST Registered UNIT
             </span>
@@ -116,7 +116,7 @@ export const Header: React.FC<HeaderProps> = () => {
               className="flex items-center gap-1.5 text-gray-300 hover:text-white transition-colors duration-200"
             >
               <Mail className="w-3.5 h-3.5 text-[#007BFF]" />
-              <span>jignesh@varaiatraders.com</span>
+              <span className="font-semibold">jignesh@varaiatraders.com</span>
             </a>
           </div>
         </div>
@@ -289,7 +289,7 @@ export const Header: React.FC<HeaderProps> = () => {
               whileTap={{ scale: 0.97 }}
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1OPPbAgEGQ8J5Kv5l9jjwdPeoPc3S4cUc/view?usp=sharing",
+                  "https://wa.me/917567999989?text=Hello,%20I%20am%20interested%20in%20your%20products.%20Please%20share%20more%20details.",
                   "_blank",
                 )
               }
@@ -440,7 +440,7 @@ export const Header: React.FC<HeaderProps> = () => {
                 <button
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/file/d/1OPPbAgEGQ8J5Kv5l9jjwdPeoPc3S4cUc/view?usp=sharing",
+                      "https://wa.me/917567999989?text=Hello,%20I%20am%20interested%20in%20your%20products.%20Please%20share%20more%20details.",
                       "_blank",
                     )
                   }

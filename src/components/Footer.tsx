@@ -11,6 +11,7 @@ import {
   Globe,
   Download,
   Sparkles,
+  MessageCircle,
 } from "lucide-react";
 import { useQuote } from "../context/QuoteContext";
 import { CATEGORIES } from "../data/products";
@@ -229,13 +230,12 @@ export const Footer: React.FC = () => {
                 <button
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/file/d/1OPPbAgEGQ8J5Kv5l9jjwdPeoPc3S4cUc/view?usp=sharing",
+                      "https://wa.me/917567999989?text=Hello,%20I%20am%20interested%20in%20your%20products.%20Please%20share%20more%20details.",
                       "_blank",
                     )
                   }
                   className="hover:text-[#007BFF] transition-colors cursor-pointer flex items-center gap-1.5"
                 >
-                  <Download className="w-3 h-3 text-[#007BFF]" />
                   Download PDF Catalogue
                 </button>
               </li>
