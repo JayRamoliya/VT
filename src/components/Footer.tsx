@@ -91,7 +91,7 @@ export const Footer: React.FC = () => {
             <Link to="/" className="flex items-center">
               <div className="w-44 h-20 rounded-lg flex items-center justify-center">
                 <img
-                  src="/varaia traders logo.png"
+                  src="/white.png"
                   alt="Varaia Traders Logo"
                   className="max-w-full max-h-full"
                 />
