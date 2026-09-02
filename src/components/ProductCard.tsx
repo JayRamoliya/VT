@@ -78,7 +78,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </span>
 
           {product.laserMarkingAvailable && (
-            <span className="bg-[#007BFF] text-white text-[9px] font-semibold px-2 py-0.5 rounded flex items-center gap-1">
+            <span className="bg-[#007BFF] text-white text-[10px] font-semibold px-2 py-0.5 rounded flex items-center gap-1">
               <Sparkles className="w-2 h-2" />
               Laser Marking
             </span>
