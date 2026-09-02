@@ -1,33 +1,56 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'motion/react';
-import { 
-  Boxes, 
-  ArrowRight, 
-  Home, 
-  Search, 
-  MessageSquare, 
-  Download, 
-  Phone 
-} from 'lucide-react';
-import { useQuote } from '../context/QuoteContext';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "motion/react";
+import {
+  Boxes,
+  ArrowRight,
+  Home,
+  Search,
+  MessageSquare,
+  Download,
+  Phone,
+} from "lucide-react";
+import { useQuote } from "../context/QuoteContext";
 
 export const NotFound: React.FC = () => {
   const { openCatalogueModal, generateWhatsAppLink } = useQuote();
 
   const quickLinks = [
-    { title: 'Home Page', path: '/', desc: 'Return to the main factory presentation' },
-    { title: 'Product Catalogue', path: '/products', desc: 'Explore all 57+ metal items' },
-    { title: 'Mobile Stands', path: '/products?category=Mobile%20Stand', desc: 'SS & MS desktop phone cradles' },
-    { title: 'Pen Stands', path: '/products?category=Pen%20Stand', desc: 'Revolving and monolith pen caddies' },
-    { title: 'Corporate Showcase', path: '/gallery', desc: 'Finished laser engraving gallery' },
-    { title: 'Contact Factory Desk', path: '/contact', desc: 'Connect with Rajkot sales team' }
+    {
+      title: "Home Page",
+      path: "/",
+      desc: "Return to the main factory presentation",
+    },
+    {
+      title: "Product Catalogue",
+      path: "/products",
+      desc: "Explore all 57+ metal items",
+    },
+    {
+      title: "Mobile Stands",
+      path: "/products?category=Mobile%20Stand",
+      desc: "SS & MS desktop phone cradles",
+    },
+    {
+      title: "Pen Stands",
+      path: "/products?category=Pen%20Stand",
+      desc: "Revolving and monolith pen caddies",
+    },
+    {
+      title: "Corporate Showcase",
+      path: "/gallery",
+      desc: "Finished laser engraving gallery",
+    },
+    {
+      title: "Contact Factory Desk",
+      path: "/contact",
+      desc: "Connect with Rajkot sales team",
+    },
   ];
 
   return (
     <div className="w-full bg-white py-16 sm:py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        
         {/* Animated 404 Header Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -43,7 +66,8 @@ export const NotFound: React.FC = () => {
         </h1>
 
         <p className="text-sm sm:text-base text-gray-600 max-w-lg mx-auto mt-3 leading-relaxed">
-          The link you followed may be broken or the product/page has been moved to a new section in our updated catalogue.
+          The link you followed may be broken or the product/page has been moved
+          to a new section in our updated catalogue.
         </p>
 
         {/* Primary Action Buttons */}
@@ -65,7 +89,12 @@ export const NotFound: React.FC = () => {
           </Link>
 
           <button
-            onClick={openCatalogueModal}
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/1OPPbAgEGQ8J5Kv5l9jjwdPeoPc3S4cUc/view?usp=sharing",
+                "_blank",
+              )
+            }
             className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer"
           >
             <Download className="w-4 h-4 text-[#007BFF]" />
@@ -103,8 +132,13 @@ export const NotFound: React.FC = () => {
         {/* Instant Support Banner */}
         <div className="mt-12 p-6 bg-gray-50 rounded-2xl border border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-left">
           <div>
-            <span className="text-xs font-bold text-[#151616] block">Need assistance finding a specific metal item?</span>
-            <span className="text-xs text-gray-500">Our sales desk is available on WhatsApp & direct phone for instant catalogue help.</span>
+            <span className="text-xs font-bold text-[#151616] block">
+              Need assistance finding a specific metal item?
+            </span>
+            <span className="text-xs text-gray-500">
+              Our sales desk is available on WhatsApp & direct phone for instant
+              catalogue help.
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <a
@@ -115,7 +149,9 @@ export const NotFound: React.FC = () => {
               <span>Call Desk</span>
             </a>
             <a
-              href={generateWhatsAppLink("Hello VARAIA TRADERS, I'm looking for a product in your catalogue.")}
+              href={generateWhatsAppLink(
+                "Hello VARAIA TRADERS, I'm looking for a product in your catalogue.",
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5"
@@ -125,7 +161,6 @@ export const NotFound: React.FC = () => {
             </a>
           </div>
         </div>
-
       </div>
     </div>
   );

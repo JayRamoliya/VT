@@ -217,17 +217,22 @@ export const Footer: React.FC = () => {
                   Contact Sales Office
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <button
                   onClick={() => openQuoteModal()}
                   className="hover:text-[#007BFF] transition-colors cursor-pointer"
                 >
                   Bulk Order RFQ (100+ pcs)
                 </button>
-              </li>
+              </li> */}
               <li>
                 <button
-                  onClick={openCatalogueModal}
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/file/d/1OPPbAgEGQ8J5Kv5l9jjwdPeoPc3S4cUc/view?usp=sharing",
+                      "_blank",
+                    )
+                  }
                   className="hover:text-[#007BFF] transition-colors cursor-pointer flex items-center gap-1.5"
                 >
                   <Download className="w-3 h-3 text-[#007BFF]" />

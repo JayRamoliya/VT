@@ -72,11 +72,11 @@ export const Header: React.FC<HeaderProps> = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: 'About Us', path: '/about' },
+    { name: "About Us", path: "/about" },
     { name: "Products", path: "/products", hasMegaMenu: true },
-    { name: 'Gallery', path: '/gallery' },
+    { name: "Gallery", path: "/gallery" },
     // { name: 'Blog', path: '/blog' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Contact", path: "/contact" },
   ];
 
   const isLinkActive = (path: string) => {
@@ -283,12 +283,16 @@ export const Header: React.FC<HeaderProps> = () => {
             })}
           </nav>
 
-          {/* Action Buttons: Catalogue & Request Quote */}
           <div className="hidden sm:flex items-center gap-3">
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              onClick={openCatalogueModal}
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1OPPbAgEGQ8J5Kv5l9jjwdPeoPc3S4cUc/view?usp=sharing",
+                  "_blank",
+                )
+              }
               id="header-download-catalogue-btn"
               className="text-xs font-bold text-gray-700 hover:text-[#151616] px-3.5 py-2 rounded-xl border border-gray-200 hover:border-gray-300 bg-gray-50/50 hover:bg-gray-50 transition-colors flex items-center gap-1.5 cursor-pointer shadow-2xs"
             >
@@ -296,7 +300,7 @@ export const Header: React.FC<HeaderProps> = () => {
               <span>Brochure</span>
             </motion.button>
 
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => openQuoteModal()}
@@ -310,12 +314,12 @@ export const Header: React.FC<HeaderProps> = () => {
                   {quoteItems.length}
                 </span>
               )}
-            </motion.button>
+            </motion.button> */}
           </div>
 
           {/* Mobile Menu Toggle Button */}
           <div className="flex items-center gap-2 lg:hidden">
-            <button
+            {/* <button
               onClick={() => openQuoteModal()}
               className="relative p-2 text-gray-700 hover:text-[#007BFF] transition-colors"
               aria-label="View Quote Cart"
@@ -326,7 +330,7 @@ export const Header: React.FC<HeaderProps> = () => {
                   {quoteItems.length}
                 </span>
               )}
-            </button>
+            </button> */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-xl text-gray-700 hover:text-[#151616] hover:bg-gray-100 transition-colors cursor-pointer"
@@ -422,7 +426,7 @@ export const Header: React.FC<HeaderProps> = () => {
 
               {/* Mobile CTA Buttons */}
               <div className="pt-4 space-y-2.5">
-                <button
+                {/* <button
                   onClick={() => {
                     setIsMobileMenuOpen(false);
                     openQuoteModal();
@@ -431,13 +435,15 @@ export const Header: React.FC<HeaderProps> = () => {
                 >
                   <FileText className="w-4 h-4" />
                   <span>Get Instant Factory Quote</span>
-                </button>
+                </button> */}
 
                 <button
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    openCatalogueModal();
-                  }}
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/file/d/1OPPbAgEGQ8J5Kv5l9jjwdPeoPc3S4cUc/view?usp=sharing",
+                      "_blank",
+                    )
+                  }
                   className="w-full bg-gray-100 text-gray-800 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Download className="w-4 h-4 text-[#007BFF]" />

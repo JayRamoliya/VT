@@ -462,7 +462,12 @@ export const About: React.FC<AboutProps> = ({
                   Request Bulk Quotation
                 </button>
                 <button
-                  onClick={openCatalogueModal}
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/file/d/1OPPbAgEGQ8J5Kv5l9jjwdPeoPc3S4cUc/view?usp=sharing",
+                      "_blank",
+                    )
+                  }
                   className="bg-[#151616] hover:bg-black text-white px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-2 cursor-pointer"
                 >
                   <Download className="w-4 h-4 text-[#007BFF]" />
@@ -664,7 +669,9 @@ export const About: React.FC<AboutProps> = ({
                 Office Address & Credentials
               </h3>
               <p className="text-xs text-gray-400">
-                <strong className="text-white">Facility:</strong> 303, THIRD FLOOR, "AAKANKSHA COMPLEX", 11 VIJAY PLOT, OPP BIMAL TYRES, GONDAL ROAD, RAJKOT - 360002 (GUJARAT) INDIA.
+                <strong className="text-white">Facility:</strong> 303, THIRD
+                FLOOR, "AAKANKSHA COMPLEX", 11 VIJAY PLOT, OPP BIMAL TYRES,
+                GONDAL ROAD, RAJKOT - 360002 (GUJARAT) INDIA.
               </p>
               <p className="text-xs text-gray-400">
                 <strong className="text-white">UDYAM Certificate:</strong>{" "}
