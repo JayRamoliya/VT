@@ -50,7 +50,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
     {
       title: "Premium Quality",
       description:
-        "Forged from certified AISI 304 Stainless Steel & heavy gauge CRCA Mild Steel with immaculate satin and mirror finishes.",
+        "Forged from certified AISI 202 Stainless Steel & heavy gauge CRCA Mild Steel with immaculate satin and mirror finishes.",
       icon: <ShieldCheck className="w-6 h-6 text-[#007BFF]" />,
     },
     {
@@ -426,7 +426,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
                     Fiber Laser Lab • Rajkot
                   </span>
                   <h3 className="text-xl font-bold text-white">
-                    Sub-Millimeter Fiber Laser Etching on 304 Stainless Steel
+                    Sub-Millimeter Fiber Laser Etching on Stainless Steel 202
                   </h3>
                   <p className="text-xs text-gray-300 mt-1">
                     Zero chemical etching. Environmentally conscious

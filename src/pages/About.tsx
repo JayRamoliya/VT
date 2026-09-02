@@ -59,7 +59,7 @@ export const About: React.FC<AboutProps> = ({
     {
       name: "Mobile Stands",
       icon: <Smartphone className="w-5 h-5 text-[#007BFF]" />,
-      desc: "Ergonomic 304 stainless steel and mild steel smartphone & tablet holders.",
+      desc: "stainless steel 202 and mild steel smartphone & tablet holders.",
     },
     {
       name: "Pen Stands",
