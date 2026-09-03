@@ -237,11 +237,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
               onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
               className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:border-[#007BFF] focus:ring-2 focus:ring-red-100 text-sm outline-none transition-all bg-white"
             >
-              <option value="100 - 250 pcs">100 - 250 pcs (Standard Tier)</option>
-              <option value="250 - 500 pcs">250 - 500 pcs (Executive Tier)</option>
-              <option value="500 - 1000 pcs">500 - 1,000 pcs (Volume Tier)</option>
-              <option value="1000+ pcs">1,000 - 5,000 pcs (Mega Tier)</option>
-              <option value="5000+ pcs">5,000+ pcs (Enterprise / Export Rate)</option>
+              <option value="100 - 250 pcs">100 - 300 pcs (Standard Tier)</option>
+              <option value="300 - 600 pcs">300 - 600 pcs (Executive Tier)</option>
+              <option value="600 - 1000 pcs">600 - 1,000 pcs (Volume Tier)</option>
+              <option value="1000+ pcs">1,000+ pcs (Mega Tier)</option>
             </select>
           </div>
 

@@ -112,7 +112,7 @@ useEffect(() => {
               {/* Email */}
 
               <a
-                href="mailto:info@varaiatraders.com"
+                href="mailto:jignesh@varaiatraders.com"
                 className="group"
               >
                 <div className="w-10 h-10 rounded-full bg-slate-100 text-[#007BFF] border border-blue-100 flex items-center justify-center shadow-md transition-all duration-200 group-hover:scale-110">
