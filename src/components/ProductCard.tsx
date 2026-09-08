@@ -50,11 +50,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <motion.div
-      // initial={{ opacity: 0, y: 20 }}
-      // whileInView={{ opacity: 1, y: 0 }}
-      // viewport={{ once: true, margin: '-40px' }}
-      // whileHover={{ y: -7 }}
-      // transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       initial={{ x: -20 }}
       whileInView={{ x: 0 }}
       viewport={{ once: true }}
@@ -63,7 +58,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       className="group bg-white rounded-2xl border border-gray-200/90 hover:border-gray-300 shadow-xs hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer relative"
       id={`product-card-${product.id}`}
     >
-      {/* Top Image Container */}
       <div className="relative w-full aspect-4/3 bg-gray-50 overflow-hidden flex items-center justify-center p-4">
         <img
           src={product.images[0]}
@@ -84,32 +78,22 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             </span>
           )}
         </div>
-
-        {/* <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-xs text-[#151616] text-[10px] font-bold px-2.5 py-1 rounded-md border border-gray-200 shadow-xs flex items-center gap-1">
-          <Box className="w-3 h-3 text-green-600" />
-          <span>Ready Stock</span>
-        </div> */}
       </div>
 
-      {/* Product Content */}
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
-          {/* Item Code & MOQ */}
           <div className="flex items-center justify-between text-xs text-gray-500 mb-2 font-medium">
             <span className="font-mono bg-gray-100 px-2 py-0.5 rounded text-[11px] text-gray-700 font-bold">
               {product.itemCode}
             </span>
-            <span className="text-[#007BFF] font-bold">
+            {/* <span className="text-[#007BFF] font-bold">
               MOQ: {product.minOrderQty} pcs
-            </span>
+            </span> */}
           </div>
 
-          {/* Product Title */}
           <h3 className="font-bold text-sm sm:text-base text-[#151616] group-hover:text-[#007BFF] transition-colors duration-200 line-clamp-2 leading-snug">
             {product.name}
           </h3>
-
-          {/* Material & Finish */}
           <div className="mt-3 space-y-1.5 text-xs text-gray-600">
             <p className="flex items-center gap-1.5 truncate">
               <Layers className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" />
@@ -123,8 +107,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </div>
         </div>
 
-        {/* Card Actions */}
-        <div className="mt-4 pt-3.5 border-t border-gray-100 grid grid-cols-2 gap-2">
+        <div className="mt-4">
+          <div className="bg-gradient-to-r from-red-500 to-red-600 text-white text-[11px] font-bold text-center py-2 px-3 rounded-lg shadow-sm">
+            MOQ: 10,000+ Units • Depends on Model
+          </div>
+        </div>
+
+        <div className="pt-3.5 border-t border-gray-100 grid grid-cols-2 gap-2">
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

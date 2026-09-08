@@ -1,3 +1,6 @@
+import { ReactNode } from "react";
+
+
 export type CategoryType = 
   | 'All'
   | 'Mobile Stand'
@@ -62,6 +65,7 @@ export interface BlogSection {
   subsections?: { subtitle: string; body: string }[];
 }
 
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -70,20 +74,11 @@ export interface BlogPost {
   category: string;
   readTime: string;
   publishedDate: string;
-  author: {
-    name: string;
-    role: string;
-    avatar: string;
-  };
   heroImage: string;
-  quote: {
-    text: string;
-    author: string;
-  };
-  toc: { id: string; title: string }[];
-  sections: BlogSection[];
   tags: string[];
   relatedProductCategory: CategoryType;
+
+  content: ReactNode;
 }
 
 export interface Testimonial {

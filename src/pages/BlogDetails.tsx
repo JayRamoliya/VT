@@ -1,24 +1,24 @@
-import React from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  Clock, 
-  User, 
-  Share2, 
-  ArrowLeft, 
-  Quote, 
-  CheckCircle2, 
-  Tag, 
-  MessageSquare, 
-  Sparkles, 
-  BookOpen 
-} from 'lucide-react';
-import { Breadcrumb } from '../components/Breadcrumb';
-import { BlogCard } from '../components/BlogCard';
-import { CTA } from '../components/CTA';
-import { BlogPost } from '../types';
-import { BLOG_POSTS } from '../data/blogs';
-import { useQuote } from '../context/QuoteContext';
+import React from "react";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import {
+  Calendar,
+  Clock,
+  User,
+  Share2,
+  ArrowLeft,
+  Quote,
+  CheckCircle2,
+  Tag,
+  MessageSquare,
+  Sparkles,
+  BookOpen,
+} from "lucide-react";
+import { Breadcrumb } from "../components/Breadcrumb";
+import { BlogCard } from "../components/BlogCard";
+import { CTA } from "../components/CTA";
+import { BlogPost } from "../types";
+import { BLOG_POSTS } from "../data/blogs";
+import { useQuote } from "../context/QuoteContext";
 
 interface BlogDetailsProps {
   post?: BlogPost;
@@ -31,24 +31,26 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
   post: directPost,
   onNavigateHome,
   onNavigateBlog,
-  onSelectPost
+  onSelectPost,
 }) => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const { openQuoteModal, generateWhatsAppLink } = useQuote();
 
-  const post = directPost || BLOG_POSTS.find(
-    p => p.slug === slug || p.id === slug
-  );
+  const post =
+    directPost || BLOG_POSTS.find((p) => p.slug === slug || p.id === slug);
 
   if (!post) {
     return (
       <div className="min-h-[60vh] max-w-7xl mx-auto px-4 py-20 text-center">
         <div className="bg-gray-50 border border-dashed border-gray-300 rounded-3xl p-12 max-w-xl mx-auto">
           <BookOpen className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-          <h1 className="text-2xl font-bold text-[#151616]">Article Not Found</h1>
+          <h1 className="text-2xl font-bold text-[#151616]">
+            Article Not Found
+          </h1>
           <p className="text-xs sm:text-sm text-gray-600 mt-2 mb-6">
-            The blog article you requested does not exist or may have been relocated.
+            The blog article you requested does not exist or may have been
+            relocated.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link
@@ -69,18 +71,20 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
     );
   }
 
-  const relatedPosts = BLOG_POSTS.filter(p => p.id !== post.id).slice(0, 2);
+  const relatedPosts = BLOG_POSTS.filter((p) => p.id !== post.id).slice(0, 2);
 
   const handleShare = () => {
     if (navigator.share) {
-      navigator.share({
-        title: post.title,
-        text: post.excerpt,
-        url: window.location.href
-      }).catch(() => {});
+      navigator
+        .share({
+          title: post.title,
+          text: post.excerpt,
+          url: window.location.href,
+        })
+        .catch(() => {});
     } else {
       navigator.clipboard.writeText(window.location.href);
-      alert('Article link copied to clipboard!');
+      alert("Article link copied to clipboard!");
     }
   };
 
@@ -98,9 +102,9 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-100">
         <Breadcrumb
           items={[
-            { label: 'Corporate Insights', to: '/blog' },
-            { label: post.category, to: '/blog' },
-            { label: post.title, active: true }
+            { label: "Corporate Insights", to: "/blog" },
+            { label: post.category, to: "/blog" },
+            { label: post.title, active: true },
           ]}
           onNavigateHome={onNavigateHome}
         />
@@ -108,7 +112,6 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
 
       {/* Article Header Container */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
-        
         {/* Back Link */}
         <Link
           to="/blog"
@@ -140,39 +143,12 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
           {post.title}
         </h1>
 
-        {/* Author Card & Share Actions */}
-        <div className="flex items-center justify-between py-4 border-t border-b border-gray-100 mb-8">
-          <div className="flex items-center gap-3">
-            <img
-              src={post.author.avatar}
-              alt={post.author.name}
-              className="w-11 h-11 rounded-full object-cover border-2 border-[#007BFF]"
-            />
-            <div>
-              <span className="font-bold text-sm text-[#151616] block leading-none mb-1">
-                {post.author.name}
-              </span>
-              <span className="text-xs text-gray-500">
-                {post.author.role} • Varaia Traders Industrial Desk
-              </span>
-            </div>
-          </div>
-
-          <button
-            onClick={handleShare}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 text-xs font-bold text-gray-700 hover:text-[#007BFF] hover:border-[#007BFF] transition-all cursor-pointer"
-          >
-            <Share2 className="w-3.5 h-3.5" />
-            <span>Share</span>
-          </button>
-        </div>
-
         {/* Hero Photo */}
         <div className="relative aspect-16/9 rounded-3xl overflow-hidden shadow-xl mb-10 bg-gray-100">
           <img
             src={post.heroImage}
             alt={post.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
 
@@ -186,19 +162,7 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
           </p>
         </div>
 
-        {/* Article Body Sections */}
-        <div className="space-y-8 text-gray-700 leading-relaxed text-sm sm:text-base">
-          {post.sections.map((section, idx) => (
-            <section key={idx} className="space-y-3">
-              <h2 className="text-xl sm:text-2xl font-bold text-[#151616] tracking-tight pt-2">
-                {section.heading}
-              </h2>
-              <p className="text-gray-600 leading-relaxed">
-                {section.content}
-              </p>
-            </section>
-          ))}
-        </div>
+        <div className="max-w-none text-gray-700">{post.content}</div>
 
         {/* Article Tags */}
         <div className="mt-12 pt-6 border-t border-gray-200 flex flex-wrap items-center gap-2">
@@ -218,13 +182,20 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
         {/* Direct WhatsApp Callout from Article */}
         <div className="mt-10 p-6 bg-[#151616] text-white rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <h4 className="font-bold text-base text-white">Have questions regarding metal merchandise for your company?</h4>
-            <p className="text-xs text-gray-400 mt-1">Chat directly with our manufacturing consultants for immediate answers.</p>
+            <h4 className="font-bold text-base text-white">
+              Have questions regarding metal merchandise for your company?
+            </h4>
+            <p className="text-xs text-gray-400 mt-1">
+              Chat directly with our manufacturing consultants for immediate
+              answers.
+            </p>
           </div>
           <button
             onClick={() => {
-              const url = generateWhatsAppLink(`Hello VARAIA TRADERS, I read your article "${post.title}" and would like to discuss metal corporate gifts.`);
-              window.open(url, '_blank');
+              const url = generateWhatsAppLink(
+                `Hello VARAIA TRADERS, I read your article "${post.title}" and would like to discuss metal corporate gifts.`,
+              );
+              window.open(url, "_blank");
             }}
             className="bg-[#007BFF] hover:bg-[#b82215] text-white px-5 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition-colors flex items-center gap-2 cursor-pointer shadow-md"
           >
@@ -232,7 +203,6 @@ export const BlogDetails: React.FC<BlogDetailsProps> = ({
             <span>Chat on WhatsApp</span>
           </button>
         </div>
-
       </article>
 
       {/* Related Articles Strip */}

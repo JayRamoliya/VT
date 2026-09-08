@@ -57,7 +57,6 @@ export const TestimonialSlider: React.FC = () => {
             <span className="ml-2 text-xs font-bold text-gray-500">5.0 Verified Corporate Feedback</span>
           </div>
 
-          {/* Animated Quote Text & Author */}
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -71,7 +70,6 @@ export const TestimonialSlider: React.FC = () => {
                 "{current.quote}"
               </blockquote>
 
-              {/* Author Details & Supplied Product */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-gray-100">
                 <div>
                   <h4 className="font-bold text-base text-[#151616] flex items-center gap-1.5">
