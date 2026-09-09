@@ -109,7 +109,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
         <div className="mt-4">
           <div className="bg-gradient-to-r from-red-500 to-red-600 text-white text-[11px] font-bold text-center py-2 px-3 rounded-lg shadow-sm">
-            MOQ: 10,000+ Units • Depends on Model
+            MOQ: 100 - 10000+ Qty Depends on Model
           </div>
         </div>
 

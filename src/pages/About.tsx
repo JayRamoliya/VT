@@ -412,6 +412,33 @@ export const About: React.FC<AboutProps> = ({
   const row1 = clients.slice(0, chunkSize);
   const row2 = clients.slice(chunkSize, chunkSize * 2);
   const row3 = clients.slice(chunkSize * 2);
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.06,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 12,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 110,
+        damping: 18,
+        mass: 0.8,
+      },
+    },
+  };
+
   return (
     <div className="w-full bg-white">
       <Helmet>
@@ -621,18 +648,22 @@ export const About: React.FC<AboutProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Vision Card */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7 }}
-            whileHover={{
-              y: -8,
-              transition: { duration: 0.2 },
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{
+              duration: 0.9,
+              ease: "easeOut",
             }}
-            className="group p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-2xl hover:border-[#007BFF]/20 transition-all duration-300"
+            className="group p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#007BFF]/20 transition-all duration-500"
           >
             <motion.div
-              whileHover={{ rotate: 5, scale: 1.08 }}
+              whileHover={{
+                scale: 1.05,
+              }}
+              transition={{
+                duration: 0.25,
+              }}
               className="w-14 h-14 rounded-2xl bg-blue-50 text-[#007BFF] flex items-center justify-center mb-6"
             >
               <Eye className="w-7 h-7" />
@@ -656,18 +687,23 @@ export const About: React.FC<AboutProps> = ({
 
           {/* Mission Card */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            whileHover={{
-              y: -8,
-              transition: { duration: 0.2 },
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{
+              duration: 0.9,
+              delay: 0.15,
+              ease: "easeOut",
             }}
-            className="group p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-2xl hover:border-[#007BFF]/20 transition-all duration-300"
+            className="group p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#007BFF]/20 transition-all duration-500"
           >
             <motion.div
-              whileHover={{ rotate: -5, scale: 1.08 }}
+              whileHover={{
+                scale: 1.05,
+              }}
+              transition={{
+                duration: 0.25,
+              }}
               className="w-14 h-14 rounded-2xl bg-blue-50 text-[#007BFF] flex items-center justify-center mb-6"
             >
               <Target className="w-7 h-7" />
@@ -695,10 +731,10 @@ export const About: React.FC<AboutProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto mb-14"
           >
             <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
@@ -716,37 +752,47 @@ export const About: React.FC<AboutProps> = ({
           </motion.div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{
+              once: true,
+              amount: 0.1,
+              margin: "0px 0px -100px 0px",
+            }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
             {specialisations.map((spec, index) => (
               <motion.div
                 key={spec.name}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                }}
+                variants={cardVariants}
                 whileHover={{
-                  y: -8,
-                  transition: { duration: 0.2 },
+                  y: -4,
+                  transition: {
+                    duration: 0.2,
+                  },
                 }}
-                className="group bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-2xl hover:border-[#007BFF]/20 transition-all duration-300"
+                className="group bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#007BFF]/20 transition-all duration-300"
               >
                 {/* Icon */}
                 <motion.div
                   whileHover={{
-                    scale: 1.08,
-                    rotate: 5,
+                    scale: 1.05,
+                    rotate: 3,
                   }}
-                  transition={{ duration: 0.2 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 250,
+                    damping: 15,
+                  }}
                   className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4 text-[#007BFF]"
                 >
                   {spec.icon}
                 </motion.div>
 
                 {/* Title */}
-                <h3 className="font-bold text-lg text-[#151616] mb-2 group-hover:text-[#007BFF] transition-colors">
+                <h3 className="font-bold text-lg text-[#151616] mb-2 group-hover:text-[#007BFF] transition-colors duration-300">
                   {spec.name}
                 </h3>
 
@@ -757,28 +803,29 @@ export const About: React.FC<AboutProps> = ({
 
                 {/* Bottom Accent Line */}
                 <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "60px" }}
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{
-                    duration: 0.6,
-                    delay: index * 0.1 + 0.3,
+                    duration: 0.45,
+                    delay: index * 0.04,
                   }}
-                  className="h-1 bg-[#007BFF] rounded-full mt-5"
+                  style={{ originX: 0 }}
+                  className="h-1 w-[60px] bg-[#007BFF] rounded-full mt-5"
                 />
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto mb-14"
         >
           <span className="text-xs font-bold uppercase tracking-widest text-[#007BFF] block mb-2">
@@ -796,22 +843,22 @@ export const About: React.FC<AboutProps> = ({
         </motion.div>
 
         {/* Operations Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
           {operationsHandled.map((op, index) => (
             <motion.div
               key={op.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.12,
-              }}
+              variants={cardVariants}
               whileHover={{
-                y: -8,
+                y: -4,
                 transition: { duration: 0.2 },
               }}
-              className="group relative overflow-hidden p-7 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-2xl hover:border-[#007BFF]/30 transition-all duration-300"
+              className="group relative overflow-hidden p-7 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#007BFF]/30 transition-all duration-300"
             >
               {/* Top Accent Bar */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#007BFF] to-[#4DA3FF] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
@@ -822,27 +869,28 @@ export const About: React.FC<AboutProps> = ({
               </span>
 
               {/* Title */}
-              <h3 className="font-black text-xl text-[#151616] mb-3 group-hover:text-[#007BFF] transition-colors">
+              <h3 className="font-black text-xl text-[#151616] mb-3 group-hover:text-[#007BFF] transition-colors duration-300">
                 {op.title}
               </h3>
 
               {/* Description */}
               <p className="text-sm text-gray-600 leading-relaxed">{op.desc}</p>
 
-              {/* Bottom Animated Line */}
+              {/* Bottom Line */}
               <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: "70px" }}
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.7,
-                  delay: index * 0.15 + 0.3,
+                  duration: 0.4,
+                  delay: index * 0.03,
                 }}
-                className="h-1 bg-[#007BFF] rounded-full mt-6"
+                style={{ originX: 0 }}
+                className="h-1 w-[70px] bg-[#007BFF] rounded-full mt-6"
               />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
       <section className="relative py-16 sm:py-20 bg-[#151616] text-white overflow-hidden">
@@ -1084,24 +1132,26 @@ export const About: React.FC<AboutProps> = ({
             {clients2.slice(0, visibleClients).map((client, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{
+                  once: true,
+                  amount: 0.1,
+                }}
                 transition={{
-                  duration: 0.5,
-                  delay: (index % 12) * 0.05,
+                  duration: 0.4,
+                  ease: "easeOut",
                 }}
                 whileHover={{
-                  y: -6,
-                  scale: 1.03,
+                  scale: 1.02,
                 }}
-                className="group w-full h-20 sm:h-24 md:h-28 bg-white border border-gray-200 rounded-2xl flex items-center justify-center p-4 hover:border-[#007BFF]/30 hover:shadow-xl transition-all duration-300"
+                className="group w-full h-20 sm:h-24 md:h-28 bg-white border border-gray-200 rounded-2xl flex items-center justify-center p-4 hover:border-[#007BFF]/30 hover:shadow-lg transition-all duration-300"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
                   loading="lazy"
-                  className="max-w-full max-h-full object-contain transition-all duration-300"
+                  className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </motion.div>
             ))}
