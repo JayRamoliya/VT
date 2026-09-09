@@ -186,7 +186,7 @@ export const Contact: React.FC<ContactProps> = ({ onNavigateHome }) => {
 
           <div className="overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3840.783776243075!2d70.79703851092366!3d22.286809243299462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395835b6de289a75%3A0xaed77fd3a318bb99!2sVaraia%20Traders!5e1!3m2!1sen!2sin!4v1787971284161!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.76726519365!2d70.79704387529215!3d22.28680427969622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395835b6de289a75%3A0xaed77fd3a318bb99!2sVaraia%20Traders!5e0!3m2!1sen!2sin!4v1788935821973!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0 }}
