@@ -49,24 +49,30 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.98 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{
-        duration: 0.5,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+    <div
       onClick={handleCardClick}
       className="group bg-white rounded-2xl border border-gray-200/90 hover:border-gray-300 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer relative"
+      id={`product-card-${product.id}`}
     >
-      <div className="relative w-full aspect-4/3 bg-gray-50 overflow-hidden flex items-center justify-center p-4">
-        <img
-          src={product.images[0]}
-          alt={product.name}
-          className="w-full h-full object-contain object-center rounded-xl group-hover:scale-[1.04] transition-transform duration-500 ease-out"
-          loading="lazy"
-        />
+      <div className="relative w-full aspect-[4/3] bg-gray-50 overflow-hidden flex items-center justify-center p-4">
+        <div className="relative w-full h-full overflow-hidden rounded-xl">
+          <motion.img
+            src={product.images[0]}
+            alt={product.name}
+            initial={{
+              clipPath: "inset(0 0 0 100%)",
+            }}
+            whileInView={{
+              clipPath: "inset(0 0 0 0%)",
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 3.6,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="w-full h-full object-contain"
+          />
+        </div>
 
         <div className="absolute bottom-2 right-2 flex flex-col gap-1 z-10">
           <span className="bg-[#151616]/90 text-white text-[9px] font-semibold px-2 py-0.5 rounded uppercase tracking-wide">
@@ -139,6 +145,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </motion.button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
