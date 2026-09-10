@@ -50,13 +50,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <motion.div
-      initial={{ x: -20 }}
-      whileInView={{ x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3 }}
+      initial={{ opacity: 0, scale: 0.98 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      }}
       onClick={handleCardClick}
-      className="group bg-white rounded-2xl border border-gray-200/90 hover:border-gray-300 shadow-xs hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer relative"
-      id={`product-card-${product.id}`}
+      className="group bg-white rounded-2xl border border-gray-200/90 hover:border-gray-300 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer relative"
     >
       <div className="relative w-full aspect-4/3 bg-gray-50 overflow-hidden flex items-center justify-center p-4">
         <img
