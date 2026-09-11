@@ -1,18 +1,15 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion } from 'motion/react';
-import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import { BlogPost } from '../types';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "motion/react";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { BlogPost } from "../types";
 
 interface BlogCardProps {
   post: BlogPost;
   onReadMore?: (post: BlogPost) => void;
 }
 
-export const BlogCard: React.FC<BlogCardProps> = ({
-  post,
-  onReadMore,
-}) => {
+export const BlogCard: React.FC<BlogCardProps> = ({ post, onReadMore }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -35,12 +32,26 @@ export const BlogCard: React.FC<BlogCardProps> = ({
     >
       {/* Image */}
       <div className="relative overflow-hidden">
-        <img
-          src={post.heroImage}
-          alt={post.title}
-          loading="lazy"
-          className="w-full aspect-[16/10] object-contain group-hover:scale-110 transition-transform duration-700"
-        />
+        <div className="overflow-hidden">
+          <motion.img
+            src={post.heroImage}
+            alt={post.title}
+            initial={{
+              scale: 1.6,
+              y: -40,
+            }}
+            whileInView={{
+              scale: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 5,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         <div className="absolute top-4 left-4">
           <span className="bg-white/95 backdrop-blur-md text-[#151616] text-[10px] font-bold px-3 py-1.5 rounded-full shadow-sm uppercase tracking-wider">
@@ -51,7 +62,6 @@ export const BlogCard: React.FC<BlogCardProps> = ({
 
       {/* Content */}
       <div className="p-6 flex flex-col flex-1">
-
         {/* Meta */}
         <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
           <span className="flex items-center gap-1">
@@ -82,7 +92,6 @@ export const BlogCard: React.FC<BlogCardProps> = ({
             <ArrowRight className="w-4 h-4 text-[#007BFF] group-hover:text-white transition-colors duration-300" />
           </div>
         </div>
-
       </div>
     </motion.article>
   );
