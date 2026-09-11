@@ -22,11 +22,11 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, onReadMore }) => {
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      whileHover={{ y: -8 }}
-      transition={{ duration: 0.4 }}
+      // initial={{ opacity: 0, y: 25 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // viewport={{ once: true }}
+      // whileHover={{ y: -8 }}
+      // transition={{ duration: 0.4 }}
       onClick={handleClick}
       className="group bg-white rounded-3xl overflow-hidden border border-gray-200 hover:border-gray-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-pointer flex flex-col h-full"
     >
