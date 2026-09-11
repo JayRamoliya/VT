@@ -80,16 +80,11 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
   const highlights = getCategoryHighlights(category);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3 }}
+    <div
       onClick={handleClick}
       className="group relative h-[360px] sm:h-[380px] rounded-3xl overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-200/90 hover:border-[#007BFF]/50 flex flex-col justify-between p-6 sm:p-7"
       id={`category-card-${category.toLowerCase().replace(/\s+/g, "-")}`}
     >
-      {/* Background Image with Zoom & Dark Vignette */}
       <img
         src={details.image}
         alt={details.title}
@@ -97,10 +92,8 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
         loading="lazy"
       />
 
-      {/* Multi-Stop Cinematic Gradient Overlay for crisp text contrast */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#111212] via-[#151616]/75 to-[#151616]/35 group-hover:via-[#151616]/85 transition-colors duration-300" />
 
-      {/* Top Bar: Icon Badge + Ready Stock Count Badge */}
       <div className="relative z-10 flex items-center justify-between">
         <div className="w-11 h-11 rounded-2xl bg-white/15 backdrop-blur-md border border-white/25 text-white flex items-center justify-center group-hover:bg-[#007BFF] group-hover:border-[#007BFF] transition-all duration-300 shadow-sm">
           {getCategoryIcon(category)}
@@ -112,33 +105,62 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
         </span>
       </div>
 
-      {/* Bottom Content Area */}
       <div className="relative z-10 text-white flex flex-col justify-end space-y-3">
         <div>
-          <span className="text-[11px] font-bold tracking-widest text-red-400 uppercase block mb-1">
+          <motion.span
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="text-[11px] font-bold tracking-widest text-red-400 uppercase block mb-1"
+          >
             {details.subtitle}
-          </span>
-          <h3 className="text-xl sm:text-2xl font-black tracking-tight text-white group-hover:text-white transition-colors">
+          </motion.span>
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.75,
+              duration: 0.6,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="text-xl sm:text-2xl font-black tracking-tight text-white"
+          >
             {details.title}
-          </h3>
-          <p className="text-xs text-gray-300 line-clamp-2 mt-1.5 leading-relaxed font-normal">
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.95,
+              duration: 0.6,
+            }}
+            className="text-xs text-gray-300 line-clamp-2 mt-1.5 leading-relaxed font-normal"
+          >
             {details.description}
-          </p>
+          </motion.p>
         </div>
 
-        {/* Feature Micro-Chips */}
         <div className="flex flex-wrap gap-1.5 pt-1">
           {highlights.map((chip, idx) => (
-            <span
+            <motion.span
               key={idx}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: 1.1 + idx * 0.08,
+                duration: 0.4,
+              }}
               className="bg-white/10 backdrop-blur-xs text-white/90 text-[10px] font-medium px-2 py-0.5 rounded-md border border-white/10"
             >
               {chip}
-            </span>
+            </motion.span>
           ))}
         </div>
 
-        {/* Action Link Button */}
         <div className="pt-3 border-t border-white/15 flex items-center justify-between text-xs font-bold text-white group-hover:text-[#007BFF] transition-colors duration-200">
           <span>Explore Full Range</span>
           <div className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-[#007BFF] group-hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm">
@@ -146,7 +168,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 export default CategoryCard;

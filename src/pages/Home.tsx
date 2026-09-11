@@ -500,35 +500,38 @@ export const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProduct }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {whyChooseUsCards.map((card, idx) => (
-            <motion.div
+            <div
               key={card.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{
-                duration: 0.4,
-                delay: idx * 0.08,
-                ease: corporateEase,
-              }}
               className="p-8 rounded-3xl bg-white border border-gray-200/80 hover:border-gray-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 <div className="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center mb-6 group-hover:text-white transition-colors duration-300">
                   {card.icon}
                 </div>
-                <h3 className="text-lg font-bold text-[#151616] mb-2 group-hover:text-[#007BFF] transition-colors">
-                  {card.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                  {card.description}
-                </p>
+                <motion.div
+                  initial={{ clipPath: "inset(0 100% 0 0)" }}
+                  whileInView={{ clipPath: "inset(0 0% 0 0)" }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 3.8,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+                  <h3 className="text-lg font-bold text-[#151616] mb-2">
+                    {card.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    {card.description}
+                  </p>
+                </motion.div>
               </div>
 
               <div className="mt-6 pt-4 border-t border-gray-100 flex items-center text-xs font-bold text-gray-400 group-hover:text-[#007BFF] transition-colors">
                 <span>Verified Quality Standard</span>
                 <CheckCircle2 className="w-3.5 h-3.5 ml-auto text-green-600" />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>

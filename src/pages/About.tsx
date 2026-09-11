@@ -439,6 +439,17 @@ export const About: React.FC<AboutProps> = ({
     },
   };
 
+  const textReveal = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
   return (
     <div className="w-full bg-white">
       <Helmet>
@@ -677,12 +688,19 @@ export const About: React.FC<AboutProps> = ({
               Our Vision
             </h2>
 
-            <p className="text-sm text-gray-600 leading-relaxed">
+            <motion.p
+              variants={textReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.35 }}
+              className="text-sm text-gray-600 leading-relaxed"
+            >
               To be the most trusted global manufacturer for metal corporate
               gifting and executive desktop utilities—setting the global
               benchmark for metallurgical durability, sub-millimeter branding
               precision, and ethical volume supply chains.
-            </p>
+            </motion.p>
           </motion.div>
 
           {/* Mission Card */}
@@ -717,12 +735,19 @@ export const About: React.FC<AboutProps> = ({
               Our Mission
             </h2>
 
-            <p className="text-sm text-gray-600 leading-relaxed">
+            <motion.p
+              variants={textReveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.35 }}
+              className="text-sm text-gray-600 leading-relaxed"
+            >
               To engineer functional, beautiful metal products that solve
               everyday executive desk organization while delivering permanent,
               unyielding brand recall through high-speed in-house laser
               technology and direct factory economics.
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
@@ -752,15 +777,8 @@ export const About: React.FC<AboutProps> = ({
           </motion.div>
 
           {/* Cards Grid */}
-          <motion.div
+          <div
             variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{
-              once: true,
-              amount: 0.1,
-              margin: "0px 0px -100px 0px",
-            }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {specialisations.map((spec, index) => (
@@ -775,7 +793,6 @@ export const About: React.FC<AboutProps> = ({
                 }}
                 className="group bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#007BFF]/20 transition-all duration-300"
               >
-                {/* Icon */}
                 <motion.div
                   whileHover={{
                     scale: 1.05,
@@ -791,15 +808,43 @@ export const About: React.FC<AboutProps> = ({
                   {spec.icon}
                 </motion.div>
 
-                {/* Title */}
-                <h3 className="font-bold text-lg text-[#151616] mb-2 group-hover:text-[#007BFF] transition-colors duration-300">
-                  {spec.name}
-                </h3>
+                <motion.div
+                  initial={{
+                    clipPath: "inset(0 100% 0 0)",
+                  }}
+                  whileInView={{
+                    clipPath: "inset(0 0% 0 0)",
+                  }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 3.7,
+                    delay: index * 0.05,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+                  <h3 className="font-bold text-lg text-[#151616] mb-2 group-hover:text-[#007BFF] transition-colors duration-300">
+                    {spec.name}
+                  </h3>
+                </motion.div>
 
-                {/* Description */}
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {spec.desc}
-                </p>
+                <motion.div
+                  initial={{
+                    clipPath: "inset(0 100% 0 0)",
+                  }}
+                  whileInView={{
+                    clipPath: "inset(0 0% 0 0)",
+                  }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 3.8,
+                    delay: index * 0.08 + 0.1,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    {spec.desc}
+                  </p>
+                </motion.div>
 
                 {/* Bottom Accent Line */}
                 <motion.div
@@ -815,7 +860,7 @@ export const About: React.FC<AboutProps> = ({
                 />
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -843,40 +888,60 @@ export const About: React.FC<AboutProps> = ({
         </motion.div>
 
         {/* Operations Grid */}
-        <motion.div
+        <div
           variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          // initial="hidden"
+          // whileInView="visible"
+          // viewport={{ once: true, amount: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {operationsHandled.map((op, index) => (
             <motion.div
               key={op.title}
               variants={cardVariants}
-              whileHover={{
-                y: -4,
-                transition: { duration: 0.2 },
-              }}
               className="group relative overflow-hidden p-7 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#007BFF]/30 transition-all duration-300"
             >
-              {/* Top Accent Bar */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#007BFF] to-[#4DA3FF] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
 
-              {/* Count */}
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-[#007BFF] text-xs font-bold uppercase tracking-wider mb-4">
+              <motion.span
+                initial={{
+                  opacity: 0,
+                  scale: 0.7,
+                  y: 10,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.15,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                whileHover={{
+                  scale: 1.05,
+                }}
+                className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-[#007BFF] text-xs font-bold uppercase tracking-wider mb-4"
+              >
                 {op.count}
-              </span>
+              </motion.span>
 
-              {/* Title */}
               <h3 className="font-black text-xl text-[#151616] mb-3 group-hover:text-[#007BFF] transition-colors duration-300">
                 {op.title}
               </h3>
 
-              {/* Description */}
-              <p className="text-sm text-gray-600 leading-relaxed">{op.desc}</p>
-
-              {/* Bottom Line */}
+              <motion.p
+                variants={textReveal}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.35 }}
+                className="text-sm text-gray-600 leading-relaxed"
+              >
+                {op.desc}
+              </motion.p>
               <motion.div
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
@@ -890,7 +955,7 @@ export const About: React.FC<AboutProps> = ({
               />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </section>
 
       <section className="relative py-16 sm:py-20 bg-[#151616] text-white overflow-hidden">

@@ -84,23 +84,34 @@ export const GalleryGrid: React.FC = () => {
       >
         <AnimatePresence>
           {filteredItems.map((item) => (
-            <motion.div
-              layout
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.4, ease: corporateEase }}
+            <div
               key={item.id}
               onClick={() => setActiveItem(item)}
               className="break-inside-avoid bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-lg transition-all duration-300 overflow-hidden group cursor-pointer relative mb-4"
             >
               <div className="relative overflow-hidden bg-gray-100">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="lazy"
-                />
+                <div className="relative overflow-hidden bg-gray-100">
+                  <motion.div
+                    initial={{
+                      clipPath: "inset(0 100% 0 0)",
+                    }}
+                    whileInView={{
+                      clipPath: "inset(0 0% 0 0)",
+                    }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 2.8,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </motion.div>
+                </div>
 
                 <div className="absolute top-3 left-3 z-10">
                   <span className="bg-[#151616]/90 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">
@@ -133,7 +144,7 @@ export const GalleryGrid: React.FC = () => {
                   )}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </AnimatePresence>
       </motion.div>
