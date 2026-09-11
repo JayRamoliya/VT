@@ -56,7 +56,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     >
       <div className="relative w-full aspect-[4/3] bg-gray-50 overflow-hidden flex items-center justify-center p-4">
         <div className="relative w-full h-full overflow-hidden rounded-xl">
-          <motion.img
+          {/* <motion.img
             src={product.images[0]}
             alt={product.name}
             initial={{
@@ -71,6 +71,24 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               ease: [0.16, 1, 0.3, 1],
             }}
             className="w-full h-full object-contain"
+          /> */}
+          <motion.img
+            src={product.images[0]}
+            alt={product.name}
+            initial={{
+              scale: 1.15,
+              opacity: 0,
+            }}
+            whileInView={{
+              scale: 1,
+              opacity: 1,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 2.5,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="w-full h-full object-contain will-change-transform"
           />
         </div>
 
