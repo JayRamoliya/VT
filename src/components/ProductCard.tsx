@@ -36,7 +36,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const handleWhatsAppEnquiry = (e: React.MouseEvent) => {
     e.stopPropagation();
     const phone = "917567999989";
-    const msg = `Hello VARAIA TRADERS, I'm interested in bulk enquiry for *${product.name}* (Item Code: ${product.itemCode}).\nMaterial: ${product.material}\nMOQ: ${product.minOrderQty} pcs.\nPlease share best bulk quotation & delivery schedule.`;
+    const msg = `Hello VARAIA TRADERS, I'm interested in bulk enquiry for *${product.name}* (Item Code: ${product.itemCode}).\nMaterial: ${product.material}\nPlease share best bulk quotation & delivery schedule.`;
     window.open(
       `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,
       "_blank",

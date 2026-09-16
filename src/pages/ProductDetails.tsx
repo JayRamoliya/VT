@@ -140,7 +140,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
       `• *Item Code:* ${product.itemCode}\n` +
       `• *Material:* ${product.material}\n` +
       `• *Finish:* ${product.finish}\n` +
-      `• *Target Quantity:* ${orderVolume}\n\n` +
       `Please share official factory rate quotation, ready stock availability, and laser logo sample process.`;
     window.open(
       `https://wa.me/${phone}?text=${encodeURIComponent(text)}`,
