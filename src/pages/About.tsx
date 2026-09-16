@@ -659,22 +659,22 @@ export const About: React.FC<AboutProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Vision Card */}
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{
-              duration: 0.9,
-              ease: "easeOut",
-            }}
+            // initial={{ opacity: 0 }}
+            // whileInView={{ opacity: 1 }}
+            // viewport={{ once: true, amount: 0.15 }}
+            // transition={{
+            //   duration: 0.9,
+            //   ease: "easeOut",
+            // }}
             className="group p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#007BFF]/20 transition-all duration-500"
           >
             <motion.div
-              whileHover={{
-                scale: 1.05,
-              }}
-              transition={{
-                duration: 0.25,
-              }}
+              // whileHover={{
+              //   scale: 1.05,
+              // }}
+              // transition={{
+              //   duration: 0.25,
+              // }}
               className="w-14 h-14 rounded-2xl bg-blue-50 text-[#007BFF] flex items-center justify-center mb-6"
             >
               <Eye className="w-7 h-7" />
@@ -693,7 +693,7 @@ export const About: React.FC<AboutProps> = ({
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.35 }}
+              transition={{ duration: 1.1, delay: 0.55 }}
               className="text-sm text-gray-600 leading-relaxed"
             >
               To be the most trusted global manufacturer for metal corporate
@@ -705,23 +705,23 @@ export const About: React.FC<AboutProps> = ({
 
           {/* Mission Card */}
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{
-              duration: 0.9,
-              delay: 0.15,
-              ease: "easeOut",
-            }}
+            // initial={{ opacity: 0 }}
+            // whileInView={{ opacity: 1 }}
+            // viewport={{ once: true, amount: 0.15 }}
+            // transition={{
+            //   duration: 0.9,
+            //   delay: 0.15,
+            //   ease: "easeOut",
+            // }}
             className="group p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#007BFF]/20 transition-all duration-500"
           >
             <motion.div
-              whileHover={{
-                scale: 1.05,
-              }}
-              transition={{
-                duration: 0.25,
-              }}
+              // whileHover={{
+              //   scale: 1.05,
+              // }}
+              // transition={{
+              //   duration: 0.25,
+              // }}
               className="w-14 h-14 rounded-2xl bg-blue-50 text-[#007BFF] flex items-center justify-center mb-6"
             >
               <Target className="w-7 h-7" />
@@ -740,7 +740,7 @@ export const About: React.FC<AboutProps> = ({
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.35 }}
+              transition={{ duration: 1.1, delay: 0.55 }}
               className="text-sm text-gray-600 leading-relaxed"
             >
               To engineer functional, beautiful metal products that solve
@@ -1197,19 +1197,19 @@ export const About: React.FC<AboutProps> = ({
             {clients2.slice(0, visibleClients).map((client, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{
-                  once: true,
-                  amount: 0.1,
-                }}
-                transition={{
-                  duration: 0.4,
-                  ease: "easeOut",
-                }}
-                whileHover={{
-                  scale: 1.02,
-                }}
+                // initial={{ opacity: 0 }}
+                // whileInView={{ opacity: 1 }}
+                // viewport={{
+                //   once: true,
+                //   amount: 0.1,
+                // }}
+                // transition={{
+                //   duration: 0.4,
+                //   ease: "easeOut",
+                // }}
+                // whileHover={{
+                //   scale: 1.02,
+                // }}
                 className="group w-full h-20 sm:h-24 md:h-28 bg-white border border-gray-200 rounded-2xl flex items-center justify-center p-4 hover:border-[#007BFF]/30 hover:shadow-lg transition-all duration-300"
               >
                 <img

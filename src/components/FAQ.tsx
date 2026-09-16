@@ -64,10 +64,10 @@ export const FAQ: React.FC<FAQProps> = ({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.55, ease: corporateEase }}
+          // initial={{ opacity: 0, y: 20 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          // viewport={{ once: true, margin: '-40px' }}
+          // transition={{ duration: 0.55, ease: corporateEase }}
           className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 text-[#007BFF] text-xs font-bold uppercase tracking-wider mb-2">
@@ -88,10 +88,10 @@ export const FAQ: React.FC<FAQProps> = ({
             const isOpen = openIndex === idx;
             return (
               <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.45, delay: idx * 0.05, ease: corporateEase }}
+                // initial={{ opacity: 0, y: 15 }}
+                // whileInView={{ opacity: 1, y: 0 }}
+                // viewport={{ once: true, margin: '-40px' }}
+                // transition={{ duration: 0.45, delay: idx * 0.05, ease: corporateEase }}
                 key={idx}
                 className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                   isOpen 
